@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Beberibe Notícias</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --azul:#0033cc;
+      --azul2:#0a1f66;
+      --vermelho:#c70000;
+      --bg:#f4f6f8;
+      --texto:#262626;
+      --muted:#5f6b7a;
+      --card:#ffffff;
+      --shadow:0 10px 26px rgba(0,0,0,.12);
+      --radius:16px;
+    }
+
+    body{
+      font-family:'Segoe UI', Arial, sans-serif;
+      background:var(--bg);
+      color:var(--texto);
+      line-height:1.65;
+    }
+
+    .ticker-wrapper{
+      background:#111;
+    }
+
+    .ticker-label{
+      background:var(--vermelho);
+      color:#fff;
+      text-align:center;
+      padding:10px 16px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+      font-size:14px;
+    }
+
+    .ticker-container{
+      height:42px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      border-bottom:1px solid #232323;
+    }
+
+    .ticker-content{
+      display:flex;
+      gap:50px;
+      white-space:nowrap;
+      color:#fff;
+      padding-left:20px;
+      animation:ticker 45s linear infinite;
+      font-size:15px;
+    }
+
+    @keyframes ticker{
+      0%{transform:translateX(0);}
+      100%{transform:translateX(-50%);}
+    }
+
+    nav{
+      background:var(--azul);
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow:0 2px 10px rgba(0,0,0,.16);
+    }
+
+    .nav-container{
+      max-width:1400px;
+      margin:0 auto;
+      padding:12px 16px;
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .nav-link{
+      color:#fff;
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:15px;
+      transition:.2s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      background:rgba(255,255,255,.16);
+    }
+
+    header{
+      background:linear-gradient(135deg,var(--azul),var(--azul2));
+      color:#fff;
+      text-align:center;
+      padding:42px 16px 34px;
+    }
+
+    header h1{
+      font-size:38px;
+      margin-bottom:8px;
+    }
+
+    header p{
+      font-size:17px;
+      opacity:.96;
+    }
+
+    .layout{
+      max-width:1400px;
+      margin:28px auto;
+      padding:0 16px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 360px;
+      gap:28px;
+      align-items:start;
+    }
+
+    .section-title{
+      color:var(--azul);
+      font-size:26px;
+      display:inline-block;
+      border-bottom:3px solid var(--vermelho);
+      padding-bottom:8px;
+      margin-bottom:22px;
+    }
+
+    .hero-card{
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      margin-bottom:28px;
+      cursor:pointer;
+      transition:.25s;
+    }
+
+    .hero-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .hero-card img{
+      width:100%;
+      height:420px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .hero-content{
+      padding:22px;
+    }
+
+    .hero-content h2{
+      font-size:32px;
+      line-height:1.25;
+      margin-bottom:10px;
+      color:var(--azul2);
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:12px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .badge{
+      display:inline-block;
+      background:var(--vermelho);
+      color:#fff;
+      border-radius:999px;
+      padding:5px 12px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.3px;
+      text-transform:uppercase;
+    }
+
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(295px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      cursor:pointer;
+      transition:.28s;
+    }
+
+    .card:hover{
+      transform:translateY(-7px);
+      box-shadow:0 16px 34px rgba(0,0,0,.17);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-content{
+      padding:18px;
+    }
+
+    .card h3{
+      font-size:20px;
+      line-height:1.35;
+      margin:10px 0 8px;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .sidebar{
+      position:sticky;
+      top:84px;
+    }
+
+    .widget{
+      background:#fff;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .widget h3{
+      color:var(--azul);
+      margin-bottom:14px;
+      font-size:20px;
+    }
+
+    .widget ul{
+      list-style:none;
+    }
+
+    .widget li{
+      padding:10px 0;
+      border-bottom:1px solid #ececec;
+      font-size:15px;
+      color:#39424e;
+    }
+
+    .widget li:last-child{
+      border-bottom:none;
+    }
+
+    .widget a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .widget a:hover{
+      color:var(--azul);
+    }
+
+    .ad-card{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      margin-bottom:18px;
+      transition:.25s;
+    }
+
+    .ad-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 16px 32px rgba(0,0,0,.16);
+    }
+
+    .ad-card img{
+      width:100%;
+      display:block;
+      object-fit:cover;
+      background:#071226;
+    }
+
+    .ad-caption{
+      padding:14px 14px 16px;
+    }
+
+    .ad-caption h4{
+      color:var(--azul);
+      font-size:18px;
+      line-height:1.35;
+      margin-bottom:6px;
+    }
+
+    .ad-caption p{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .detail{
+      max-width:950px;
+      margin:40px auto;
+      background:#fff;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:34px 28px;
+      display:none;
+    }
+
+    .back-btn{
+      border:none;
+      background:var(--vermelho);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+      margin-bottom:20px;
+    }
+
+    .detail img{
+      width:100%;
+      max-height:520px;
+      object-fit:cover;
+      border-radius:14px;
+      margin:12px 0 22px;
+    }
+
+    .detail h1{
+      color:var(--azul);
+      font-size:31px;
+      line-height:1.28;
+      margin-bottom:14px;
+    }
+
+    .detail p{
+      font-size:17px;
+      color:#404040;
+      margin-bottom:16px;
+    }
+
+    .footer-cta{
+      max-width:1400px;
+      margin:0 auto 18px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      padding:0 16px;
+    }
+
+    .footer-cta a{
+      text-decoration:none;
+      color:#fff;
+      padding:14px 20px;
+      border-radius:12px;
+      font-weight:700;
+      min-width:220px;
+      text-align:center;
+      transition:.25s;
+    }
+
+    .footer-cta a:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-portal{background:#0a45ff;}
+    .btn-youtube{background:#ff0000;}
+    .btn-instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);}
+
+    footer{
+      background:#111;
+      color:#d3d3d3;
+      text-align:center;
+      padding:34px 16px;
+      margin-top:60px;
+    }
+
+    footer p{
+      margin:4px 0;
+    }
+
+    @media (max-width:1200px){
+      .layout{
+        grid-template-columns:1fr;
+      }
+
+      .sidebar{
+        position:static;
+      }
+    }
+
+    @media (max-width:768px){
+      header h1{
+        font-size:30px;
+      }
+
+      .hero-card img{
+        height:260px;
+      }
+
+      .hero-content h2{
+        font-size:24px;
+      }
+
+      .detail{
+        padding:24px 18px;
+      }
+
+      .detail h1{
+        font-size:25px;
+      }
+
+      .footer-cta a{
+        width:100%;
+        max-width:360px;
+        min-width:unset;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ticker-wrapper">
+    <div class="ticker-label">Últimas de Beberibe</div>
+    <div class="ticker-container">
+      <div class="ticker-content" id="tickerNoticias"></div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-container" id="menuCategorias">
+      <a href="#" class="nav-link active" data-categoria="Todas">Início</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Portal Beberibe Notícias</h1>
+    <p>Notícias da cidade, região e informações em destaque todos os dias</p>
+  </header>
+
+  <div class="layout" id="homePage">
+    <main>
+      <section id="areaDestaque"></section>
+
+      <h2 class="section-title">Últimas notícias</h2>
+      <div class="news-grid" id="listaNoticias"></div>
+    </main>
+
+    <aside class="sidebar">
+      <a class="ad-card" href="https://gabaritomaxoficial.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <img src="simulado-max.jpg" alt="Gabarito Max - preparação para concurso da Câmara Municipal de Beberibe">
+        <div class="ad-caption">
+          <h4>Gabarito Max</h4>
+          <p>Preparação para concurso da Câmara Municipal de Beberibe com simulados digitais, prática direcionada e foco no edital.</p>
+        </div>
+      </a>
+
+      <a class="ad-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Parceiros locais">
+        <div class="ad-caption">
+          <h4>Parceiros locais</h4>
+          <p>Espaço ideal para empresas, clínicas, pousadas, cursos e negócios da região.</p>
+        </div>
+      </a>
+
+      <div class="widget">
+        <h3>Mais lidas</h3>
+        <ul id="maisLidas"></ul>
+      </div>
+
+      <div class="widget">
+        <h3>Categorias</h3>
+        <ul id="listaCategorias"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <section class="detail" id="paginaNoticia"></section>
+
+  <div class="footer-cta">
+    <a href="#" class="btn-portal">Portal Local</a>
+    <a href="#" class="btn-youtube">YouTube</a>
+    <a href="#" class="btn-instagram">Instagram</a>
+  </div>
+
+  <footer>
+    <p><strong>Portal Beberibe Notícias</strong></p>
+    <p>Informação local com visual profissional e atualização constante.</p>
+  </footer>
+
+  <script src="noticias.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
