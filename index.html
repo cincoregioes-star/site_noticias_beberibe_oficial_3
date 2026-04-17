@@ -39,7 +39,7 @@
       background:var(--vermelho);
       color:#fff;
       text-align:center;
-      padding:10px 16px;
+      padding:8px 12px;
       font-weight:700;
       text-transform:uppercase;
       letter-spacing:.5px;
@@ -47,7 +47,7 @@
     }
 
     .ticker-container{
-      height:42px;
+      height:34px;
       overflow:hidden;
       display:flex;
       align-items:center;
@@ -61,7 +61,7 @@
       color:#fff;
       padding-left:20px;
       animation:ticker 45s linear infinite;
-      font-size:15px;
+      font-size:14px;
     }
 
     @keyframes ticker{
@@ -80,20 +80,20 @@
     .nav-container{
       max-width:1400px;
       margin:0 auto;
-      padding:12px 16px;
+      padding:6px 8px;
       display:flex;
       justify-content:center;
-      gap:8px;
+      gap:6px;
       flex-wrap:wrap;
     }
 
     .nav-link{
       color:#fff;
       text-decoration:none;
-      padding:10px 16px;
+      padding:8px 12px;
       border-radius:10px;
       font-weight:600;
-      font-size:15px;
+      font-size:14px;
       transition:.2s;
     }
 
@@ -106,22 +106,23 @@
       background:linear-gradient(135deg,var(--azul),var(--azul2));
       color:#fff;
       text-align:center;
-      padding:42px 16px 34px;
+      padding:18px 12px 16px;
     }
 
     header h1{
-      font-size:38px;
-      margin-bottom:8px;
+      font-size:28px;
+      margin-bottom:6px;
+      line-height:1.2;
     }
 
     header p{
-      font-size:17px;
-      opacity:.96;
+      font-size:14px;
+      opacity:.95;
     }
 
     .layout{
       max-width:1400px;
-      margin:28px auto;
+      margin:24px auto;
       padding:0 16px;
       display:grid;
       grid-template-columns:minmax(0,1fr) 360px;
@@ -235,7 +236,7 @@
 
     .sidebar{
       position:sticky;
-      top:84px;
+      top:54px;
     }
 
     .widget{
@@ -298,6 +299,7 @@
       display:block;
       object-fit:cover;
       background:#071226;
+      aspect-ratio:9 / 16;
     }
 
     .ad-caption{
@@ -314,7 +316,7 @@
     .ad-caption p{
       color:var(--muted);
       font-size:14px;
-      line-height:1.5;
+      line-height:1.55;
     }
 
     .detail{
@@ -411,16 +413,60 @@
     }
 
     @media (max-width:768px){
+      .ticker-label{
+        padding:7px 10px;
+        font-size:13px;
+      }
+
+      .ticker-container{
+        height:32px;
+      }
+
+      .ticker-content{
+        font-size:13px;
+      }
+
+      .nav-container{
+        padding:6px 8px;
+        gap:4px;
+      }
+
+      .nav-link{
+        padding:7px 10px;
+        font-size:13px;
+        border-radius:8px;
+      }
+
+      header{
+        padding:16px 10px 14px;
+      }
+
       header h1{
-        font-size:30px;
+        font-size:24px;
+      }
+
+      header p{
+        font-size:13px;
       }
 
       .hero-card img{
         height:260px;
       }
 
+      .hero-content{
+        padding:18px;
+      }
+
       .hero-content h2{
         font-size:24px;
+      }
+
+      .card img{
+        height:210px;
+      }
+
+      .card-content{
+        padding:16px;
       }
 
       .detail{
@@ -469,14 +515,14 @@
 
     <aside class="sidebar">
       <a class="ad-card" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">
-        <img src="simulado-max.jpg" alt="Gabarito Max - preparação para concurso da Câmara Municipal de Beberibe">
+        <img src="imagem-gabarito-max.png" alt="Gabarito Max - simulados digitais para diversas áreas">
         <div class="ad-caption">
           <h4>Gabarito Max</h4>
-          <p>Preparação para concurso da Câmara Municipal de Beberibe com simulados digitais, prática direcionada e foco no edital.</p>
+          <p>Preparação com simulados digitais para concurso da Câmara Municipal de Beberibe e também para várias áreas, concursos, profissões, educação e outros temas. O site Gabarito Max já reúne mais de 30 simulados com foco prático, estudo direcionado e melhor preparação.</p>
         </div>
       </a>
 
-      <a class="ad-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+      <a class="ad-card" href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer">
         <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Parceiros locais">
         <div class="ad-caption">
           <h4>Parceiros locais</h4>
@@ -500,8 +546,8 @@
 
   <div class="footer-cta">
     <a href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/" class="btn-portal" target="_blank" rel="noopener noreferrer">Portal Local</a>
-    <a href="#" class="btn-youtube">YouTube</a>
-    <a href="#" class="btn-instagram">Instagram</a>
+    <a href="https://www.youtube.com/@Portal_Gabarito_Max" class="btn-youtube" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <a href="https://www.instagram.com/beberibe.noticiasoficial/" class="btn-instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
   </div>
 
   <footer>

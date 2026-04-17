@@ -1,166 +1,174 @@
 const bancoNoticias = [
   {
     id: 1,
-    titulo: "Saúde itinerante amplia atendimento e aproxima serviços da população em Beberibe",
-    data: "2026-04-14",
-    categoria: "Saúde",
-    imagem: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
-    resumo: "A ação reforçou o atendimento em comunidades e facilitou o acesso da população aos serviços básicos.",
+    titulo: "Beberibe divulga resultado final do edital de fomento aos grupos de quadrilhas juninas 2026",
+    data: "2026-04-16",
+    categoria: "Cultura",
+    imagem: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Publicação oficial traz o resultado final do chamamento público voltado ao apoio aos grupos de quadrilhas juninas do município.",
     conteudo: [
-      "A iniciativa de saúde itinerante voltou a ganhar destaque em Beberibe ao levar atendimento para moradores de áreas com maior dificuldade de deslocamento. A proposta busca reduzir distâncias, agilizar encaminhamentos e fortalecer a presença do poder público junto às comunidades.",
-      "Durante a programação, foram disponibilizados serviços de triagem, orientações preventivas, escuta inicial e encaminhamento para atendimentos específicos. A mobilização também contribuiu para organizar a demanda local e identificar necessidades mais urgentes.",
-      "Além do impacto direto no acesso aos serviços, a ação fortalece o vínculo entre profissionais e população. Esse modelo de atendimento tende a ampliar a cobertura, melhorar o acompanhamento dos casos e facilitar intervenções mais rápidas.",
-      "A expectativa é que novas edições ocorram ao longo do ano em diferentes localidades do município. Com planejamento contínuo, a estratégia pode se consolidar como uma das medidas mais práticas para ampliar o cuidado em saúde no território."
+      "A Prefeitura de Beberibe publicou o resultado final do Edital de Chamamento Público nº 005/2026, voltado ao fomento dos grupos de quadrilhas juninas. A medida reforça o avanço da organização cultural do município e movimenta diretamente coletivos que participam do calendário junino local.",
+      "Esse tipo de publicação tem peso relevante porque o apoio oficial contribui para viabilizar figurinos, deslocamentos, estrutura de apresentação e preparação dos grupos. Em muitos casos, o fomento também ajuda a manter viva a tradição cultural e a participação comunitária.",
+      "Além do aspecto artístico, o ciclo junino costuma gerar efeitos econômicos no comércio, em serviços e na circulação de público. Quando o resultado sai com antecedência, os grupos conseguem organizar melhor seus cronogramas e ampliar sua capacidade de preparação.",
+      "Para o portal local, a notícia é importante porque conecta cultura, identidade popular e calendário oficial. A tendência é que as próximas semanas tragam mais movimentação em torno de ensaios, apresentações e definições do Festival Junino 2026."
     ],
     destaque: true
   },
   {
     id: 2,
-    titulo: "Capacitação voltada à gestão pública reforça debate sobre transparência e controle social",
-    data: "2026-04-13",
-    categoria: "Política",
-    imagem: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Formação reuniu participantes para discutir práticas administrativas, acompanhamento social e responsabilidade pública.",
+    titulo: "Resultado final da ampliação de carga horária do magistério é publicado em Beberibe",
+    data: "2026-04-15",
+    categoria: "Educação",
+    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Edital oficial confirma o resultado final e a homologação do procedimento de ampliação de carga horária dos profissionais do magistério.",
     conteudo: [
-      "Uma capacitação voltada à gestão pública movimentou o debate local sobre transparência, fiscalização e participação social. O encontro reuniu servidores, representantes institucionais e cidadãos interessados em compreender melhor os mecanismos de controle da administração.",
-      "Entre os temas abordados, estiveram procedimentos administrativos, acompanhamento de gastos, responsabilidade dos agentes públicos e formas de ampliar a participação da sociedade. A proposta foi aproximar linguagem técnica e realidade prática.",
-      "A formação também destacou a importância de fortalecer conselhos, canais de escuta e instrumentos de monitoramento. Em municípios com forte demanda por eficiência, essas ferramentas ajudam a melhorar decisões e reduzir falhas na execução.",
-      "A expectativa é que encontros semelhantes continuem sendo realizados, com foco em qualificação e melhoria da gestão. Quanto maior o domínio sobre processos e regras, maior tende a ser a qualidade do serviço entregue à população."
+      "A Secretaria Municipal de Educação de Beberibe publicou o resultado final e a homologação do procedimento de ampliação de carga horária dos profissionais do magistério, conforme o Edital nº 003/2026. O tema interessa diretamente a servidores da educação e à organização da rede municipal de ensino.",
+      "Na prática, a ampliação de carga horária afeta a distribuição de trabalho, a composição das equipes escolares e o planejamento pedagógico das unidades. Quando a etapa final é homologada, o processo ganha segurança administrativa e passa a produzir efeitos mais concretos na rede.",
+      "A decisão também tem impacto para o acompanhamento da comunidade escolar, já que alterações de carga horária influenciam rotina docente, atendimento das turmas e capacidade de resposta da rede às suas demandas.",
+      "Para quem acompanha a administração pública local, trata-se de uma notícia importante porque envolve pessoal, gestão educacional e execução administrativa. A publicação oficial encerra uma etapa sensível e dá base para os próximos ajustes internos da rede."
     ],
     destaque: false
   },
   {
     id: 3,
-    titulo: "Turismo local ganha fôlego com eventos que ampliam circulação de visitantes no município",
-    data: "2026-04-12",
-    categoria: "Economia",
-    imagem: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-    resumo: "A movimentação de visitantes fortaleceu comércio, serviços e visibilidade regional de Beberibe.",
+    titulo: "Prefeitura nomeia aprovados para agente comunitário de saúde e convoca para posse",
+    data: "2026-04-14",
+    categoria: "Concursos",
+    imagem: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Ato oficial trata da nomeação de aprovados e da convocação para procedimentos de posse no cargo de ACS.",
     conteudo: [
-      "A realização de eventos com alcance regional voltou a gerar efeitos positivos para a economia de Beberibe. A presença de visitantes impulsionou a procura por hospedagem, alimentação, transporte e comércio em diferentes pontos do município.",
-      "Além do impacto financeiro imediato, a movimentação contribui para ampliar a visibilidade da cidade como destino turístico. Esse efeito é especialmente relevante para regiões que dependem de fluxo sazonal e buscam consolidar calendário atrativo durante o ano.",
-      "Empreendedores locais observam que a circulação de público gera oportunidades não apenas para grandes estabelecimentos, mas também para pequenos negócios. Artesanato, alimentação informal e serviços complementares tendem a ser beneficiados nessas ocasiões.",
-      "Com planejamento, divulgação e infraestrutura adequada, eventos desse porte podem se tornar peça importante no fortalecimento da economia local. A combinação entre turismo e comércio segue como uma das frentes mais promissoras para ampliar renda no município."
+      "A Prefeitura de Beberibe publicou ato de nomeação dos aprovados para agente comunitário de saúde, com convocação para os procedimentos de posse. A medida representa avanço concreto para candidatos que aguardavam a efetivação do resultado na estrutura municipal.",
+      "Esse tipo de publicação é especialmente relevante porque transforma expectativa de concurso em etapa administrativa real. Para os aprovados, o momento exige atenção aos documentos, prazos e às exigências formais do processo de ingresso.",
+      "Do ponto de vista do município, a entrada de agentes comunitários de saúde tem potencial de fortalecer a atenção básica e ampliar o vínculo entre equipes e comunidades. Trata-se de uma função estratégica para o acompanhamento territorial da saúde pública.",
+      "A notícia também mantém o tema concursos em evidência no portal, já que há forte interesse local por nomeações, convocações e posse. Para muitos leitores, esse tipo de atualização está entre as informações mais procuradas no dia a dia."
     ],
     destaque: false
   },
   {
     id: 4,
-    titulo: "Obras de recuperação viária melhoram mobilidade em trechos estratégicos da zona rural",
-    data: "2026-04-11",
-    categoria: "Infraestrutura",
-    imagem: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Intervenções em vias de acesso buscam facilitar deslocamentos e reduzir transtornos para moradores.",
+    titulo: "Beberibe decreta ponto facultativo no expediente do dia 20 de abril",
+    data: "2026-04-13",
+    categoria: "Política",
+    imagem: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Decreto municipal estabelece ponto facultativo para órgãos e entidades da administração pública no dia 20 de abril de 2026.",
     conteudo: [
-      "Trechos considerados estratégicos para o deslocamento diário de moradores passaram por recuperação viária nos últimos dias. A medida busca melhorar o tráfego, reduzir riscos e facilitar o acesso entre comunidades e áreas de serviços essenciais.",
-      "Em regiões onde o fluxo depende diretamente das condições das vias, a manutenção preventiva e corretiva se torna indispensável. Problemas acumulados ao longo do tempo costumam impactar transporte escolar, escoamento de produção e atendimento emergencial.",
-      "A melhoria da mobilidade também contribui para diminuir custos indiretos com deslocamento e desgaste de veículos. Em áreas rurais, esse tipo de intervenção costuma gerar efeito prático imediato na rotina da população.",
-      "A continuidade dessas ações dependerá de acompanhamento técnico e cronograma regular de manutenção. Mais do que obras pontuais, o município precisa de planejamento permanente para garantir trafegabilidade em diferentes períodos do ano."
+      "A Prefeitura de Beberibe publicou decreto estabelecendo ponto facultativo em todo o expediente do dia 20 de abril de 2026 para os órgãos e entidades da administração pública municipal. A informação interessa a servidores e a moradores que dependem de atendimento presencial.",
+      "Quando esse tipo de medida é divulgada, ela passa a impactar rotinas de repartições, setores administrativos e serviços não essenciais. Por isso, a população costuma precisar reorganizar atendimentos, solicitações e deslocamentos para evitar transtornos.",
+      "A publicação antecipada do decreto ajuda a dar previsibilidade ao calendário institucional e permite melhor planejamento tanto da gestão quanto dos cidadãos. Em cidades com grande dependência de atendimento presencial, essa organização faz diferença prática.",
+      "A notícia é relevante para o portal porque trata de funcionamento do poder público e de um assunto que afeta diretamente a rotina administrativa do município. É o tipo de informação útil e imediata para o leitor local."
     ],
     destaque: false
   },
   {
     id: 5,
-    titulo: "Rede municipal intensifica organização do calendário escolar e da matrícula de estudantes",
-    data: "2026-04-10",
-    categoria: "Educação",
-    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-    resumo: "A organização da matrícula e do calendário letivo segue como foco central para garantir atendimento da rede.",
+    titulo: "Licitação abre caminho para construção de praça em Campestre da Lagoa de Dentro, em Sucatinga",
+    data: "2026-04-06",
+    categoria: "Infraestrutura",
+    imagem: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Município publicou licitação para contratar empresa responsável pela construção de praça na localidade de Campestre da Lagoa de Dentro.",
     conteudo: [
-      "A rede municipal de ensino segue concentrando esforços na organização de matrículas, remanejamentos e ajustes do calendário escolar. O objetivo é assegurar melhor distribuição de vagas e maior previsibilidade para famílias e unidades de ensino.",
-      "Esse trabalho exige alinhamento entre gestão, secretarias, equipes escolares e comunidade. Quando o processo é bem conduzido, reduz filas, evita desencontros de informação e melhora o planejamento pedagógico.",
-      "Outro ponto importante é o atendimento a perfis diversos de estudantes, incluindo crianças com necessidades específicas e situações que exigem acompanhamento diferenciado. A organização prévia contribui para estruturar melhor o ano letivo.",
-      "Com gestão eficiente, a matrícula deixa de ser apenas procedimento administrativo e passa a funcionar como etapa essencial da qualidade educacional. A tendência é que o sistema ganhe mais estabilidade à medida que os fluxos sejam aperfeiçoados."
+      "A Prefeitura de Beberibe publicou aviso de licitação para contratar empresa especializada na construção de uma praça na localidade de Campestre da Lagoa de Dentro, em Sucatinga. O processo foi divulgado oficialmente com abertura marcada para abril.",
+      "A criação de espaços públicos como esse costuma ter impacto direto na convivência comunitária, no lazer e no uso social do território. Em localidades fora da sede, intervenções desse tipo podem representar melhoria significativa da estrutura urbana disponível à população.",
+      "Além do aspecto visual, uma praça pode ajudar a fortalecer encontros, circulação de moradores e atividades comunitárias. Quando bem planejada, a obra deixa de ser apenas intervenção física e passa a funcionar como equipamento de integração local.",
+      "A notícia entra como destaque de infraestrutura porque mostra movimento concreto da administração em obras voltadas ao cotidiano das comunidades. A expectativa agora recai sobre o andamento do processo licitatório e a futura execução da praça."
     ],
     destaque: false
   },
   {
     id: 6,
-    titulo: "Concursos e seleções públicas seguem no radar de quem busca estabilidade e renda no município",
-    data: "2026-04-09",
-    categoria: "Concursos",
-    imagem: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Acompanhar convocações, editais e movimentações oficiais continua sendo prioridade para muitos candidatos.",
+    titulo: "Sítio Portas entra no radar com licitação para construção de espaço esportivo",
+    data: "2026-04-01",
+    categoria: "Esporte",
+    imagem: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Processo licitatório trata da contratação de empresa para construir um espaço esportivo na comunidade do Sítio Portas.",
     conteudo: [
-      "A pauta de concursos e seleções públicas continua mobilizando moradores que buscam oportunidade de ingresso no serviço público. O interesse cresce especialmente em períodos de convocação, ajustes administrativos e expectativa de novos chamamentos.",
-      "Para os candidatos, acompanhar publicações oficiais e manter documentação organizada é parte essencial da preparação. Pequenos detalhes podem fazer diferença em fases de apresentação, análise de títulos e cumprimento de prazos.",
-      "Além do aspecto individual, concursos influenciam a dinâmica local ao movimentar cursinhos, serviços de apoio e produção de conteúdo voltado à preparação. O tema mantém forte apelo social e econômico no município.",
-      "Diante desse cenário, a informação precisa e atualizada se torna ainda mais relevante. Um portal local bem estruturado pode cumprir papel importante ao reunir notícias, orientações e acompanhamento contínuo sobre o tema."
+      "A Prefeitura de Beberibe lançou licitação para a construção de um espaço esportivo no Sítio Portas, reforçando a pauta de obras voltadas ao uso coletivo nas comunidades. A abertura do processo foi publicada oficialmente no portal municipal.",
+      "Equipamentos esportivos costumam ter efeito social relevante porque ampliam áreas de prática física, integração comunitária e ocupação saudável do tempo livre, principalmente entre crianças, adolescentes e jovens.",
+      "Além disso, a implantação desse tipo de estrutura pode apoiar eventos comunitários, ações escolares e atividades recreativas permanentes. Em muitas localidades, a demanda por espaços assim permanece por anos até a abertura de um processo oficial.",
+      "A notícia segue importante no portal porque une infraestrutura, esporte e impacto comunitário. O próximo passo é acompanhar o andamento da licitação e os desdobramentos para a execução da obra."
     ],
     destaque: false
   },
   {
     id: 7,
-    titulo: "Comércio e serviços em Beberibe observam impacto positivo da circulação de pessoas em períodos de alta",
-    data: "2026-04-08",
-    categoria: "Economia",
-    imagem: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Empreendedores locais apontam aumento no movimento e maior procura em datas de maior fluxo na cidade.",
+    titulo: "Boqueirão do Cesário pode receber novo campo de areia após publicação de licitação",
+    data: "2026-04-01",
+    categoria: "Esporte",
+    imagem: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Aviso oficial prevê a contratação de empresa especializada para construir campo de areia na localidade.",
     conteudo: [
-      "O aumento da circulação de pessoas em Beberibe, especialmente em fins de semana prolongados e períodos de maior visitação, tem reflexos diretos no comércio e nos serviços locais.",
-      "Empreendedores relatam melhora no movimento em segmentos como alimentação, hospedagem, transporte e pequenos negócios ligados ao turismo e à rotina urbana.",
-      "O efeito econômico é percebido tanto na arrecadação quanto na geração de oportunidades temporárias e no fortalecimento de atividades que dependem do fluxo de visitantes e consumidores.",
-      "A manutenção desse ritmo depende de fatores como infraestrutura, divulgação do município e continuidade de ações que estimulem permanência e retorno de visitantes."
+      "A Prefeitura de Beberibe também publicou aviso de licitação para a construção de um campo de areia na localidade de Boqueirão do Cesário. O projeto integra a linha de intervenções voltadas ao esporte e à convivência nas comunidades.",
+      "Campos de areia costumam atender práticas recreativas e esportivas com estrutura relativamente simples e grande potencial de uso cotidiano. Em áreas menores, esse tipo de equipamento pode concentrar torneios, encontros e atividades informais de lazer.",
+      "A presença de uma estrutura esportiva adequada contribui não apenas para o esporte, mas também para o fortalecimento dos vínculos comunitários. Muitas vezes, o espaço passa a servir de referência local para eventos e mobilizações coletivas.",
+      "Por isso, a notícia segue relevante no portal, principalmente para leitores das comunidades e para quem acompanha obras públicas no município. O andamento do processo licitatório será decisivo para saber quando a obra poderá sair do papel."
     ],
     destaque: false
   },
   {
     id: 8,
-    titulo: "Ações sociais em Beberibe reforçam atenção a famílias em situação de maior vulnerabilidade",
-    data: "2026-04-07",
-    categoria: "Social",
-    imagem: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Programas e atendimentos seguem como suporte importante para inclusão e garantia de direitos.",
+    titulo: "Trecho entre Praia das Fontes e Diogo avança com licitação de pavimentação em intertravado",
+    data: "2026-03-24",
+    categoria: "Infraestrutura",
+    imagem: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Processo trata da execução da etapa 2 da pavimentação em intertravado em trecho importante do município.",
     conteudo: [
-      "As ações voltadas à assistência social em Beberibe continuam sendo importantes para apoiar famílias em situação de maior vulnerabilidade e ampliar o acesso a direitos básicos.",
-      "O acompanhamento por equipes técnicas permite identificar necessidades mais urgentes, encaminhar atendimentos e orientar a população sobre programas e serviços disponíveis.",
-      "Esse tipo de atuação ajuda a reduzir impactos sociais negativos, fortalecer vínculos comunitários e melhorar a proteção a grupos que enfrentam maior risco socioeconômico.",
-      "Em municípios com realidades diversas entre sede e comunidades, a presença contínua da política social é vista como peça fundamental para o desenvolvimento humano e a inclusão."
+      "A Prefeitura de Beberibe publicou licitação para a execução da etapa 2 da pavimentação em intertravado no trecho entre Praia das Fontes e Diogo. A obra tem potencial de repercussão direta na mobilidade e no uso turístico da área.",
+      "A melhoria desse acesso interessa tanto a moradores quanto a trabalhadores, empreendedores e visitantes, já que a região possui importância econômica e circulação constante. Intervenções viárias nesse contexto tendem a gerar efeitos práticos rápidos.",
+      "A pavimentação em intertravado é frequentemente adotada em áreas urbanas e turísticas por oferecer acabamento mais organizado e melhores condições de manutenção em comparação com soluções precárias ou desgastadas.",
+      "A notícia continua relevante porque envolve infraestrutura estratégica e impacto territorial claro. A expectativa é que o avanço do processo administrativo permita a futura execução da obra em prazo viável."
     ],
     destaque: false
   },
   {
     id: 9,
-    titulo: "Morada Nova mantém oportunidades e segue sendo observada por candidatos de Beberibe e região",
-    data: "2026-04-06",
-    categoria: "Região",
-    imagem: "https://filesystem.assesi.com.br/capa/261/368/6c19464078ea704a220ed929d1275d13",
-    resumo: "A movimentação regional em concursos e seleções amplia o interesse de quem acompanha oportunidades próximas.",
+    titulo: "Merenda escolar entra em pauta com licitação para compra de gêneros alimentícios da rede municipal",
+    data: "2026-03-18",
+    categoria: "Educação",
+    imagem: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Pregão visa o registro de preços para aquisição de alimentos destinados ao cardápio da merenda escolar em Beberibe.",
     conteudo: [
-      "A movimentação administrativa e seletiva em Morada Nova continua atraindo a atenção de candidatos de Beberibe e de outras cidades vizinhas que acompanham oportunidades na região.",
-      "Quando um município próximo abre seleção ou concurso, o interesse se espalha rapidamente, já que muitos candidatos ampliam o foco para além da própria cidade em busca de melhores chances.",
-      "Esse comportamento fortalece uma dinâmica regional de preparação, em que estudantes acompanham editais, cronogramas e tendências de contratação em diferentes municípios.",
-      "A observação do cenário regional também ajuda os candidatos a manter ritmo de estudo, ganhar experiência com provas e aumentar o alcance das oportunidades possíveis."
+      "A Prefeitura de Beberibe publicou pregão para registro de preços visando à aquisição de gêneros alimentícios para compor o cardápio da merenda escolar da rede municipal. O processo chama atenção por envolver uma área sensível da política educacional.",
+      "A alimentação escolar tem papel relevante na permanência do estudante, no suporte nutricional e na regularidade da rotina das unidades de ensino. Por isso, licitações desse tipo costumam ter forte interesse público.",
+      "Quando o fornecimento é planejado com antecedência, a rede reduz risco de descontinuidade e melhora a organização logística ao longo do ano letivo. Isso afeta diretamente o funcionamento das escolas e a experiência dos alunos.",
+      "No portal, a notícia permanece importante porque liga gestão, educação e serviço essencial. É um tema de interesse amplo para famílias, profissionais da rede e comunidade escolar."
     ],
     destaque: false
   },
   {
     id: 10,
-    titulo: "Uso de ferramentas digitais cresce entre estudantes e concurseiros de Beberibe",
-    data: "2026-04-05",
-    categoria: "Tecnologia",
-    imagem: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Simulados, conteúdos online e revisão digital ganham espaço na rotina de preparação da população.",
+    titulo: "PCCE realiza ação em Beberibe e prende suspeito de integrar grupo criminoso e de homicídios",
+    data: "2026-04-03",
+    categoria: "Segurança",
+    imagem: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Governo do Ceará divulgou ação policial em Beberibe envolvendo suspeito apontado em investigação sobre grupo criminoso e homicídios.",
     conteudo: [
-      "O uso de ferramentas digitais de estudo vem crescendo em Beberibe, principalmente entre estudantes, candidatos a concursos e pessoas que buscam aprimoramento profissional.",
-      "Simulados online, materiais em formato digital e conteúdos organizados por tema facilitam a revisão e tornam a rotina de estudo mais prática e acessível.",
-      "Esse movimento acompanha uma tendência mais ampla de digitalização da aprendizagem, em que o estudante consegue treinar com mais frequência e acompanhar seu próprio desempenho.",
-      "Com a expansão do acesso a esse tipo de ferramenta, cresce também o potencial de preparação antecipada e mais organizada para provas, avaliações e processos seletivos."
+      "O Governo do Ceará divulgou que a Polícia Civil do Estado do Ceará realizou, em Beberibe, a prisão de um suspeito de integrar grupo criminoso e de envolvimento em homicídios. A informação teve repercussão por tratar de crime grave e atuação direta das forças de segurança.",
+      "Casos assim colocam a segurança pública no centro do debate local, principalmente quando a ação policial é oficializada e envolve investigação com repercussão regional. A população tende a acompanhar esse tipo de notícia com atenção redobrada.",
+      "A divulgação também reforça a importância de ações de inteligência e de cumprimento de mandados no enfrentamento a crimes violentos. Em municípios do interior e do litoral, operações desse porte afetam diretamente a percepção de segurança da população.",
+      "A permanência da notícia no portal se justifica pelo interesse público evidente e pelo impacto social do tema. Segurança segue sendo uma das áreas de maior atenção no noticiário local e regional."
     ],
     destaque: false
   },
   {
     id: 11,
-    titulo: "Plano Diretor de Beberibe realiza 2ª reunião da CGA nesta terça-feira com secretarias e representantes da comunidade",
-    data: "2026-04-14",
-    categoria: "Política",
-    imagem: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Encontro da Comissão de Gestão e Acompanhamento do PDM está marcado para 15 de abril, às 13h, com pauta voltada ao diagnóstico do município.",
+    titulo: "Plano Diretor de Beberibe avança com propostas em saneamento, turismo, meio ambiente e inclusão produtiva",
+    data: "2026-04-17",
+    categoria: "Infraestrutura",
+    imagem: "pdm1.png",
+    resumo: "2ª reunião do Plano Diretor debateu saneamento, turismo, fiscalização ambiental e propostas de inclusão produtiva no município.",
     conteudo: [
-      "A 2ª Reunião Ordinária da Comissão de Gestão e Acompanhamento, a CGA do Plano Diretor Municipal de Beberibe, está marcada para esta terça-feira, 15 de abril de 2026, às 13h, por videoconferência. O encontro dará continuidade ao processo de construção do PDM, considerado instrumento básico da política de desenvolvimento do município.",
-      "De acordo com o convite oficial, a pauta inclui verificação de quórum, aprovação da ata da 1ª reunião ordinária, apresentação de novos membros, aprovação de um novo calendário de reuniões e recebimento de contribuições de dados para o diagnóstico. Entre as pastas e órgãos convidados para apresentar informações estão Gabinete da Prefeita, Controladoria Geral, Secretaria de Governo, Secretaria de Obras e Desenvolvimento Urbano, Secretaria de Meio Ambiente, Secretaria de Desenvolvimento Agrário e Pesca, Secretaria de Turismo, Cultura e Desenvolvimento Econômico, Secretaria de Infraestrutura, Secretaria de Educação, Secretaria de Saúde, Secretaria de Desenvolvimento Social, Cidadania e Direitos Humanos, Secretaria de Planejamento e Finanças, Secretaria de Administração, Secretaria de Ciência e Tecnologia, Secretaria de Esportes e Juventude, Secretaria da Mulher, Coordenadoria de Comunicação Social, Ouvidoria Geral e representantes da comunidade.",
-      "A Comissão de Gestão e Acompanhamento tem função estratégica no processo de revisão do Plano Diretor, pois acompanha os estudos técnicos, contribui com dados especializados e leva para o debate as demandas e os anseios da comunidade. Isso é importante porque o Plano Diretor orienta a atuação do poder público e também influencia decisões ligadas a habitação, mobilidade, meio ambiente, infraestrutura urbana e desenvolvimento econômico.",
-      "Na 1ª reunião ordinária, realizada em março de 2026, foram aprovados o regimento interno da comissão, a organização administrativa dos cargos e o calendário inicial de reuniões. Também foi apresentado o plano de trabalho do PDM, com etapas como diagnóstico, audiências públicas, macrozoneamento preliminar, elaboração de proposições e futura minuta de lei complementar. Esse primeiro encontro teve papel importante por estruturar o funcionamento da CGA e abrir oficialmente a fase técnica e participativa do processo de revisão do Plano Diretor em Beberibe."
+      "A revisão do Plano Diretor Municipal de Beberibe avançou com a realização da 2ª Reunião Ordinária da Comissão de Gestão e Acompanhamento, realizada de forma remota em 15 de abril de 2026, reunindo representantes do poder público e da sociedade civil.",
+      "O encontro teve como principal objetivo consolidar contribuições técnicas ao diagnóstico preliminar do município, etapa essencial para a definição das diretrizes que irão orientar o desenvolvimento urbano, ambiental, social e econômico de Beberibe.",
+      "<img src='pdm1.png' style='width:100%;border-radius:12px;margin:15px 0;'>",
+      "Durante a reunião, foram debatidos temas estratégicos como uso e ocupação do solo, expansão urbana, turismo sustentável, saneamento básico, mobilidade e proteção ambiental, reforçando a complexidade do planejamento territorial do município.",
+      "No eixo do saneamento básico, foi comentado durante os debates que o município pode estar relacionado a um volume significativo de recursos destinados a investimentos na área. A informação deverá ser confirmada oficialmente na ata da reunião que será publicada em breve.",
+      "O turismo também foi destaque, com a necessidade de equilibrar desenvolvimento econômico e preservação ambiental, especialmente em áreas de falésias, lagoas e litoral.",
+      "Outro ponto relevante foi a demarcação e fiscalização de áreas protegidas, diante do avanço de ocupações irregulares em regiões ambientalmente sensíveis.",
+      "Entre as contribuições técnicas apresentadas, destacou-se o incentivo ao uso produtivo de pequenos espaços urbanos, como quintais e áreas comunitárias.",
+      "As propostas incluem hortas pedagógicas, hortas comunitárias, quintais produtivos, agricultura sintrópica, produção de fertilizantes orgânicos e canteiros adaptados para idosos e pessoas com deficiência.",
+      "<img src='pdm2.png' style='width:100%;border-radius:12px;margin:15px 0;'>",
+      "Também foram sugeridas medidas como incentivos fiscais para práticas sustentáveis, zoneamento mais flexível e a criação de um Parque Escola de Agroecologia.",
+      "Com a continuidade das reuniões, o Plano Diretor segue para novas etapas, incluindo o macrozoneamento e a definição das diretrizes finais. A ata oficial da reunião será publicada em breve."
     ],
     destaque: false
   }
