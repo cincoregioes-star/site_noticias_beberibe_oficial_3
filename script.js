@@ -1,138 +1,134 @@
 const homePage = document.getElementById("homePage");
-const paginaNoticia = document.getElementById("paginaNoticia");
 const areaDestaque = document.getElementById("areaDestaque");
 const listaNoticias = document.getElementById("listaNoticias");
+const paginaNoticia = document.getElementById("paginaNoticia");
 const tickerNoticias = document.getElementById("tickerNoticias");
+const menuCategorias = document.getElementById("menuCategorias");
 const maisLidas = document.getElementById("maisLidas");
 const listaCategorias = document.getElementById("listaCategorias");
-const menuCategorias = document.getElementById("menuCategorias");
 
-let noticiasVisiveis = [...bancoNoticias];
+const noticiasOrdenadas = [...bancoNoticias].sort((a, b) => {
+  const destaqueA = a.destaque ? 1 : 0;
+  const destaqueB = b.destaque ? 1 : 0;
 
-function formatarData(dataISO) {
-  const [ano, mes, dia] = dataISO.split("-");
-  return `${dia}/${mes}/${ano}`;
+  if (destaqueB !== destaqueA) return destaqueB - destaqueA;
+  return new Date(b.data) - new Date(a.data);
+});
+
+let categoriaAtual = "Todas";
+
+function formatarData(dataStr){
+  const data = new Date(dataStr + "T12:00:00");
+  return data.toLocaleDateString("pt-BR");
 }
 
-function ordenarNoticias(lista) {
-  return [...lista].sort((a, b) => new Date(b.data) - new Date(a.data));
-}
+function gerarCategorias(){
+  const categorias = ["Todas", ...new Set(bancoNoticias.map(n => n.categoria))];
 
-function obterCategorias() {
-  const categorias = [...new Set(bancoNoticias.map(noticia => noticia.categoria))];
-  return ["Todas", ...categorias];
-}
-
-function renderMenuCategorias() {
-  const categorias = obterCategorias();
-
-  menuCategorias.innerHTML = categorias.map((categoria, index) => `
-    <a href="#" class="nav-link ${index === 0 ? "active" : ""}" data-categoria="${categoria}">
-      ${categoria}
+  menuCategorias.innerHTML = categorias.map(cat => `
+    <a href="#" class="nav-link ${cat === categoriaAtual ? "active" : ""}" data-categoria="${cat}">
+      ${cat}
     </a>
   `).join("");
 
-  const links = menuCategorias.querySelectorAll(".nav-link");
+  listaCategorias.innerHTML = categorias
+    .filter(cat => cat !== "Todas")
+    .map(cat => `<li><a href="#" data-categoria="${cat}">${cat}</a></li>`)
+    .join("");
 
-  links.forEach(link => {
-    link.addEventListener("click", function(evento) {
-      evento.preventDefault();
-
-      links.forEach(item => item.classList.remove("active"));
-      this.classList.add("active");
-
-      const categoria = this.dataset.categoria;
-      filtrarNoticias(categoria);
+  document.querySelectorAll("[data-categoria]").forEach(item => {
+    item.addEventListener("click", function(e){
+      e.preventDefault();
+      categoriaAtual = this.dataset.categoria;
+      gerarCategorias();
+      renderizarHome();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 }
 
-function renderListaCategorias() {
-  const categorias = obterCategorias().filter(cat => cat !== "Todas");
+function gerarTicker(){
+  const titulos = noticiasOrdenadas.slice(0, 10).map(n => `<span>${n.titulo}</span>`);
+  tickerNoticias.innerHTML = [...titulos, ...titulos].join("");
+}
 
-  listaCategorias.innerHTML = categorias.map(categoria => `
-    <li><a href="#" onclick="filtrarNoticias('${categoria}'); return false;">${categoria}</a></li>
+function gerarMaisLidas(){
+  const topNoticias = noticiasOrdenadas.slice(0, 6);
+  maisLidas.innerHTML = topNoticias.map(n => `
+    <li><a href="#" data-id="${n.id}">${n.titulo}</a></li>
   `).join("");
+
+  maisLidas.querySelectorAll("[data-id]").forEach(link => {
+    link.addEventListener("click", function(e){
+      e.preventDefault();
+      abrirNoticia(Number(this.dataset.id));
+    });
+  });
 }
 
-function renderTicker() {
-  const titulos = ordenarNoticias(bancoNoticias)
-    .slice(0, 6)
-    .map(noticia => `<span>${noticia.titulo} →</span>`)
-    .join("");
-
-  tickerNoticias.innerHTML = `<div>${titulos}</div><div>${titulos}</div>`;
+function obterNoticiasFiltradas(){
+  if (categoriaAtual === "Todas") return noticiasOrdenadas;
+  return noticiasOrdenadas.filter(n => n.categoria === categoriaAtual);
 }
 
-function renderMaisLidas() {
-  const lista = ordenarNoticias(bancoNoticias).slice(0, 5);
+function renderizarHome(){
+  const noticiasFiltradas = obterNoticiasFiltradas();
 
-  maisLidas.innerHTML = lista.map(noticia => `
-    <li>
-      <a href="#" onclick="abrirNoticia(${noticia.id}); return false;">
-        ${noticia.titulo}
-      </a>
-    </li>
-  `).join("");
-}
-
-function renderDestaque(lista) {
-  const noticiaDestaque = lista.find(noticia => noticia.destaque === true);
-
-  if (!noticiaDestaque) {
-    areaDestaque.innerHTML = "";
-    return;
-  }
+  const noticiaDestaque = noticiasFiltradas.find(n => n.destaque) || noticiasFiltradas[0];
+  const restantes = noticiasFiltradas.filter(n => n.id !== noticiaDestaque.id);
 
   areaDestaque.innerHTML = `
-    <div class="hero-card" onclick="abrirNoticia(${noticiaDestaque.id})">
+    <article class="hero-card" data-id="${noticiaDestaque.id}">
       <img src="${noticiaDestaque.imagem}" alt="${noticiaDestaque.titulo}">
       <div class="hero-content">
         <span class="badge">${noticiaDestaque.categoria}</span>
         <h2>${noticiaDestaque.titulo}</h2>
         <div class="meta">
           <span>${formatarData(noticiaDestaque.data)}</span>
-          <span>•</span>
           <span>Notícia em destaque</span>
         </div>
         <p>${noticiaDestaque.resumo}</p>
       </div>
-    </div>
+    </article>
   `;
-}
 
-function renderNoticias(lista) {
-  const noticiasSemDestaque = lista.filter(noticia => !noticia.destaque);
-
-  listaNoticias.innerHTML = noticiasSemDestaque.map(noticia => `
-    <div class="card" onclick="abrirNoticia(${noticia.id})">
-      <img src="${noticia.imagem}" alt="${noticia.titulo}">
+  listaNoticias.innerHTML = restantes.map(n => `
+    <article class="card" data-id="${n.id}">
+      <img src="${n.imagem}" alt="${n.titulo}">
       <div class="card-content">
-        <span class="badge">${noticia.categoria}</span>
-        <h3>${noticia.titulo}</h3>
+        <span class="badge">${n.categoria}</span>
+        <h3>${n.titulo}</h3>
         <div class="meta">
-          <span>${formatarData(noticia.data)}</span>
+          <span>${formatarData(n.data)}</span>
         </div>
-        <p>${noticia.resumo}</p>
+        <p>${n.resumo}</p>
       </div>
-    </div>
+    </article>
   `).join("");
+
+  document.querySelectorAll("[data-id]").forEach(card => {
+    card.addEventListener("click", function(){
+      abrirNoticia(Number(this.dataset.id));
+    });
+  });
 }
 
-function abrirNoticia(id) {
-  const noticia = bancoNoticias.find(item => item.id === id);
+function abrirNoticia(id){
+  const noticia = bancoNoticias.find(n => n.id === id);
+  if(!noticia) return;
 
-  if (!noticia) return;
+  const conteudoHtml = noticia.conteudo.map(paragrafo => `<p>${paragrafo}</p>`).join("");
 
   paginaNoticia.innerHTML = `
-    <button class="back-btn" onclick="voltarHome()">← Voltar</button>
+    <button class="back-btn" onclick="fecharNoticia()">← Voltar</button>
     <span class="badge">${noticia.categoria}</span>
     <h1>${noticia.titulo}</h1>
     <div class="meta">
       <span>${formatarData(noticia.data)}</span>
+      <span>Portal Beberibe Notícias</span>
     </div>
     <img src="${noticia.imagem}" alt="${noticia.titulo}">
-    ${noticia.conteudo.map(paragrafo => `<p>${paragrafo}</p>`).join("")}
+    ${conteudoHtml}
   `;
 
   homePage.style.display = "none";
@@ -140,34 +136,27 @@ function abrirNoticia(id) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function voltarHome() {
+function fecharNoticia(){
   paginaNoticia.style.display = "none";
   homePage.style.display = "grid";
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function filtrarNoticias(categoria) {
-  if (categoria === "Todas") {
-    noticiasVisiveis = ordenarNoticias(bancoNoticias);
-  } else {
-    noticiasVisiveis = ordenarNoticias(
-      bancoNoticias.filter(noticia => noticia.categoria === categoria)
-    );
+window.fecharNoticia = fecharNoticia;
+
+(function(){
+  const chave = "portal_beberibe_acessos";
+  let acessos = parseInt(localStorage.getItem(chave) || "0", 10);
+  acessos += 1;
+  localStorage.setItem(chave, acessos);
+
+  const contador = document.getElementById("contadorAcessos");
+  if(contador){
+    contador.textContent = `Acessos neste dispositivo: ${acessos}`;
   }
+})();
 
-  renderDestaque(noticiasVisiveis);
-  renderNoticias(noticiasVisiveis);
-  voltarHome();
-}
-
-function iniciarPortal() {
-  noticiasVisiveis = ordenarNoticias(bancoNoticias);
-  renderMenuCategorias();
-  renderListaCategorias();
-  renderTicker();
-  renderMaisLidas();
-  renderDestaque(noticiasVisiveis);
-  renderNoticias(noticiasVisiveis);
-}
-
-iniciarPortal();
+gerarCategorias();
+gerarTicker();
+gerarMaisLidas();
+renderizarHome();

@@ -12,7 +12,7 @@ const bancoNoticias = [
       "Além do aspecto artístico, o ciclo junino costuma gerar efeitos econômicos no comércio, em serviços e na circulação de público. Quando o resultado sai com antecedência, os grupos conseguem organizar melhor seus cronogramas e ampliar sua capacidade de preparação.",
       "Para o portal local, a notícia é importante porque conecta cultura, identidade popular e calendário oficial. A tendência é que as próximas semanas tragam mais movimentação em torno de ensaios, apresentações e definições do Festival Junino 2026."
     ],
-    destaque: true
+    destaque: false
   },
   {
     id: 2,
@@ -153,7 +153,7 @@ const bancoNoticias = [
     id: 11,
     titulo: "Plano Diretor de Beberibe avança com propostas em saneamento, turismo, meio ambiente e inclusão produtiva",
     data: "2026-04-17",
-    categoria: "Infraestrutura",
+    categoria: "Beberibe",
     imagem: "pdm1.png",
     resumo: "2ª reunião do Plano Diretor debateu saneamento, turismo, fiscalização ambiental e propostas de inclusão produtiva no município.",
     conteudo: [
@@ -171,5 +171,91 @@ const bancoNoticias = [
       "Com a continuidade das reuniões, o Plano Diretor segue para novas etapas, incluindo o macrozoneamento e a definição das diretrizes finais. A ata oficial da reunião será publicada em breve."
     ],
     destaque: false
+  },
+  {
+    id: 12,
+    titulo: "Concurso da Câmara de Beberibe segue com inscrições reabertas e destaca vaga para Analista Administrativo",
+    data: "2026-04-18",
+    categoria: "Concursos",
+    imagem: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Edital da Câmara de Beberibe segue aberto e mantém vaga para Analista Administrativo entre os cargos ofertados.",
+    conteudo: [
+      "O concurso público da Câmara Municipal de Beberibe continua em evidência entre os candidatos da região, especialmente após a reabertura das inscrições até o dia 27 de abril de 2026.",
+      "Entre os cargos ofertados, um dos que mais chama atenção é o de Analista Administrativo, voltado para candidatos de nível superior e com remuneração inicial acima da faixa dos cargos básicos do edital.",
+      "O certame reforça o interesse local por oportunidades ligadas ao legislativo municipal, setor que costuma atrair concurseiros em busca de estabilidade, remuneração fixa e jornada mais previsível.",
+      "Para muitos candidatos de Beberibe e municípios próximos, o cargo de Analista Administrativo aparece como uma das principais metas desta edição do concurso.",
+      "A preparação antecipada tem sido vista como decisiva, sobretudo porque provas desse tipo costumam cobrar disciplinas como português, raciocínio lógico, administração pública, direito administrativo e conhecimentos específicos.",
+      "Outro ponto importante é o treino por simulados, já que isso ajuda o candidato a ganhar velocidade, resistência e leitura de banca.",
+      "No caso de Beberibe, a reta final até a prova deve aumentar a busca por materiais focados em revisão e prática.",
+      "Quem quiser reforçar os estudos pode usar o Gabarito Max, plataforma com simulados digitais para concursos e outras áreas.",
+      "Acesse: <a href='https://cincoregioes-star.github.io/oficial-portal-gabaritomax/' target='_blank'>Gabarito Max</a>.",
+      "Com as inscrições em andamento, a tendência é de aumento na concorrência e maior atenção dos candidatos ao cronograma, conteúdo programático e etapas finais do concurso."
+    ],
+    destaque: false
+  },
+  {
+    id: 13,
+    titulo: "Concurso do INSS segue no radar de candidatos e amplia busca por preparação antecipada",
+    data: "2026-04-18",
+    categoria: "Concursos",
+    imagem: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Tema volta a movimentar concurseiros, com foco em preparação antecipada para futuras oportunidades no INSS.",
+    conteudo: [
+      "O concurso do INSS continua entre os assuntos mais acompanhados por quem sonha com vaga no serviço público federal.",
+      "Mesmo sem um novo edital próprio publicado até o momento, o tema segue mobilizando candidatos em todo o país, especialmente por causa da demanda histórica por reposição de pessoal no órgão.",
+      "O cenário federal também mantém atenção voltada para o Concurso Público Nacional Unificado, que reúne vagas de vários órgãos e reforça o ambiente de retomada de seleções públicas.",
+      "Para muitos candidatos, o mais importante neste momento é não esperar a publicação do edital para começar.",
+      "A preparação antecipada costuma ser o diferencial em concursos grandes, ainda mais em órgãos disputados como o INSS.",
+      "Entre os conteúdos mais associados a esse perfil de prova estão português, raciocínio lógico, informática, direito previdenciário e legislação administrativa.",
+      "Além da teoria, o treino com simulados ajuda a melhorar desempenho, controle de tempo e familiaridade com enunciados de prova.",
+      "Plataformas digitais vêm ganhando espaço justamente por oferecer prática mais rápida e organizada.",
+      "Quem quiser intensificar a preparação pode acessar o Gabarito Max em: <a href='https://cincoregioes-star.github.io/oficial-portal-gabaritomax/' target='_blank'>Gabarito Max</a>.",
+      "Enquanto o cenário oficial evolui, a recomendação entre os candidatos mais competitivos continua sendo a mesma: estudar antes para chegar na frente."
+    ],
+    destaque: false
+  },
+  {
+    id: 14,
+    titulo: "Morada Nova avança no debate para futuros concursos de Guarda Municipal e Agente de Trânsito",
+    data: "2026-04-18",
+    categoria: "Concursos",
+    imagem: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Movimentação institucional em Morada Nova reforça atenção para cargos de Guarda Civil Municipal e Agente Municipal de Trânsito.",
+    conteudo: [
+      "Morada Nova entrou no radar dos concurseiros com movimentações institucionais que reforçam a expectativa em torno de cargos ligados à segurança pública e mobilidade urbana.",
+      "Entre os destaques estão os cargos de Guarda Civil Municipal e Agente Municipal de Trânsito, que ganharam novo peso com o avanço de normas específicas no município.",
+      "O tema chama atenção porque esses cargos costumam atrair grande número de candidatos em cidades de médio porte, especialmente pela estabilidade e pelo vínculo direto com fiscalização, segurança e ordenamento urbano.",
+      "A legislação recente no município fortaleceu esse campo ao tratar da reserva de vagas femininas em concursos para essas funções.",
+      "Esse tipo de medida não substitui edital, mas mostra que a estrutura legal dos cargos está sendo observada com mais clareza.",
+      "Para quem pretende disputar futuras vagas, o momento pode ser ideal para iniciar a preparação com antecedência.",
+      "Normalmente, provas desse perfil cobram português, legislação de trânsito, noções de direito administrativo, direito constitucional e conhecimentos sobre atuação do cargo.",
+      "Também é importante treinar com simulados para desenvolver raciocínio rápido e resistência para provas objetivas.",
+      "Uma opção prática é o Gabarito Max, que reúne simulados digitais em várias áreas. Acesse: <a href='https://cincoregioes-star.github.io/oficial-portal-gabaritomax/' target='_blank'>Gabarito Max</a>.",
+      "Com a pauta ganhando visibilidade, a tendência é que mais candidatos da região passem a acompanhar de perto os próximos passos do município."
+    ],
+    destaque: false
+  },
+  {
+    id: 15,
+    titulo: "Novas contribuições ao PDM ampliam debate sobre patrimônio, mobilidade, acessibilidade e gestão urbana em Beberibe",
+    data: "2026-04-18",
+    categoria: "Beberibe",
+    imagem: "pdm1.png",
+    resumo: "Sugestões apresentadas após a reunião reforçam desafios da cidade em planejamento, patrimônio, mobilidade, meio ambiente e acessibilidade.",
+    conteudo: [
+      "O debate sobre o novo Plano Diretor de Beberibe ganhou novos desdobramentos com o compartilhamento de contribuições técnicas enviadas após a última reunião da Comissão de Gestão e Acompanhamento.",
+      "As observações apresentadas ampliam o diagnóstico do município e reforçam que o planejamento urbano local precisa enfrentar problemas estruturais antigos e temas que se tornaram mais urgentes nos últimos anos.",
+      "<img src='pdm1.png' style='width:100%;border-radius:12px;margin:15px 0;'>",
+      "Entre os pontos destacados está a falta de integração entre instrumentos fundamentais da gestão pública, como Plano Diretor, PPA e LOA, além da necessidade de atualizar o planejamento municipal diante de estruturas mais recentes, como o COMARES na gestão de resíduos sólidos.",
+      "Na área do patrimônio histórico e da identidade urbana, as contribuições chamam atenção para o potencial econômico e turístico ainda pouco explorado de áreas históricas do município, com destaque para a antiga Vila Rica e para o entorno da Igreja Matriz.",
+      "Também foi apontada a descaracterização progressiva de edificações históricas e a ausência de instrumentos legais mais consolidados para a salvaguarda do patrimônio, além da fragilidade da educação patrimonial no município.",
+      "Na mobilidade, o diagnóstico foi ampliado com críticas à ausência de projetos de transporte público entre os distritos e à carência de infraestrutura para outros modais além do automóvel, especialmente em áreas periféricas e novos projetos urbanos.",
+      "Outro eixo forte foi a acessibilidade, com observações sobre desníveis, rampas inadequadas, falta de manutenção e barreiras urbanas até mesmo em trechos centrais da cidade.",
+      "<img src='pdm2.png' style='width:100%;border-radius:12px;margin:15px 0;'>",
+      "Na pauta ambiental, surgiram preocupações com deficiência de arborização, poluição visual e sonora e ausência de educação ambiental e urbanística mais permanente.",
+      "As novas contribuições reforçam que o Plano Diretor não deve se limitar ao crescimento físico da cidade, mas precisa dialogar com memória, identidade, mobilidade, inclusão, paisagem urbana e qualidade de vida.",
+      "Com a futura publicação da ata da 2ª reunião, a expectativa é de que essas observações ajudem a qualificar ainda mais a etapa diagnóstica e fortaleçam o debate público sobre o futuro de Beberibe."
+    ],
+    destaque: true
   }
 ];

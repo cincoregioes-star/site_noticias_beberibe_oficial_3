@@ -120,6 +120,14 @@
       opacity:.95;
     }
 
+    #contadorAcessos{
+      max-width:1400px;
+      margin:12px auto 0;
+      padding:0 16px;
+      color:#5f6b7a;
+      font-size:14px;
+    }
+
     .layout{
       max-width:1400px;
       margin:24px auto;
@@ -299,7 +307,6 @@
       display:block;
       object-fit:cover;
       background:#071226;
-      aspect-ratio:9 / 16;
     }
 
     .ad-caption{
@@ -317,6 +324,17 @@
       color:var(--muted);
       font-size:14px;
       line-height:1.55;
+    }
+
+    .bloco-anuncio{
+      background:#fff;
+      border-radius:16px;
+      box-shadow:0 10px 26px rgba(0,0,0,.12);
+      padding:22px;
+      text-align:center;
+      color:#5f6b7a;
+      font-weight:600;
+      margin-bottom:18px;
     }
 
     .detail{
@@ -389,6 +407,25 @@
     .btn-portal{background:#0a45ff;}
     .btn-youtube{background:#ff0000;}
     .btn-instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);}
+
+    .botao-simulados-fixo{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:9999;
+      background:linear-gradient(135deg,#0a45ff,#121c4e);
+      color:#fff;
+      text-decoration:none;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:700;
+      box-shadow:0 10px 24px rgba(0,0,0,.22);
+      transition:.2s;
+    }
+
+    .botao-simulados-fixo:hover{
+      transform:translateY(-2px);
+    }
 
     footer{
       background:#111;
@@ -482,6 +519,13 @@
         max-width:360px;
         min-width:unset;
       }
+
+      .botao-simulados-fixo{
+        right:12px;
+        bottom:12px;
+        padding:12px 16px;
+        font-size:14px;
+      }
     }
   </style>
 </head>
@@ -505,6 +549,8 @@
     <p>Notícias da cidade, região e informações em destaque todos os dias</p>
   </header>
 
+  <div id="contadorAcessos">Carregando acessos...</div>
+
   <div class="layout" id="homePage">
     <main>
       <section id="areaDestaque"></section>
@@ -521,6 +567,8 @@
           <p>Preparação com simulados digitais para concurso da Câmara Municipal de Beberibe e também para várias áreas, concursos, profissões, educação e outros temas. O site Gabarito Max já reúne mais de 30 simulados com foco prático, estudo direcionado e melhor preparação.</p>
         </div>
       </a>
+
+      <div class="bloco-anuncio">Espaço publicitário disponível para parceiros locais</div>
 
       <a class="ad-card" href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer">
         <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Parceiros locais">
@@ -554,6 +602,8 @@
     <p><strong>Portal Beberibe Notícias</strong></p>
     <p>Informação local com visual profissional e atualização constante.</p>
   </footer>
+
+  <a href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" class="botao-simulados-fixo" target="_blank" rel="noopener noreferrer">Simulados</a>
 
   <script src="noticias.js"></script>
   <script src="script.js"></script>
