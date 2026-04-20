@@ -4,7 +4,7 @@ const bancoNoticias = [
     titulo: "Copa do Mundo 2026 vira manchete do dia e simulador ganha destaque no portal",
     data: "2026-04-20",
     categoria: "Esporte",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/2026_FIFA_World_Cup_emblem_%28with_wordmark%29.svg",
+    imagem: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=1200&q=80",
     resumo: "Copa 2026 ganha espaço principal no portal com acesso direto ao simulador de palpites.",
     conteudo: [
       "A Copa do Mundo 2026 ganhou a manchete principal do Portal Beberibe Notícias e passou a ocupar posição de destaque entre os conteúdos do dia, reforçando o interesse do público por futebol, competição e entretenimento digital.",
@@ -34,7 +34,7 @@ const bancoNoticias = [
     titulo: "INSS segue no radar dos concurseiros e aumenta busca por preparação antecipada",
     data: "2026-04-20",
     categoria: "Concursos",
-    imagem: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+    imagem: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
     resumo: "Tema volta a mobilizar candidatos em todo o país em busca de preparação antecipada.",
     conteudo: [
       "O concurso do INSS continua entre os temas mais pesquisados por quem sonha com vaga no serviço público federal.",
@@ -49,7 +49,7 @@ const bancoNoticias = [
     titulo: "Morada Nova amplia expectativa para futuros concursos de Guarda Municipal e Agente de Trânsito",
     data: "2026-04-20",
     categoria: "Concursos",
-    imagem: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+    imagem: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
     resumo: "Movimentação institucional aumenta atenção de candidatos para cargos de segurança e mobilidade urbana.",
     conteudo: [
       "Morada Nova entrou no radar dos concurseiros com movimentações que reforçam a expectativa para cargos ligados à segurança pública e fiscalização urbana.",
@@ -79,7 +79,7 @@ const bancoNoticias = [
     titulo: "Comércio de Beberibe registra melhora no movimento com maior circulação no fim de semana",
     data: "2026-04-20",
     categoria: "Economia",
-    imagem: "https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1200&q=80",
+    imagem: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
     resumo: "Setores locais observam crescimento no fluxo de clientes e reação positiva nas vendas.",
     conteudo: [
       "O comércio local de Beberibe apresentou melhora no movimento durante o fim de semana, com destaque para alimentação, serviços e pequenas vendas.",
@@ -109,7 +109,7 @@ const bancoNoticias = [
     titulo: "Educação municipal aposta em novas práticas pedagógicas e recursos de apoio",
     data: "2026-04-20",
     categoria: "Educação",
-    imagem: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80",
+    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
     resumo: "Projetos e novas metodologias buscam melhorar o ambiente de aprendizagem.",
     conteudo: [
       "A educação municipal segue adotando práticas pedagógicas voltadas à melhoria do ensino e ao fortalecimento do ambiente escolar.",
@@ -124,7 +124,7 @@ const bancoNoticias = [
     titulo: "Campeonato Brasileiro chega com rodada importante e movimenta torcedores em todo o país",
     data: "2026-04-20",
     categoria: "Esporte",
-    imagem: "https://images.unsplash.com/photo-1508098682722-e99c643e7485?auto=format&fit=crop&w=1200&q=80",
+    imagem: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
     resumo: "Rodada promete jogos decisivos e maior atenção dos torcedores.",
     conteudo: [
       "O Campeonato Brasileiro segue movimentando torcedores com mais uma rodada importante e confrontos de peso.",
