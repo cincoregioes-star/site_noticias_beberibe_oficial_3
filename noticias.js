@@ -1,198 +1,167 @@
-const noticias = [
-
-{
-  id: 1,
-  titulo: "Copa do Mundo 2026 movimenta simulador e engaja usuários em Beberibe",
-  categoria: "Esporte",
-  data: "2026-04-18",
-  destaque: true,
-  imagem: "imagem-gabarito-max.png",
-  conteudo: `
-  A Copa do Mundo 2026 já começa a movimentar torcedores e usuários do Portal Beberibe Notícias com o lançamento do simulador interativo de palpites.
-
-  A ferramenta permite que os usuários acompanhem os jogos, façam previsões e disputem com amigos para ver quem acerta mais resultados.
-
-  O simulador tem ganhado destaque principalmente entre jovens e concurseiros, que utilizam a plataforma como forma de entretenimento e competição saudável.
-
-  A proposta une informação, tecnologia e diversão, ampliando o alcance do portal e fortalecendo o engajamento digital.
-
-  A cada rodada, os usuários somam pontos conforme seus acertos, criando um ranking dinâmico entre participantes.
-
-  O sistema foi desenvolvido para ser simples, rápido e acessível em qualquer celular, facilitando o uso em tempo real.
-
-  A expectativa é que o número de acessos aumente significativamente com a proximidade do mundial.
-
-  O simulador também ajuda a atrair novos usuários para o portal de notícias, ampliando o alcance regional.
-
-  Além do entretenimento, a ferramenta reforça o posicionamento digital do portal como inovador.
-
-  O acesso pode ser feito diretamente pelo link disponível no site oficial.
-  `
-},
-
-// ================= BEBERIBE =================
-
-{
-  id: 2,
-  titulo: "Movimentação política local cresce com articulações para 2026",
-  categoria: "Política",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620",
-  conteudo: `
-  A movimentação política em Beberibe começa a ganhar intensidade com articulações voltadas para as eleições futuras.
-
-  Lideranças locais têm buscado fortalecimento de base e alianças estratégicas.
-
-  O cenário aponta para uma disputa mais organizada em comparação aos anos anteriores.
-
-  A participação popular tende a crescer com o avanço do debate político na cidade.
-  `
-},
-
-{
-  id: 3,
-  titulo: "Comércio local registra aumento de movimento no fim de semana",
-  categoria: "Economia",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1515169067865-5387ec356754",
-  conteudo: `
-  O comércio de Beberibe apresentou crescimento no fluxo de clientes neste fim de semana.
-
-  O aumento foi impulsionado pelo turismo e eventos locais.
-
-  Pequenos empreendedores destacam melhora nas vendas.
-
-  A expectativa é de continuidade nos próximos meses.
-  `
-},
-
-// ================= ESPORTE =================
-
-{
-  id: 4,
-  titulo: "Campeonato Brasileiro inicia rodada com jogos decisivos",
-  categoria: "Esporte",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1508098682722-e99c643e7485",
-  conteudo: `
-  O Campeonato Brasileiro segue com jogos importantes neste fim de semana.
-
-  Equipes disputam posições estratégicas na tabela.
-
-  A rodada promete movimentar torcedores em todo o país.
-
-  Destaque para confrontos diretos na parte de cima da tabela.
-  `
-},
-
-// ================= SAÚDE =================
-
-{
-  id: 5,
-  titulo: "Ações de saúde preventiva são ampliadas na região",
-  categoria: "Saúde",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1584515933487-779824d29309",
-  conteudo: `
-  A rede de saúde da região intensificou ações preventivas.
-
-  Campanhas educativas estão sendo realizadas em comunidades.
-
-  O objetivo é reduzir a demanda hospitalar.
-
-  A população é orientada a buscar atendimento precoce.
-  `
-},
-
-// ================= EDUCAÇÃO =================
-
-{
-  id: 6,
-  titulo: "Educação municipal recebe novas iniciativas pedagógicas",
-  categoria: "Educação",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1588072432836-e10032774350",
-  conteudo: `
-  Escolas municipais estão adotando novas práticas pedagógicas.
-
-  Projetos voltados à tecnologia e inclusão ganham espaço.
-
-  Professores participam de capacitações contínuas.
-
-  O foco é melhorar o desempenho dos alunos.
-  `
-},
-
-// ================= NACIONAL =================
-
-{
-  id: 7,
-  titulo: "Pesquisa presidencial aponta cenário competitivo para 2026",
-  categoria: "Nacional",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620",
-  conteudo: `
-  Nova pesquisa eleitoral aponta cenário competitivo para as eleições presidenciais.
-
-  Os dados indicam disputa acirrada entre os principais nomes.
-
-  Especialistas avaliam impacto econômico e social nas campanhas.
-
-  O cenário ainda é considerado indefinido.
-  `
-},
-
-{
-  id: 8,
-  titulo: "Concurso do INSS segue como um dos mais aguardados do país",
-  categoria: "Nacional",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1581091215367-59ab6b4b4c93",
-  conteudo: `
-  O concurso do INSS segue como um dos mais aguardados pelos candidatos.
-
-  A expectativa é de milhares de vagas.
-
-  O edital deve ser divulgado nos próximos meses.
-
-  A preparação antecipada é considerada essencial.
-  `
-},
-
-// ================= INTERNACIONAL =================
-
-{
-  id: 9,
-  titulo: "Economia global apresenta sinais de recuperação gradual",
-  categoria: "Internacional",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-  conteudo: `
-  Indicadores internacionais mostram recuperação econômica.
-
-  Países registram crescimento moderado.
-
-  O cenário ainda exige cautela.
-
-  Analistas acompanham os próximos movimentos.
-  `
-},
-
-{
-  id: 10,
-  titulo: "Tecnologia e inteligência artificial avançam em escala global",
-  categoria: "Tecnologia",
-  data: "2026-04-18",
-  imagem: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-  conteudo: `
-  A inteligência artificial continua avançando rapidamente.
-
-  Empresas investem em inovação tecnológica.
-
-  O impacto no mercado de trabalho é crescente.
-
-  Especialistas destacam necessidade de adaptação profissional.
-  `
-}
-
+const bancoNoticias = [
+  {
+    id: 1,
+    titulo: "Copa do Mundo 2026 vira manchete do dia e simulador movimenta acessos no portal",
+    data: "2026-04-20",
+    categoria: "Esporte",
+    imagem: "imagem-gabarito-max.png",
+    resumo: "Simulador da Copa do Mundo 2026 ganha destaque no portal e amplia o engajamento dos usuários.",
+    conteudo: [
+      "A Copa do Mundo 2026 ganhou espaço de destaque no Portal Beberibe Notícias com o simulador interativo de palpites, que vem atraindo usuários interessados em acompanhar os jogos de forma mais dinâmica.",
+      "A proposta permite que o público faça previsões, some pontos e dispute com amigos para descobrir quem entende mais de futebol e acerta mais resultados ao longo da competição.",
+      "O simulador foi pensado para funcionar de forma simples no celular, facilitando o acesso rápido e ampliando o engajamento dos usuários em tempo real.",
+      "Além do entretenimento, a ferramenta ajuda a fortalecer o portal como espaço de informação, interação e participação digital para o público de Beberibe e região."
+    ],
+    destaque: true
+  },
+  {
+    id: 2,
+    titulo: "Concurso da Câmara de Beberibe segue em evidência com foco no cargo de Analista Administrativo",
+    data: "2026-04-20",
+    categoria: "Concursos",
+    imagem: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Cargo de Analista Administrativo aparece entre os mais observados pelos candidatos da região.",
+    conteudo: [
+      "O concurso da Câmara Municipal de Beberibe continua entre os assuntos mais acompanhados por candidatos da cidade e de municípios vizinhos.",
+      "Entre os cargos mais comentados está o de Analista Administrativo, que costuma chamar atenção por exigir formação superior e por atrair candidatos que buscam estabilidade e melhor remuneração.",
+      "A disputa tem aumentado o interesse por revisão, simulados e materiais voltados ao perfil do concurso legislativo municipal.",
+      "Na reta final de preparação, a tendência é que os candidatos intensifiquem os estudos e acompanhem com mais atenção o cronograma do certame."
+    ],
+    destaque: false
+  },
+  {
+    id: 3,
+    titulo: "INSS segue no radar dos concurseiros e aumenta busca por preparação antecipada",
+    data: "2026-04-20",
+    categoria: "Concursos",
+    imagem: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Tema volta a mobilizar candidatos em todo o país em busca de preparação antecipada.",
+    conteudo: [
+      "O concurso do INSS continua entre os temas mais pesquisados por quem sonha com vaga no serviço público federal.",
+      "Mesmo sem definição completa de um novo edital próprio, a expectativa em torno do órgão mantém milhares de candidatos em preparação constante.",
+      "A recomendação entre os concurseiros mais experientes é começar antes da publicação oficial, sobretudo em concursos com alta concorrência.",
+      "O interesse crescente também fortalece a busca por simulados e plataformas digitais focadas em prática e revisão."
+    ],
+    destaque: false
+  },
+  {
+    id: 4,
+    titulo: "Morada Nova amplia expectativa para futuros concursos de Guarda Municipal e Agente de Trânsito",
+    data: "2026-04-20",
+    categoria: "Concursos",
+    imagem: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Movimentação institucional aumenta atenção de candidatos para cargos de segurança e mobilidade urbana.",
+    conteudo: [
+      "Morada Nova entrou no radar dos concurseiros com movimentações que reforçam a expectativa para cargos ligados à segurança pública e fiscalização urbana.",
+      "Entre os cargos mais comentados estão Guarda Municipal e Agente de Trânsito, funções que costumam atrair grande número de candidatos na região.",
+      "O tema ganhou mais força com o avanço de medidas institucionais e legais relacionadas a essas carreiras.",
+      "Para quem pretende disputar futuras vagas, o momento é visto como adequado para iniciar a preparação com antecedência."
+    ],
+    destaque: false
+  },
+  {
+    id: 5,
+    titulo: "Movimentação política local ganha força com novas articulações em Beberibe",
+    data: "2026-04-20",
+    categoria: "Política",
+    imagem: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Cenário político local passa a mostrar maior organização e novas articulações.",
+    conteudo: [
+      "A movimentação política em Beberibe começa a ganhar mais intensidade com o avanço de articulações locais e reposicionamentos de grupos.",
+      "Lideranças da cidade têm buscado ampliar base e fortalecer presença pública em diferentes áreas do município.",
+      "O cenário indica um ambiente mais competitivo e atento às disputas futuras.",
+      "Para a população, o momento também reforça a importância de acompanhar de perto os debates e decisões locais."
+    ],
+    destaque: false
+  },
+  {
+    id: 6,
+    titulo: "Comércio de Beberibe registra melhora no movimento com maior circulação no fim de semana",
+    data: "2026-04-20",
+    categoria: "Economia",
+    imagem: "https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Setores locais observam crescimento no fluxo de clientes e reação positiva nas vendas.",
+    conteudo: [
+      "O comércio local de Beberibe apresentou melhora no movimento durante o fim de semana, com destaque para alimentação, serviços e pequenas vendas.",
+      "A maior circulação de pessoas ajudou a estimular a economia em pontos estratégicos da cidade.",
+      "Empreendedores avaliam o cenário com cautela, mas já percebem sinais positivos em comparação com períodos mais fracos.",
+      "A expectativa é que datas comemorativas, turismo e eventos continuem ajudando a movimentar a economia local."
+    ],
+    destaque: false
+  },
+  {
+    id: 7,
+    titulo: "Saúde reforça importância da prevenção e amplia ações de orientação à população",
+    data: "2026-04-20",
+    categoria: "Saúde",
+    imagem: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Medidas de prevenção e orientação ganham espaço como parte do atendimento básico.",
+    conteudo: [
+      "A área da saúde segue reforçando a importância das ações preventivas e de orientação à população.",
+      "Campanhas educativas e acompanhamento mais próximo ajudam a reduzir agravamentos e facilitam o atendimento nas unidades básicas.",
+      "A prevenção continua sendo apontada como uma das estratégias mais eficazes para melhorar a resposta do sistema de saúde.",
+      "A população também é orientada a procurar atendimento logo nos primeiros sinais de necessidade, evitando complicações futuras."
+    ],
+    destaque: false
+  },
+  {
+    id: 8,
+    titulo: "Educação municipal aposta em novas práticas pedagógicas e recursos de apoio",
+    data: "2026-04-20",
+    categoria: "Educação",
+    imagem: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Projetos e novas metodologias buscam melhorar o ambiente de aprendizagem.",
+    conteudo: [
+      "A educação municipal segue adotando práticas pedagógicas voltadas à melhoria do ensino e ao fortalecimento do ambiente escolar.",
+      "Projetos com apoio tecnológico, reforço de planejamento e metodologias mais participativas têm ganhado espaço.",
+      "A proposta é ampliar o envolvimento dos alunos e melhorar os resultados ao longo do ano letivo.",
+      "A valorização do trabalho pedagógico também aparece como eixo importante para fortalecer a rede municipal."
+    ],
+    destaque: false
+  },
+  {
+    id: 9,
+    titulo: "Campeonato Brasileiro chega com rodada importante e movimenta torcedores em todo o país",
+    data: "2026-04-20",
+    categoria: "Esporte",
+    imagem: "https://images.unsplash.com/photo-1508098682722-e99c643e7485?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Rodada promete jogos decisivos e maior atenção dos torcedores.",
+    conteudo: [
+      "O Campeonato Brasileiro segue movimentando torcedores com mais uma rodada importante e confrontos de peso.",
+      "A disputa por posições na tabela aumenta a pressão sobre clubes que brigam tanto na parte de cima quanto na luta para escapar das últimas colocações.",
+      "A rodada promete grande repercussão entre os apaixonados por futebol.",
+      "O interesse pelo campeonato também cresce no ambiente digital, com mais comentários, análises e palpites."
+    ],
+    destaque: false
+  },
+  {
+    id: 10,
+    titulo: "Pesquisa presidencial volta a agitar cenário político nacional",
+    data: "2026-04-20",
+    categoria: "Nacional",
+    imagem: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Novo levantamento reacende debate político e movimenta discussão em todo o país.",
+    conteudo: [
+      "Uma nova pesquisa presidencial voltou a agitar o cenário político nacional e reacendeu debates sobre a disputa eleitoral.",
+      "Os números reforçam que o ambiente segue competitivo e sujeito a mudanças ao longo dos próximos meses.",
+      "Analistas observam que o peso da economia, da comunicação política e da mobilização das bases seguirá decisivo.",
+      "O tema continua entre os mais acompanhados do país e tende a permanecer em evidência no noticiário."
+    ],
+    destaque: false
+  },
+  {
+    id: 11,
+    titulo: "Economia internacional apresenta sinais de recuperação gradual em diferentes mercados",
+    data: "2026-04-20",
+    categoria: "Internacional",
+    imagem: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Indicadores globais apontam recuperação moderada e cenário ainda de cautela.",
+    conteudo: [
+      "Indicadores internacionais apontam sinais de recuperação gradual em diferentes mercados ao redor do mundo.",
+      "Apesar do cenário mais positivo em algumas áreas, economistas ainda defendem cautela diante de incertezas globais.",
+      "O comportamento da inflação, dos juros e do comércio internacional segue no centro da análise.",
+      "A tendência é de acompanhamento constante dos próximos movimentos para medir a consistência da recuperação."
+    ],
+    destaque: false
+  }
 ];
