@@ -23,7 +23,10 @@ function formatarData(dataStr){
 }
 
 function gerarCategorias(){
-  const categorias = ["Todas", ...new Set(bancoNoticias.map(n => n.categoria))];
+  const categorias = [
+    "Todas",
+    ...new Set(bancoNoticias.map(n => n.categoria))
+  ];
 
   menuCategorias.innerHTML = categorias.map(cat => `
     <a href="#" class="nav-link ${cat === categoriaAtual ? "active" : ""}" data-categoria="${cat}">
@@ -74,6 +77,12 @@ function obterNoticiasFiltradas(){
 function renderizarHome(){
   const noticiasFiltradas = obterNoticiasFiltradas();
 
+  if (!noticiasFiltradas.length) {
+    areaDestaque.innerHTML = "";
+    listaNoticias.innerHTML = "<p>Nenhuma notícia encontrada.</p>";
+    return;
+  }
+
   const noticiaDestaque = noticiasFiltradas.find(n => n.destaque) || noticiasFiltradas[0];
   const restantes = noticiasFiltradas.filter(n => n.id !== noticiaDestaque.id);
 
@@ -88,6 +97,11 @@ function renderizarHome(){
           <span>Notícia em destaque</span>
         </div>
         <p>${noticiaDestaque.resumo}</p>
+        ${
+          noticiaDestaque.id === 1
+            ? `<a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank" style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;">Abrir simulador da Copa</a>`
+            : ""
+        }
       </div>
     </article>
   `;
