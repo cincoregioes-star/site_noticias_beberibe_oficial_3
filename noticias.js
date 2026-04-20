@@ -1,16 +1,16 @@
 const bancoNoticias = [
   {
     id: 1,
-    titulo: "Copa do Mundo 2026 vira manchete do dia e simulador movimenta acessos no portal",
+    titulo: "Copa do Mundo 2026 vira manchete do dia e simulador ganha destaque no portal",
     data: "2026-04-20",
     categoria: "Esporte",
-    imagem: "imagem-gabarito-max.png",
-    resumo: "Simulador da Copa do Mundo 2026 ganha destaque no portal e amplia o engajamento dos usuários.",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/2026_FIFA_World_Cup_emblem_%28with_wordmark%29.svg",
+    resumo: "Copa 2026 ganha espaço principal no portal com acesso direto ao simulador de palpites.",
     conteudo: [
-      "A Copa do Mundo 2026 ganhou espaço de destaque no Portal Beberibe Notícias com o simulador interativo de palpites, que vem atraindo usuários interessados em acompanhar os jogos de forma mais dinâmica.",
-      "A proposta permite que o público faça previsões, some pontos e dispute com amigos para descobrir quem entende mais de futebol e acerta mais resultados ao longo da competição.",
-      "O simulador foi pensado para funcionar de forma simples no celular, facilitando o acesso rápido e ampliando o engajamento dos usuários em tempo real.",
-      "Além do entretenimento, a ferramenta ajuda a fortalecer o portal como espaço de informação, interação e participação digital para o público de Beberibe e região."
+      "A Copa do Mundo 2026 ganhou a manchete principal do Portal Beberibe Notícias e passou a ocupar posição de destaque entre os conteúdos do dia, reforçando o interesse do público por futebol, competição e entretenimento digital.",
+      "Com a proximidade do mundial e o aumento da movimentação entre torcedores, o portal passou a destacar o tema como chamada principal, conectando notícia, esporte e participação do público em um só espaço.",
+      "Além da cobertura esportiva, a proposta é ampliar o engajamento dos usuários com uma experiência mais interativa, aproveitando o clima de disputa, palpites e expectativa em torno da Copa do Mundo de 2026.",
+      "Quem quiser participar pode acessar o simulador da Copa pelo Gabarito Max neste link: <a href='https://cincoregioes-star.github.io/-simulado-copa-isca/' target='_blank'>abrir simulador da Copa</a>."
     ],
     destaque: true
   },
