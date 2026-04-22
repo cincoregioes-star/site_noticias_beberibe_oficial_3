@@ -4,7 +4,7 @@ const bancoNoticias = [
     titulo: "Copa do Mundo 2026 vira manchete do dia e simulador ganha destaque no portal",
     data: "2026-04-20",
     categoria: "Esporte",
-    imagem: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=1200&q=80",
+    imagem: "https://www.netdeal.com.br/api/images/producao.spayce.com.br/1774881939117_2022_12_02_torcida_da_selecao_brasileira_no_estadio_lusail_para_o_jogo_contra_camaroes_pela_copa_do_mundo_do_catar_922675.jpeg",
     resumo: "Copa 2026 ganha espaço principal no portal com acesso direto ao simulador de palpites.",
     conteudo: [
       "A Copa do Mundo 2026 ganhou a manchete principal do Portal Beberibe Notícias e passou a ocupar posição de destaque entre os conteúdos do dia, reforçando o interesse do público por futebol, competição e entretenimento digital.",
