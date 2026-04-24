@@ -17,12 +17,12 @@ const noticiasOrdenadas = [...bancoNoticias].sort((a, b) => {
 
 let categoriaAtual = "Todas";
 
-function formatarData(dataStr){
+function formatarData(dataStr) {
   const data = new Date(dataStr + "T12:00:00");
   return data.toLocaleDateString("pt-BR");
 }
 
-function gerarCategorias(){
+function gerarCategorias() {
   const categorias = [
     "Todas",
     ...new Set(bancoNoticias.map(n => n.categoria))
@@ -40,7 +40,7 @@ function gerarCategorias(){
     .join("");
 
   document.querySelectorAll("[data-categoria]").forEach(item => {
-    item.addEventListener("click", function(e){
+    item.addEventListener("click", function(e) {
       e.preventDefault();
       categoriaAtual = this.dataset.categoria;
       gerarCategorias();
@@ -50,31 +50,32 @@ function gerarCategorias(){
   });
 }
 
-function gerarTicker(){
+function gerarTicker() {
   const titulos = noticiasOrdenadas.slice(0, 10).map(n => `<span>${n.titulo}</span>`);
   tickerNoticias.innerHTML = [...titulos, ...titulos].join("");
 }
 
-function gerarMaisLidas(){
+function gerarMaisLidas() {
   const topNoticias = noticiasOrdenadas.slice(0, 6);
+
   maisLidas.innerHTML = topNoticias.map(n => `
     <li><a href="#" data-id="${n.id}">${n.titulo}</a></li>
   `).join("");
 
   maisLidas.querySelectorAll("[data-id]").forEach(link => {
-    link.addEventListener("click", function(e){
+    link.addEventListener("click", function(e) {
       e.preventDefault();
       abrirNoticia(Number(this.dataset.id));
     });
   });
 }
 
-function obterNoticiasFiltradas(){
+function obterNoticiasFiltradas() {
   if (categoriaAtual === "Todas") return noticiasOrdenadas;
   return noticiasOrdenadas.filter(n => n.categoria === categoriaAtual);
 }
 
-function renderizarHome(){
+function renderizarHome() {
   const noticiasFiltradas = obterNoticiasFiltradas();
 
   if (!noticiasFiltradas.length) {
@@ -98,8 +99,8 @@ function renderizarHome(){
         </div>
         <p>${noticiaDestaque.resumo}</p>
         ${
-          noticiaDestaque.id === 1
-            ? `<a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank" style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;">Abrir simulador da Copa</a>`
+          noticiaDestaque.id === 2
+            ? `<a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank" style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;" onclick="event.stopPropagation();">Abrir simulador da Copa</a>`
             : ""
         }
       </div>
@@ -121,17 +122,27 @@ function renderizarHome(){
   `).join("");
 
   document.querySelectorAll("[data-id]").forEach(card => {
-    card.addEventListener("click", function(){
+    card.addEventListener("click", function() {
       abrirNoticia(Number(this.dataset.id));
     });
   });
 }
 
-function abrirNoticia(id){
+function abrirNoticia(id) {
   const noticia = bancoNoticias.find(n => n.id === id);
-  if(!noticia) return;
+  if (!noticia) return;
 
   const conteudoHtml = noticia.conteudo.map(paragrafo => `<p>${paragrafo}</p>`).join("");
+
+  const imagensExtrasHtml = noticia.imagensExtras
+    ? `
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:24px 0;">
+        ${noticia.imagensExtras.map(img => `
+          <img src="${img}" alt="${noticia.titulo}" style="width:100%;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+        `).join("")}
+      </div>
+    `
+    : `<img src="${noticia.imagem}" alt="${noticia.titulo}">`;
 
   paginaNoticia.innerHTML = `
     <button class="back-btn" onclick="fecharNoticia()">← Voltar</button>
@@ -141,7 +152,7 @@ function abrirNoticia(id){
       <span>${formatarData(noticia.data)}</span>
       <span>Portal Beberibe Notícias</span>
     </div>
-    <img src="${noticia.imagem}" alt="${noticia.titulo}">
+    ${imagensExtrasHtml}
     ${conteudoHtml}
   `;
 
@@ -150,7 +161,7 @@ function abrirNoticia(id){
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function fecharNoticia(){
+function fecharNoticia() {
   paginaNoticia.style.display = "none";
   homePage.style.display = "grid";
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -158,14 +169,14 @@ function fecharNoticia(){
 
 window.fecharNoticia = fecharNoticia;
 
-(function(){
+(function() {
   const chave = "portal_beberibe_acessos";
   let acessos = parseInt(localStorage.getItem(chave) || "0", 10);
   acessos += 1;
   localStorage.setItem(chave, acessos);
 
   const contador = document.getElementById("contadorAcessos");
-  if(contador){
+  if (contador) {
     contador.textContent = `Acessos neste dispositivo: ${acessos}`;
   }
 })();
