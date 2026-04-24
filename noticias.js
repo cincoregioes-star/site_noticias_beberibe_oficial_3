@@ -1,166 +1,194 @@
 const bancoNoticias = [
   {
     id: 1,
-    titulo: "Copa do Mundo 2026 vira manchete do dia e simulador ganha destaque no portal",
-    data: "2026-04-20",
-    categoria: "Esporte",
-    imagem: "https://www.netdeal.com.br/api/images/producao.spayce.com.br/1774881939117_2022_12_02_torcida_da_selecao_brasileira_no_estadio_lusail_para_o_jogo_contra_camaroes_pela_copa_do_mundo_do_catar_922675.jpeg",
-    resumo: "Copa 2026 ganha espaço principal no portal com acesso direto ao simulador de palpites.",
+    titulo: "Beberibe divulga resultado final da documentação e perícia médica de convocados para posse",
+    data: "2026-04-24",
+    categoria: "Beberibe",
+    imagem: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Portarias publicadas pela Prefeitura apresentam resultados da análise documental e da perícia médica dos candidatos convocados para procedimentos de posse.",
     conteudo: [
-      "A Copa do Mundo 2026 ganhou a manchete principal do Portal Beberibe Notícias e passou a ocupar posição de destaque entre os conteúdos do dia, reforçando o interesse do público por futebol, competição e entretenimento digital.",
-      "Com a proximidade do mundial e o aumento da movimentação entre torcedores, o portal passou a destacar o tema como chamada principal, conectando notícia, esporte e participação do público em um só espaço.",
-      "Além da cobertura esportiva, a proposta é ampliar o engajamento dos usuários com uma experiência mais interativa, aproveitando o clima de disputa, palpites e expectativa em torno da Copa do Mundo de 2026.",
-      "Quem quiser participar pode acessar o simulador da Copa pelo Gabarito Max neste link: <a href='https://cincoregioes-star.github.io/-simulado-copa-isca/' target='_blank'>abrir simulador da Copa</a>."
+      "A Prefeitura de Beberibe publicou novas portarias relacionadas aos candidatos convocados para os procedimentos de posse, trazendo informações importantes sobre a análise documental e a perícia médica admissional.",
+      "A Portaria GAPRE nº 17.04.001/2026 dispõe sobre o resultado final da análise da documentação dos candidatos convocados, etapa obrigatória para continuidade do processo de posse no serviço público municipal.",
+      "O documento informa que os candidatos com pendências documentais ainda poderão regularizar a situação até a data da posse, mediante entrega dos documentos exigidos junto à Secretaria Municipal de Administração.",
+      "A mesma portaria confirma que a posse dos candidatos nomeados fica condicionada ao cumprimento integral dos requisitos previstos no edital e à aptidão em exame médico admissional.",
+      "Já a Portaria GAPRE nº 17.04.002/2026 trata do resultado preliminar da perícia médica dos candidatos convocados, apresentando a situação dos participantes quanto à aptidão para assumir os respectivos cargos.",
+      "No anexo da portaria da perícia médica, os candidatos aparecem listados com nome, cargo e resultado, como apto, inapto, ausente ou outras observações relacionadas ao procedimento admissional.",
+      "Os candidatos que desejarem consultar a lista completa podem acessar os documentos oficiais publicados pela Prefeitura de Beberibe: <a href='https://www.beberibe.ce.gov.br/portarias/5528/1704001_2026_0000001.pdf?time=1776451576' target='_blank'>ver resultado da análise documental</a> e <a href='https://www.beberibe.ce.gov.br/portarias/5529/1704002_2026_0000001.pdf?time=1776451663' target='_blank'>ver resultado da perícia médica</a>.",
+      "A solenidade de posse está prevista para o dia 27 de abril de 2026, às 18h, na quadra da EMEF Desembargador Pedro de Queiroz, no Centro de Beberibe."
     ],
     destaque: true
   },
   {
     id: 2,
-    titulo: "Concurso da Câmara de Beberibe segue em evidência com foco no cargo de Analista Administrativo",
-    data: "2026-04-20",
-    categoria: "Concursos",
-    imagem: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Cargo de Analista Administrativo aparece entre os mais observados pelos candidatos da região.",
+    titulo: "Copa do Mundo 2026 segue em destaque com simulador interativo no Gabarito Max",
+    data: "2026-04-24",
+    categoria: "Esporte",
+    imagem: "https://www.netdeal.com.br/api/images/producao.spayce.com.br/1774881939117_2022_12_02_torcida_da_selecao_brasileira_no_estadio_lusail_para_o_jogo_contra_camaroes_pela_copa_do_mundo_do_catar_922675.jpeg",
+    resumo: "Simulador da Copa continua disponível para quem deseja testar palpites e acompanhar o clima do mundial.",
     conteudo: [
-      "O concurso da Câmara Municipal de Beberibe continua entre os assuntos mais acompanhados por candidatos da cidade e de municípios vizinhos.",
-      "Entre os cargos mais comentados está o de Analista Administrativo, que costuma chamar atenção por exigir formação superior e por atrair candidatos que buscam estabilidade e melhor remuneração.",
-      "A disputa tem aumentado o interesse por revisão, simulados e materiais voltados ao perfil do concurso legislativo municipal.",
-      "Na reta final de preparação, a tendência é que os candidatos intensifiquem os estudos e acompanhem com mais atenção o cronograma do certame."
+      "A Copa do Mundo 2026 continua movimentando os torcedores e também ganha espaço no ambiente digital.",
+      "O Gabarito Max mantém disponível o simulador interativo da Copa, criado para quem gosta de futebol, palpites e desafios.",
+      "A ferramenta permite ao público participar de uma experiência simples, rápida e divertida.",
+      "Acesse aqui: <a href='https://cincoregioes-star.github.io/-simulado-copa-isca/' target='_blank'>abrir simulador da Copa</a>."
     ],
     destaque: false
   },
   {
     id: 3,
-    titulo: "INSS segue no radar dos concurseiros e aumenta busca por preparação antecipada",
-    data: "2026-04-20",
-    categoria: "Concursos",
-    imagem: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Tema volta a mobilizar candidatos em todo o país em busca de preparação antecipada.",
+    titulo: "JS Bike se destaca em Beberibe com qualidade, preço justo e atendimento diferenciado",
+    data: "2026-04-24",
+    categoria: "Publicidade",
+    imagem: "./bicicletaria-jonathan-1.jpg",
+    imagensExtras: [
+      "./bicicletaria-jonathan-1.jpg",
+      "./bicicletaria-jonathan.jpg"
+    ],
+    resumo: "Bicicletaria ganha destaque na cidade com bikes revisadas, garantia, revisão grátis e atendimento de confiança.",
     conteudo: [
-      "O concurso do INSS continua entre os temas mais pesquisados por quem sonha com vaga no serviço público federal.",
-      "Mesmo sem definição completa de um novo edital próprio, a expectativa em torno do órgão mantém milhares de candidatos em preparação constante.",
-      "A recomendação entre os concurseiros mais experientes é começar antes da publicação oficial, sobretudo em concursos com alta concorrência.",
-      "O interesse crescente também fortalece a busca por simulados e plataformas digitais focadas em prática e revisão."
+      "A JS Bike vem se destacando em Beberibe pela qualidade dos produtos e pelo compromisso com seus clientes.",
+      "A loja trabalha com bicicletas do aro 16 ao aro 29, com destaque para as aro 29, já entregues revisadas, lubrificadas e prontas para uso.",
+      "Todos os produtos passam por uma seleção criteriosa, garantindo mais segurança e durabilidade para quem compra.",
+      "Entre os diferenciais estão revisão grátis, garantia de 3 meses e descanso de brinde em diversas bicicletas.",
+      "Com preços competitivos, a loja vem conquistando cada vez mais espaço e confiança na cidade.",
+      "Mais do que vender bicicletas e serviços, a JS Bike entrega qualidade, segurança e confiança para seus clientes.",
+      "📍 Endereço: Rua Raimunda Gama Fernandes, 231 - Sítio Lucas, Beberibe - CE",
+      "📞 WhatsApp: <a href='https://wa.me/5585996259283' target='_blank'>Fale agora pelo WhatsApp</a>",
+      "📸 Instagram: <a href='https://www.instagram.com/jsbikeoficial00' target='_blank'>@jsbikeoficial00</a>"
     ],
     destaque: false
   },
   {
     id: 4,
-    titulo: "Morada Nova amplia expectativa para futuros concursos de Guarda Municipal e Agente de Trânsito",
-    data: "2026-04-20",
-    categoria: "Concursos",
-    imagem: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Movimentação institucional aumenta atenção de candidatos para cargos de segurança e mobilidade urbana.",
+    titulo: "Convocações em Beberibe movimentam candidatos e familiares na reta final para posse",
+    data: "2026-04-24",
+    categoria: "Beberibe",
+    imagem: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Publicações oficiais aumentam expectativa entre candidatos convocados para assumir cargos públicos.",
     conteudo: [
-      "Morada Nova entrou no radar dos concurseiros com movimentações que reforçam a expectativa para cargos ligados à segurança pública e fiscalização urbana.",
-      "Entre os cargos mais comentados estão Guarda Municipal e Agente de Trânsito, funções que costumam atrair grande número de candidatos na região.",
-      "O tema ganhou mais força com o avanço de medidas institucionais e legais relacionadas a essas carreiras.",
-      "Para quem pretende disputar futuras vagas, o momento é visto como adequado para iniciar a preparação com antecedência."
+      "As novas publicações da Prefeitura de Beberibe movimentaram candidatos convocados e familiares que aguardam a conclusão dos procedimentos de posse.",
+      "A fase atual é considerada decisiva, pois reúne verificação documental, análise médica e cumprimento dos requisitos previstos nos editais.",
+      "Para muitos candidatos, a convocação representa a concretização de uma longa preparação e de uma oportunidade de estabilidade no serviço público.",
+      "A orientação é que todos acompanhem os canais oficiais e confiram atentamente prazos, documentos e demais exigências administrativas."
     ],
     destaque: false
   },
   {
     id: 5,
-    titulo: "Movimentação política local ganha força com novas articulações em Beberibe",
-    data: "2026-04-20",
+    titulo: "Movimentação política em Beberibe se intensifica com foco em gestão e concursos",
+    data: "2026-04-24",
     categoria: "Política",
     imagem: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Cenário político local passa a mostrar maior organização e novas articulações.",
+    resumo: "Cenário local ganha força com decisões administrativas e impacto direto na população.",
     conteudo: [
-      "A movimentação política em Beberibe começa a ganhar mais intensidade com o avanço de articulações locais e reposicionamentos de grupos.",
-      "Lideranças da cidade têm buscado ampliar base e fortalecer presença pública em diferentes áreas do município.",
-      "O cenário indica um ambiente mais competitivo e atento às disputas futuras.",
-      "Para a população, o momento também reforça a importância de acompanhar de perto os debates e decisões locais."
+      "A política local em Beberibe ganha novos desdobramentos com decisões administrativas recentes ligadas a concursos públicos.",
+      "A divulgação dos resultados e convocações tem impacto direto na organização da gestão municipal e na prestação de serviços à população.",
+      "Lideranças locais acompanham de perto os desdobramentos, enquanto candidatos e moradores observam os efeitos práticos dessas decisões.",
+      "O tema deve continuar em destaque nos próximos dias, principalmente com a realização das posses."
     ],
     destaque: false
   },
   {
     id: 6,
-    titulo: "Comércio de Beberibe registra melhora no movimento com maior circulação no fim de semana",
-    data: "2026-04-20",
+    titulo: "Comércio de Beberibe observa expectativa positiva com posse de novos servidores",
+    data: "2026-04-24",
     categoria: "Economia",
     imagem: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Setores locais observam crescimento no fluxo de clientes e reação positiva nas vendas.",
+    resumo: "Entrada de novos servidores pode fortalecer a circulação de renda no município.",
     conteudo: [
-      "O comércio local de Beberibe apresentou melhora no movimento durante o fim de semana, com destaque para alimentação, serviços e pequenas vendas.",
-      "A maior circulação de pessoas ajudou a estimular a economia em pontos estratégicos da cidade.",
-      "Empreendedores avaliam o cenário com cautela, mas já percebem sinais positivos em comparação com períodos mais fracos.",
-      "A expectativa é que datas comemorativas, turismo e eventos continuem ajudando a movimentar a economia local."
+      "A expectativa de posse de novos servidores em Beberibe também repercute na economia local.",
+      "Com novos vínculos no serviço público, a tendência é de maior circulação de renda no município ao longo dos próximos meses.",
+      "Pequenos comerciantes, prestadores de serviços e setores ligados ao consumo podem sentir reflexos positivos.",
+      "O impacto deve ser observado de forma gradual, especialmente após a conclusão dos procedimentos administrativos."
     ],
     destaque: false
   },
   {
     id: 7,
-    titulo: "Saúde reforça importância da prevenção e amplia ações de orientação à população",
-    data: "2026-04-20",
-    categoria: "Saúde",
-    imagem: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Medidas de prevenção e orientação ganham espaço como parte do atendimento básico.",
+    titulo: "Educação municipal reforça importância da organização escolar no segundo bimestre",
+    data: "2026-04-24",
+    categoria: "Educação",
+    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Planejamento pedagógico segue como prioridade para melhorar aprendizagem dos alunos.",
     conteudo: [
-      "A área da saúde segue reforçando a importância das ações preventivas e de orientação à população.",
-      "Campanhas educativas e acompanhamento mais próximo ajudam a reduzir agravamentos e facilitam o atendimento nas unidades básicas.",
-      "A prevenção continua sendo apontada como uma das estratégias mais eficazes para melhorar a resposta do sistema de saúde.",
-      "A população também é orientada a procurar atendimento logo nos primeiros sinais de necessidade, evitando complicações futuras."
+      "A rede municipal de ensino segue em fase de organização das ações pedagógicas para o segundo bimestre letivo.",
+      "Escolas trabalham com foco no acompanhamento da aprendizagem, planejamento de atividades e fortalecimento da rotina escolar.",
+      "A participação das famílias continua sendo considerada essencial para melhorar os resultados dos estudantes.",
+      "O objetivo é manter o ritmo das aulas e ampliar o desempenho educacional ao longo do ano."
     ],
     destaque: false
   },
   {
     id: 8,
-    titulo: "Educação municipal aposta em novas práticas pedagógicas e recursos de apoio",
-    data: "2026-04-20",
-    categoria: "Educação",
-    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Projetos e novas metodologias buscam melhorar o ambiente de aprendizagem.",
+    titulo: "Saúde reforça atenção aos atendimentos preventivos em Beberibe",
+    data: "2026-04-24",
+    categoria: "Saúde",
+    imagem: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Unidades de saúde seguem orientando a população sobre prevenção e cuidados básicos.",
     conteudo: [
-      "A educação municipal segue adotando práticas pedagógicas voltadas à melhoria do ensino e ao fortalecimento do ambiente escolar.",
-      "Projetos com apoio tecnológico, reforço de planejamento e metodologias mais participativas têm ganhado espaço.",
-      "A proposta é ampliar o envolvimento dos alunos e melhorar os resultados ao longo do ano letivo.",
-      "A valorização do trabalho pedagógico também aparece como eixo importante para fortalecer a rede municipal."
+      "A saúde municipal segue reforçando a importância dos atendimentos preventivos e da busca antecipada por orientação médica.",
+      "A prevenção ajuda a reduzir agravamentos e melhora a capacidade de resposta das unidades de atendimento.",
+      "Moradores são orientados a manter acompanhamento regular, atualizar vacinas e procurar atendimento diante dos primeiros sintomas.",
+      "A estratégia fortalece a atenção básica e contribui para melhorar a qualidade de vida da população."
     ],
     destaque: false
   },
   {
     id: 9,
-    titulo: "Campeonato Brasileiro chega com rodada importante e movimenta torcedores em todo o país",
-    data: "2026-04-20",
-    categoria: "Esporte",
-    imagem: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Rodada promete jogos decisivos e maior atenção dos torcedores.",
+    titulo: "Ceará acompanha movimentação econômica com expectativa de crescimento gradual",
+    data: "2026-04-24",
+    categoria: "Ceará",
+    imagem: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Setores de comércio, serviços e turismo seguem no centro das expectativas econômicas.",
     conteudo: [
-      "O Campeonato Brasileiro segue movimentando torcedores com mais uma rodada importante e confrontos de peso.",
-      "A disputa por posições na tabela aumenta a pressão sobre clubes que brigam tanto na parte de cima quanto na luta para escapar das últimas colocações.",
-      "A rodada promete grande repercussão entre os apaixonados por futebol.",
-      "O interesse pelo campeonato também cresce no ambiente digital, com mais comentários, análises e palpites."
+      "A economia do Ceará segue em observação diante da movimentação de setores como comércio, serviços e turismo.",
+      "Especialistas avaliam que o crescimento deve ocorrer de forma gradual, com atenção ao consumo das famílias e geração de emprego.",
+      "Municípios turísticos, como Beberibe, acompanham de perto esse cenário por causa do impacto direto no comércio local.",
+      "A expectativa é que datas comemorativas e períodos de maior circulação ajudem a fortalecer a economia regional."
     ],
     destaque: false
   },
   {
     id: 10,
-    titulo: "Pesquisa presidencial volta a agitar cenário político nacional",
-    data: "2026-04-20",
-    categoria: "Nacional",
+    titulo: "Pesquisa presidencial mantém disputa nacional em clima de forte atenção política",
+    data: "2026-04-24",
+    categoria: "Política Nacional",
     imagem: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Novo levantamento reacende debate político e movimenta discussão em todo o país.",
+    resumo: "Levantamentos recentes mantêm debate político aquecido em todo o país.",
     conteudo: [
-      "Uma nova pesquisa presidencial voltou a agitar o cenário político nacional e reacendeu debates sobre a disputa eleitoral.",
-      "Os números reforçam que o ambiente segue competitivo e sujeito a mudanças ao longo dos próximos meses.",
-      "Analistas observam que o peso da economia, da comunicação política e da mobilização das bases seguirá decisivo.",
-      "O tema continua entre os mais acompanhados do país e tende a permanecer em evidência no noticiário."
+      "As pesquisas presidenciais seguem movimentando o cenário político nacional e mantendo o debate aceso entre eleitores, partidos e analistas.",
+      "Os levantamentos mais recentes indicam um ambiente competitivo, com atenção especial ao desempenho dos principais nomes colocados na disputa.",
+      "A diferença entre possíveis candidatos continua sendo acompanhada com cautela, já que o cenário pode mudar conforme economia, alianças e comunicação política avancem.",
+      "Nos próximos meses, novas pesquisas devem ganhar ainda mais peso no debate público."
     ],
     destaque: false
   },
   {
     id: 11,
-    titulo: "Economia internacional apresenta sinais de recuperação gradual em diferentes mercados",
-    data: "2026-04-20",
-    categoria: "Internacional",
-    imagem: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    resumo: "Indicadores globais apontam recuperação moderada e cenário ainda de cautela.",
+    titulo: "Governo federal amplia debate sobre economia, programas sociais e eleições",
+    data: "2026-04-24",
+    categoria: "Nacional",
+    imagem: "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Cenário nacional mistura gestão pública, economia e movimentação eleitoral.",
     conteudo: [
-      "Indicadores internacionais apontam sinais de recuperação gradual em diferentes mercados ao redor do mundo.",
-      "Apesar do cenário mais positivo em algumas áreas, economistas ainda defendem cautela diante de incertezas globais.",
-      "O comportamento da inflação, dos juros e do comércio internacional segue no centro da análise.",
-      "A tendência é de acompanhamento constante dos próximos movimentos para medir a consistência da recuperação."
+      "O cenário nacional segue marcado por debates envolvendo economia, programas sociais e articulações políticas.",
+      "Com a proximidade do calendário eleitoral, decisões administrativas passam a ter forte repercussão pública.",
+      "A avaliação do governo, o custo de vida e os investimentos federais devem permanecer no centro da discussão.",
+      "Analistas apontam que o ambiente político continuará intenso nos próximos meses."
+    ],
+    destaque: false
+  },
+  {
+    id: 12,
+    titulo: "Campeonato Brasileiro movimenta rodada com jogos decisivos",
+    data: "2026-04-24",
+    categoria: "Esporte",
+    imagem: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
+    resumo: "Rodada importante aumenta expectativa entre torcedores.",
+    conteudo: [
+      "O Campeonato Brasileiro segue com jogos decisivos nesta rodada.",
+      "Clubes disputam posições importantes na tabela e aumentam a pressão por resultados.",
+      "Torcedores acompanham com grande expectativa cada confronto.",
+      "O ambiente digital registra aumento de interações, comentários e palpites sobre os jogos."
     ],
     destaque: false
   }
