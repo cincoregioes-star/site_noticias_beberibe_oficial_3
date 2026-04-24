@@ -87,9 +87,11 @@ function renderizarHome() {
   const noticiaDestaque = noticiasFiltradas.find(n => n.destaque) || noticiasFiltradas[0];
   const restantes = noticiasFiltradas.filter(n => n.id !== noticiaDestaque.id);
 
+  // 🔥 MANCHETE
   areaDestaque.innerHTML = `
     <article class="hero-card" data-id="${noticiaDestaque.id}">
-      <img src="${noticiaDestaque.imagem}" alt="${noticiaDestaque.titulo}">
+      <img src="${noticiaDestaque.imagem}" 
+           style="width:100%;height:260px;object-fit:cover;border-radius:12px;">
       <div class="hero-content">
         <span class="badge">${noticiaDestaque.categoria}</span>
         <h2>${noticiaDestaque.titulo}</h2>
@@ -100,16 +102,20 @@ function renderizarHome() {
         <p>${noticiaDestaque.resumo}</p>
         ${
           noticiaDestaque.id === 2
-            ? `<a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank" style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;" onclick="event.stopPropagation();">Abrir simulador da Copa</a>`
+            ? `<a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank"
+               style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;"
+               onclick="event.stopPropagation();">Abrir simulador da Copa</a>`
             : ""
         }
       </div>
     </article>
   `;
 
+  // 🔥 CARDS
   listaNoticias.innerHTML = restantes.map(n => `
     <article class="card" data-id="${n.id}">
-      <img src="${n.imagem}" alt="${n.titulo}">
+      <img src="${n.imagem}" 
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
       <div class="card-content">
         <span class="badge">${n.categoria}</span>
         <h3>${n.titulo}</h3>
@@ -132,17 +138,18 @@ function abrirNoticia(id) {
   const noticia = bancoNoticias.find(n => n.id === id);
   if (!noticia) return;
 
-  const conteudoHtml = noticia.conteudo.map(paragrafo => `<p>${paragrafo}</p>`).join("");
+  const conteudoHtml = noticia.conteudo.map(p => `<p>${p}</p>`).join("");
 
   const imagensExtrasHtml = noticia.imagensExtras
     ? `
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:24px 0;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:20px 0;">
         ${noticia.imagensExtras.map(img => `
-          <img src="${img}" alt="${noticia.titulo}" style="width:100%;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,0.15);">
+          <img src="${img}" 
+               style="width:100%;height:220px;object-fit:cover;border-radius:12px;">
         `).join("")}
       </div>
     `
-    : `<img src="${noticia.imagem}" alt="${noticia.titulo}">`;
+    : `<img src="${noticia.imagem}" style="width:100%;height:260px;object-fit:cover;border-radius:12px;">`;
 
   paginaNoticia.innerHTML = `
     <button class="back-btn" onclick="fecharNoticia()">← Voltar</button>
