@@ -87,7 +87,6 @@ function renderizarHome() {
   const noticiaDestaque = noticiasFiltradas.find(n => n.destaque) || noticiasFiltradas[0];
   const restantes = noticiasFiltradas.filter(n => n.id !== noticiaDestaque.id);
 
-  // 🔥 MANCHETE
   areaDestaque.innerHTML = `
     <article class="hero-card" data-id="${noticiaDestaque.id}">
       <img src="${noticiaDestaque.imagem}" 
@@ -100,18 +99,15 @@ function renderizarHome() {
           <span>Notícia em destaque</span>
         </div>
         <p>${noticiaDestaque.resumo}</p>
-        ${
-          noticiaDestaque.id === 2
-            ? `<a href="https://cincoregioes-star.github.io/-simulado-copa-isca/" target="_blank"
-               style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;"
-               onclick="event.stopPropagation();">Abrir simulador da Copa</a>`
-            : ""
-        }
+        ${noticiaDestaque.botao ? `
+          <a href="${noticiaDestaque.botao.link}" target="_blank"
+             style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;"
+             onclick="event.stopPropagation();">${noticiaDestaque.botao.texto}</a>
+        ` : ""}
       </div>
     </article>
   `;
 
-  // 🔥 CARDS
   listaNoticias.innerHTML = restantes.map(n => `
     <article class="card" data-id="${n.id}">
       <img src="${n.imagem}" 
@@ -151,6 +147,15 @@ function abrirNoticia(id) {
     `
     : `<img src="${noticia.imagem}" style="width:100%;height:260px;object-fit:cover;border-radius:12px;">`;
 
+  const botaoHtml = noticia.botao
+    ? `
+      <a href="${noticia.botao.link}" target="_blank" rel="noopener noreferrer"
+         style="display:inline-block;margin:12px 0 22px;background:#0a45ff;color:#fff;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:800;">
+        ${noticia.botao.texto}
+      </a>
+    `
+    : "";
+
   paginaNoticia.innerHTML = `
     <button class="back-btn" onclick="fecharNoticia()">← Voltar</button>
     <span class="badge">${noticia.categoria}</span>
@@ -160,6 +165,7 @@ function abrirNoticia(id) {
       <span>Portal Beberibe Notícias</span>
     </div>
     ${imagensExtrasHtml}
+    ${botaoHtml}
     ${conteudoHtml}
   `;
 

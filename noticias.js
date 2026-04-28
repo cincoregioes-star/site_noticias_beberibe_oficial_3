@@ -1,8 +1,24 @@
 const bancoNoticias = [
   {
+    id: 300,
+    titulo: "Beberibe ganha destaque com oficialização de novo resort na Praia do Uruaú",
+    data: "2026-04-28",
+    categoria: "Turismo",
+    imagem: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Empreendimento turístico em Beberibe reforça o potencial do município para geração de emprego, renda e visibilidade no Ceará.",
+    conteudo: [
+      "Beberibe volta a ganhar destaque no cenário turístico do Ceará com a oficialização de um novo empreendimento de grande porte na Praia do Uruaú.",
+      "A chegada de um resort fortalece a imagem do município como um dos destinos mais importantes do litoral leste cearense, conhecido por praias, falésias e belezas naturais.",
+      "Além de ampliar a presença de visitantes, o investimento pode movimentar hospedagem, alimentação, transporte, comércio, serviços e oportunidades de trabalho para moradores da região.",
+      "Para Beberibe, o desafio agora é transformar a visibilidade turística em desenvolvimento organizado, com valorização das comunidades, preservação ambiental e fortalecimento dos pequenos negócios locais."
+    ],
+    destaque: true
+  },
+
+  {
     id: 1,
     titulo: "JS Bike se destaca em Beberibe com bicicletas revisadas, garantia e atendimento de confiança",
-    data: "2026-04-27",
+    data: "2026-04-28",
     categoria: "Publicidade",
     imagem: "./bicicletaria-jonathan-1.jpg",
     imagensExtras: ["./bicicletaria-jonathan-1.jpg", "./bicicletaria-jonathan.jpg"],
@@ -13,8 +29,121 @@ const bancoNoticias = [
       "Entre os diferenciais estão revisão grátis, garantia de 3 meses e descanso de brinde em diversos modelos, reforçando o compromisso com segurança e economia.",
       "📍 Endereço: Rua Raimunda Gama Fernandes, 231 - Sítio Lucas, Beberibe - CE. 📞 WhatsApp: <a href='https://wa.me/5585996259283' target='_blank'>falar com a JS Bike</a>. 📸 Instagram: <a href='https://www.instagram.com/jsbikeoficial00' target='_blank'>@jsbikeoficial00</a>."
     ],
-    destaque: true
+    destaque: false
   },
+
+  {
+    id: 301,
+    titulo: "ENEM 2026: Redação pode definir aprovação e simulado com 300 questões ganha destaque",
+    data: "2026-04-28",
+    categoria: "ENEM",
+    imagem: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Treinar redação com frequência pode ser decisivo para alcançar boa nota no ENEM 2026.",
+    conteudo: [
+      "A redação segue como uma das partes mais importantes do ENEM 2026, principalmente porque pode influenciar diretamente a classificação em cursos concorridos.",
+      "Estudantes que treinam estrutura, repertório sociocultural, argumentação e proposta de intervenção tendem a chegar mais preparados no dia da prova.",
+      "O DB ENEM destaca o simulado de Redação com 300 questões como ferramenta de treino para quem deseja praticar mais, corrigir dificuldades e ganhar segurança.",
+      "👉 <a href='https://cincoregioes-star.github.io/DB-ENEM/' target='_blank'>Acessar o DB ENEM e treinar Redação</a>"
+    ],
+    destaque: false
+  },
+
+  {
+    id: 302,
+    titulo: "ENEM 2026: prazo para pedir isenção da taxa foi prorrogado até 30 de abril",
+    data: "2026-04-28",
+    categoria: "Educação",
+    imagem: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Candidatos que desejam fazer o ENEM gratuitamente devem solicitar isenção pela Página do Participante.",
+    conteudo: [
+      "O prazo para solicitar a isenção da taxa de inscrição do ENEM 2026 foi prorrogado até 30 de abril, conforme divulgação oficial do MEC e do Inep.",
+      "O pedido deve ser feito pela Página do Participante, com login Gov.br, e a isenção não é automática mesmo para quem se enquadra nos critérios.",
+      "Podem solicitar o benefício estudantes do 3º ano do ensino médio em escola pública, pessoas inscritas no CadÚnico, participantes do Pé-de-Meia e candidatos dentro das regras de renda previstas.",
+      "👉 <a href='https://cincoregioes-star.github.io/DB-ENEM/' target='_blank'>Aproveitar o prazo e começar a treinar para o ENEM</a>"
+    ],
+    destaque: false
+  },
+
+  {
+    id: 303,
+    titulo: "ENEM 2026: inscrições devem ser acompanhadas após etapa de isenção",
+    data: "2026-04-28",
+    categoria: "ENEM",
+    imagem: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Após o período de isenção, candidatos devem acompanhar os canais oficiais do Inep para não perder o calendário.",
+    conteudo: [
+      "Com a prorrogação do prazo de isenção até 30 de abril, os estudantes devem ficar atentos às próximas etapas do ENEM 2026.",
+      "A inscrição no exame é uma fase diferente do pedido de isenção, por isso o candidato precisa acompanhar o calendário oficial divulgado pelo Inep.",
+      "Quem pretende disputar vaga em universidades públicas, bolsas ou financiamento estudantil deve usar esse período para organizar documentos e rotina de estudo.",
+      "👉 <a href='https://cincoregioes-star.github.io/DB-ENEM/' target='_blank'>Ver simulados por disciplina no DB ENEM</a>"
+    ],
+    destaque: false
+  },
+
+  {
+    id: 304,
+    titulo: "Estudantes intensificam preparação para o ENEM 2026 com simulados por disciplina",
+    data: "2026-04-28",
+    categoria: "Educação",
+    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Treinar por área ajuda o aluno a identificar dificuldades e melhorar o desempenho antes da prova.",
+    conteudo: [
+      "A preparação para o ENEM 2026 já começou para muitos estudantes que desejam melhorar o desempenho com antecedência.",
+      "Resolver simulados por disciplina ajuda a identificar erros, revisar conteúdos importantes e criar uma rotina mais organizada de estudos.",
+      "No DB ENEM, o estudante encontra simulados gratuitos e opções premium por área, com foco em prática constante e evolução gradual.",
+      "👉 <a href='https://cincoregioes-star.github.io/DB-ENEM/' target='_blank'>Começar agora pelos simulados do DB ENEM</a>"
+    ],
+    destaque: false
+  },
+
+  {
+    id: 305,
+    titulo: "ENEM 2026: estratégia de estudos deve unir revisão, prática e controle do tempo",
+    data: "2026-04-28",
+    categoria: "ENEM",
+    imagem: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Organização semanal e resolução de questões ajudam candidatos a ganhar ritmo para o exame.",
+    conteudo: [
+      "A preparação para o ENEM 2026 exige mais do que leitura de conteúdo: o estudante precisa treinar interpretação, tempo de prova e resistência.",
+      "Uma rotina eficiente pode combinar revisão dos principais temas, resolução de questões, simulados e análise dos erros cometidos.",
+      "Disciplinas como Matemática, Redação, Linguagens, Ciências Humanas e Ciências da Natureza devem ser trabalhadas de forma equilibrada.",
+      "👉 <a href='https://cincoregioes-star.github.io/DB-ENEM/' target='_blank'>Montar rotina de treino com o DB ENEM</a>"
+    ],
+    destaque: false
+  },
+
+  {
+    id: 306,
+    titulo: "Concurso INSS 2026 segue no radar com pedido de milhares de vagas",
+    data: "2026-04-28",
+    categoria: "Concurso",
+    imagem: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Pedido para novo concurso do INSS movimenta candidatos que aguardam oportunidades de nível médio e superior.",
+    conteudo: [
+      "O concurso INSS 2026 segue entre os mais aguardados do país, com expectativa em torno de pedido de novas vagas para cargos de Técnico e Analista.",
+      "Informações de portais especializados apontam solicitação de 8.500 vagas, sendo 7.000 para Técnico e 1.500 para Analista, ainda dependendo de autorização.",
+      "Enquanto o edital não é confirmado, candidatos podem aproveitar o momento para revisar conteúdos básicos, legislação previdenciária e questões de provas anteriores.",
+      "👉 <a href='https://cincoregioes-star.github.io/oficial-portal-gabaritomax/' target='_blank'>Treinar concursos com o Gabarito Max</a>"
+    ],
+    destaque: false
+  },
+
+  {
+    id: 307,
+    titulo: "Câmara de Beberibe: Analista Administrativo ganha destaque entre candidatos",
+    data: "2026-04-28",
+    categoria: "Concurso",
+    imagem: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80",
+    resumo: "Prova de Analista Administrativo da Câmara de Beberibe exige preparação específica e treino constante.",
+    conteudo: [
+      "O concurso da Câmara Municipal de Beberibe movimenta candidatos da região e chama atenção especialmente para o cargo de Analista Administrativo.",
+      "A função costuma exigir domínio de conteúdos administrativos, legislação, interpretação, raciocínio e atenção às exigências previstas no edital.",
+      "Para quem deseja melhorar a preparação, treinar com questões e simulados voltados ao cargo pode ajudar a ganhar segurança antes da prova.",
+      "👉 <a href='https://cincoregioes-star.github.io/oficial-portal-gabaritomax/' target='_blank'>Acessar o simulado Analista Administrativo no Gabarito Max</a>"
+    ],
+    destaque: false
+  },
+
   {
     id: 2,
     titulo: "Fim de semana movimenta praias e comércio em Beberibe",
@@ -30,6 +159,7 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 3,
     titulo: "Beberibe reforça atenção ao turismo com foco em organização e segurança",
@@ -45,6 +175,7 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 4,
     titulo: "Comunidades de Beberibe acompanham demandas por infraestrutura",
@@ -60,6 +191,7 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 5,
     titulo: "Beberibe mantém expectativa positiva para comércio e turismo nos próximos dias",
@@ -75,6 +207,7 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 6,
     titulo: "Ceará e Fortaleza seguem em destaque na Série B do Campeonato Brasileiro",
@@ -84,23 +217,13 @@ const bancoNoticias = [
     resumo: "Times cearenses aparecem entre os primeiros colocados na tabela da Série B 2026.",
     conteudo: [
       "O futebol cearense segue em evidência na Série B do Campeonato Brasileiro 2026, com Ceará e Fortaleza aparecendo na parte alta da classificação.",
-      "Segundo tabela da CBF atualizada em abril, o Fortaleza aparece com 10 pontos em 5 jogos, enquanto o Ceará soma 9 pontos também em 5 partidas.",
       "A presença dos dois clubes entre os primeiros colocados aumenta a expectativa para a sequência da competição e para os confrontos diretos ao longo do campeonato.",
-      "A torcida cearense acompanha a rodada com atenção, já que cada ponto pode fazer diferença na briga pelo acesso e pela consolidação no G4."
+      "A torcida cearense acompanha a rodada com atenção, já que cada ponto pode fazer diferença na briga pelo acesso e pela consolidação no G4.",
+      "A sequência da competição deve exigir regularidade, força do elenco, planejamento e capacidade de reação diante de uma disputa longa."
     ],
-    tabela: `
-      <table class="tabela-noticia">
-        <thead>
-          <tr><th>Posição</th><th>Clube</th><th>Pontos</th><th>Jogos</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>2º</td><td>Fortaleza</td><td>10</td><td>5</td></tr>
-          <tr><td>3º</td><td>Ceará</td><td>9</td><td>5</td></tr>
-        </tbody>
-      </table>
-    `,
     destaque: false
   },
+
   {
     id: 7,
     titulo: "Clássico-Rei aumenta expectativa na Série B 2026",
@@ -116,34 +239,23 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 8,
-    titulo: "Brasileirão Série B tem Vila Nova na liderança e cearenses no G4",
+    titulo: "Brasileirão Série B tem disputa equilibrada nas primeiras rodadas",
     data: "2026-04-27",
     categoria: "Brasileirão",
     imagem: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1400&q=80",
     resumo: "Tabela mostra equilíbrio nas primeiras rodadas da competição nacional.",
     conteudo: [
       "A Série B do Campeonato Brasileiro 2026 apresenta equilíbrio nas primeiras rodadas, com clubes separados por poucos pontos na parte de cima da tabela.",
-      "O Vila Nova aparece na liderança com 11 pontos em 5 jogos, seguido por Fortaleza, Ceará e Novorizontino entre os primeiros colocados.",
-      "O início forte dos representantes cearenses aumenta a confiança das torcidas, mas a competição ainda exige regularidade em uma disputa longa.",
-      "A tabela pode mudar rapidamente nas próximas rodadas, principalmente porque vitórias diretas contra concorrentes costumam ter peso decisivo."
+      "O início forte de algumas equipes aumenta a confiança das torcidas, mas a competição ainda exige regularidade em uma disputa longa.",
+      "Os confrontos diretos devem ganhar importância nas próximas rodadas, principalmente entre clubes que brigam por acesso.",
+      "A tabela pode mudar rapidamente, já que vitórias contra concorrentes diretos costumam ter peso decisivo na classificação."
     ],
-    tabela: `
-      <table class="tabela-noticia">
-        <thead>
-          <tr><th>Posição</th><th>Time</th><th>PTS</th><th>J</th><th>V</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1º</td><td>Vila Nova</td><td>11</td><td>5</td><td>3</td></tr>
-          <tr><td>2º</td><td>Fortaleza</td><td>10</td><td>5</td><td>3</td></tr>
-          <tr><td>3º</td><td>Ceará</td><td>9</td><td>5</td><td>2</td></tr>
-          <tr><td>4º</td><td>Novorizontino</td><td>8</td><td>5</td><td>2</td></tr>
-        </tbody>
-      </table>
-    `,
     destaque: false
   },
+
   {
     id: 9,
     titulo: "Rodada do Brasileirão mantém disputa acirrada por pontos",
@@ -159,51 +271,23 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 10,
-    titulo: "Copa do Mundo 2026 confirma Brasil no Grupo C ao lado de Marrocos",
+    titulo: "Copa do Mundo 2026 aumenta expectativa entre torcedores brasileiros",
     data: "2026-04-27",
     categoria: "Copa do Mundo",
     imagem: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1400&q=80",
-    resumo: "Mundial terá jogos nos Estados Unidos, México e Canadá, com Brasil em chave de grande expectativa.",
+    resumo: "Mundial será realizado nos Estados Unidos, México e Canadá, com novo formato e grande expectativa.",
     conteudo: [
-      "A Copa do Mundo de 2026 segue gerando expectativa entre os torcedores brasileiros, especialmente após a definição dos grupos e do calendário oficial.",
-      "O Brasil aparece no Grupo C, ao lado de Marrocos, em uma chave que promete grande atenção por reunir tradição, força técnica e torcida mundial.",
-      "A edição de 2026 será realizada em três países: Estados Unidos, México e Canadá, ampliando o formato e a dimensão do torneio.",
-      "Com a proximidade da competição, a Seleção Brasileira passa a ser acompanhada com ainda mais cobrança por desempenho, convocação e preparação."
+      "A Copa do Mundo de 2026 segue gerando expectativa entre os torcedores brasileiros, especialmente pela ampliação do torneio.",
+      "A edição será realizada em três países: Estados Unidos, México e Canadá, aumentando a dimensão logística e esportiva da competição.",
+      "Com a proximidade do Mundial, a Seleção Brasileira passa a ser acompanhada com ainda mais atenção por torcedores e imprensa.",
+      "Convocações, desempenho dos jogadores e preparação da equipe devem ganhar espaço crescente nos próximos meses."
     ],
     destaque: false
   },
-  {
-    id: 11,
-    titulo: "Pesquisa mostra empate técnico entre Lula e Flávio Bolsonaro em cenário nacional",
-    data: "2026-04-27",
-    categoria: "Eleições",
-    imagem: "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?auto=format&fit=crop&w=1400&q=80",
-    resumo: "Levantamento BTG Pactual/Nexus aponta disputa apertada em simulação de segundo turno.",
-    conteudo: [
-      "A corrida presidencial de 2026 voltou ao centro do debate nacional após nova pesquisa apontar cenário competitivo para o segundo turno.",
-      "Levantamento BTG Pactual/Nexus divulgado nesta segunda-feira mostrou Lula e Flávio Bolsonaro em situação de empate técnico em uma simulação nacional.",
-      "O resultado reforça a polarização política no país e indica que a eleição deve seguir marcada por forte disputa entre governo e oposição.",
-      "Novas pesquisas devem ganhar peso nos próximos meses, principalmente com a definição de alianças, estratégias de campanha e desempenho econômico."
-    ],
-    destaque: false
-  },
-  {
-    id: 12,
-    titulo: "Pesquisa no Ceará aponta cenário disputado para o Governo do Estado",
-    data: "2026-04-27",
-    categoria: "Eleições",
-    imagem: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=80",
-    resumo: "Levantamentos estaduais colocam a eleição cearense entre os temas mais acompanhados de 2026.",
-    conteudo: [
-      "A eleição para o Governo do Ceará também aparece entre os assuntos políticos de maior atenção no estado em 2026.",
-      "Pesquisa AtlasIntel divulgada em abril ouviu eleitores cearenses e apresentou cenários para governador e senador, movimentando partidos e lideranças.",
-      "Além disso, levantamentos recentes colocam nomes conhecidos da política estadual no centro da disputa, aumentando a expectativa para os próximos passos.",
-      "Em Beberibe e no litoral leste, o cenário estadual deve ter reflexos nas articulações locais, apoios regionais e debates sobre investimentos."
-    ],
-    destaque: false
-  },
+
   {
     id: 13,
     titulo: "Saúde em Beberibe reforça importância da prevenção e acompanhamento nas unidades",
@@ -219,6 +303,7 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 14,
     titulo: "Educação em Beberibe entra em nova semana com foco no rendimento dos alunos",
@@ -234,9 +319,10 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 15,
-    titulo: "Política em Beberibe acompanha posses, gestão pública e demandas das comunidades",
+    titulo: "Política em Beberibe acompanha gestão pública e demandas das comunidades",
     data: "2026-04-27",
     categoria: "Política",
     imagem: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
@@ -249,6 +335,7 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 16,
     titulo: "Trabalho em Beberibe: turismo, comércio e serviços seguem como principais portas de entrada",
@@ -264,6 +351,7 @@ const bancoNoticias = [
     ],
     destaque: false
   },
+
   {
     id: 17,
     titulo: "Concurso em Beberibe: candidatos acompanham etapas de documentação, perícia e posse",
@@ -276,21 +364,6 @@ const bancoNoticias = [
       "A fase exige atenção aos prazos, apresentação correta de documentos e cumprimento das exigências previstas nos editais e portarias oficiais.",
       "Para muitos aprovados, a posse representa estabilidade, realização profissional e início de uma nova etapa na vida funcional.",
       "A recomendação é que todos acompanhem os canais oficiais da Prefeitura e confiram regularmente novas publicações sobre o processo."
-    ],
-    destaque: false
-  },
-  {
-    id: 18,
-    titulo: "Resort em Beberibe reforça potencial turístico e geração de renda no litoral",
-    data: "2026-04-27",
-    categoria: "Turismo",
-    imagem: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
-    resumo: "Empreendimentos turísticos de grande porte ampliam visibilidade do município no Ceará.",
-    conteudo: [
-      "O setor de hospedagem em Beberibe segue como peça importante para fortalecer o turismo e ampliar a permanência de visitantes no município.",
-      "Resorts e empreendimentos turísticos ajudam a atrair famílias, eventos, excursões e turistas interessados nas praias e belezas naturais da região.",
-      "Além da hospedagem, esses equipamentos movimentam serviços locais, fornecedores, transporte, gastronomia e oportunidades de trabalho direto e indireto.",
-      "Com planejamento e valorização das comunidades, o turismo de grande porte pode contribuir para consolidar Beberibe como referência no litoral cearense."
     ],
     destaque: false
   }
