@@ -7,13 +7,48 @@ const menuCategorias = document.getElementById("menuCategorias");
 const maisLidas = document.getElementById("maisLidas");
 const listaCategorias = document.getElementById("listaCategorias");
 
-const noticiasOrdenadas = [...bancoNoticias].sort((a, b) => {
-  const destaqueA = a.destaque ? 1 : 0;
-  const destaqueB = b.destaque ? 1 : 0;
+function misturarCategorias(noticias) {
+  const grupos = {};
 
-  if (destaqueB !== destaqueA) return destaqueB - destaqueA;
-  return new Date(b.data) - new Date(a.data);
-});
+  noticias.forEach(n => {
+    if (!grupos[n.categoria]) grupos[n.categoria] = [];
+    grupos[n.categoria].push(n);
+  });
+
+  Object.keys(grupos).forEach(cat => {
+    grupos[cat].sort((a, b) => new Date(b.data) - new Date(a.data));
+  });
+
+  const categoriasOrdenadas = Object.keys(grupos).sort((a, b) => grupos[b].length - grupos[a].length);
+  const resultado = [];
+  let adicionou = true;
+
+  while (adicionou) {
+    adicionou = false;
+    categoriasOrdenadas.forEach(cat => {
+      const item = grupos[cat].shift();
+      if (item) {
+        resultado.push(item);
+        adicionou = true;
+      }
+    });
+  }
+
+  return resultado;
+}
+
+const noticiasDestaque = bancoNoticias
+  .filter(n => n.destaque)
+  .sort((a, b) => new Date(b.data) - new Date(a.data));
+
+const noticiasComuns = bancoNoticias
+  .filter(n => !n.destaque)
+  .sort((a, b) => new Date(b.data) - new Date(a.data));
+
+const noticiasOrdenadas = [
+  ...noticiasDestaque,
+  ...misturarCategorias(noticiasComuns)
+];
 
 let categoriaAtual = "Todas";
 

@@ -37,7 +37,7 @@ const bancoNoticias = [
     titulo: "ENEM 2026: Redação pode definir aprovação e simulado com 300 questões ganha destaque",
     data: "2026-04-28",
     categoria: "ENEM",
-    imagem: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    imagem: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1400&q=80",
     resumo: "Treinar redação com frequência pode ser decisivo para alcançar boa nota no ENEM 2026.",
     conteudo: [
       "A redação segue como uma das partes mais importantes do ENEM 2026, principalmente porque pode influenciar diretamente a classificação em cursos concorridos.",
@@ -53,7 +53,7 @@ const bancoNoticias = [
     titulo: "ENEM 2026: prazo para pedir isenção da taxa foi prorrogado até 30 de abril",
     data: "2026-04-28",
     categoria: "Educação",
-    imagem: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80",
+    imagem: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80",
     resumo: "Candidatos que desejam fazer o ENEM gratuitamente devem solicitar isenção pela Página do Participante.",
     conteudo: [
       "O prazo para solicitar a isenção da taxa de inscrição do ENEM 2026 foi prorrogado até 30 de abril, conforme divulgação oficial do MEC e do Inep.",
@@ -85,7 +85,7 @@ const bancoNoticias = [
     titulo: "Estudantes intensificam preparação para o ENEM 2026 com simulados por disciplina",
     data: "2026-04-28",
     categoria: "Educação",
-    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80",
+    imagem: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1400&q=80",
     resumo: "Treinar por área ajuda o aluno a identificar dificuldades e melhorar o desempenho antes da prova.",
     conteudo: [
       "A preparação para o ENEM 2026 já começou para muitos estudantes que desejam melhorar o desempenho com antecedência.",
@@ -101,7 +101,7 @@ const bancoNoticias = [
     titulo: "ENEM 2026: estratégia de estudos deve unir revisão, prática e controle do tempo",
     data: "2026-04-28",
     categoria: "ENEM",
-    imagem: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80",
+    imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80",
     resumo: "Organização semanal e resolução de questões ajudam candidatos a ganhar ritmo para o exame.",
     conteudo: [
       "A preparação para o ENEM 2026 exige mais do que leitura de conteúdo: o estudante precisa treinar interpretação, tempo de prova e resistência.",
