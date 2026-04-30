@@ -6,11 +6,7 @@
   <title>Portal Beberibe Notícias</title>
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;}
 
     :root{
       --azul:#0033cc;
@@ -25,27 +21,25 @@
     }
 
     body{
-      font-family:'Segoe UI', Arial, sans-serif;
+      font-family:'Segoe UI',Arial,sans-serif;
       background:var(--bg);
       color:var(--texto);
       line-height:1.65;
     }
 
     .ticker-wrapper{background:#111;}
-
     .ticker-label{
       background:var(--vermelho);
       color:#fff;
       text-align:center;
-      padding:8px 12px;
-      font-weight:700;
+      padding:9px 12px;
+      font-weight:800;
       text-transform:uppercase;
-      letter-spacing:.5px;
       font-size:14px;
     }
 
     .ticker-container{
-      height:34px;
+      height:38px;
       overflow:hidden;
       display:flex;
       align-items:center;
@@ -59,7 +53,8 @@
       color:#fff;
       padding-left:20px;
       animation:ticker 45s linear infinite;
-      font-size:14px;
+      font-size:15px;
+      font-weight:600;
     }
 
     @keyframes ticker{
@@ -78,7 +73,7 @@
     .nav-container{
       max-width:1400px;
       margin:0 auto;
-      padding:6px 8px;
+      padding:7px 8px;
       display:flex;
       justify-content:center;
       gap:6px;
@@ -90,33 +85,21 @@
       text-decoration:none;
       padding:8px 12px;
       border-radius:10px;
-      font-weight:600;
+      font-weight:700;
       font-size:14px;
-      transition:.2s;
     }
 
-    .nav-link:hover,
-    .nav-link.active{
-      background:rgba(255,255,255,.16);
-    }
+    .nav-link:hover,.nav-link.active{background:rgba(255,255,255,.16);}
 
     header{
       background:linear-gradient(135deg,var(--azul),var(--azul2));
       color:#fff;
       text-align:center;
-      padding:18px 12px 16px;
+      padding:22px 12px 18px;
     }
 
-    header h1{
-      font-size:28px;
-      margin-bottom:6px;
-      line-height:1.2;
-    }
-
-    header p{
-      font-size:14px;
-      opacity:.95;
-    }
+    header h1{font-size:30px;margin-bottom:6px;line-height:1.2;}
+    header p{font-size:15px;opacity:.95;}
 
     #contadorAcessos{
       max-width:1400px;
@@ -126,12 +109,46 @@
       font-size:14px;
     }
 
+    .empregos-topo{
+      max-width:1400px;
+      margin:18px auto 0;
+      padding:0 16px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+    }
+
+    .emprego-box{
+      background:#fff;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:18px;
+      border-left:6px solid var(--vermelho);
+    }
+
+    .emprego-box h3{
+      color:var(--azul);
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .emprego-box p{
+      color:#4c5663;
+      font-size:15px;
+    }
+
+    .emprego-box a{
+      color:var(--azul);
+      font-weight:800;
+      text-decoration:none;
+    }
+
     .layout{
       max-width:1400px;
       margin:24px auto;
       padding:0 16px;
       display:grid;
-      grid-template-columns:minmax(0,1fr) 360px;
+      grid-template-columns:minmax(0,1fr) 390px;
       gap:28px;
       align-items:start;
     }
@@ -145,31 +162,31 @@
       margin-bottom:22px;
     }
 
-    .hero-card{
+    .hero-card,.card,.widget,.ad-card{
       background:#fff;
-      border-radius:18px;
-      overflow:hidden;
+      border-radius:var(--radius);
       box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-card{
       margin-bottom:28px;
       cursor:pointer;
       transition:.25s;
     }
 
-    .hero-card:hover{
-      transform:translateY(-4px);
+    .hero-card:hover,.card:hover,.ad-card:hover{
+      transform:translateY(-6px);
     }
 
     .hero-card img{
       width:100%;
-      height:260px;
+      height:290px;
       object-fit:cover;
       display:block;
     }
 
-    .hero-content{
-      padding:22px;
-    }
-
+    .hero-content{padding:22px;}
     .hero-content h2{
       font-size:32px;
       line-height:1.25;
@@ -193,8 +210,7 @@
       border-radius:999px;
       padding:5px 12px;
       font-size:12px;
-      font-weight:700;
-      letter-spacing:.3px;
+      font-weight:800;
       text-transform:uppercase;
     }
 
@@ -205,30 +221,18 @@
     }
 
     .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:var(--shadow);
       cursor:pointer;
       transition:.28s;
     }
 
-    .card:hover{
-      transform:translateY(-7px);
-      box-shadow:0 16px 34px rgba(0,0,0,.17);
-    }
-
     .card img{
       width:100%;
-      height:180px;
+      height:190px;
       object-fit:cover;
       display:block;
     }
 
-    .card-content{
-      padding:18px;
-    }
-
+    .card-content{padding:18px;}
     .card h3{
       font-size:20px;
       line-height:1.35;
@@ -242,13 +246,10 @@
 
     .sidebar{
       position:sticky;
-      top:54px;
+      top:58px;
     }
 
     .widget{
-      background:#fff;
-      border-radius:16px;
-      box-shadow:var(--shadow);
       padding:18px;
       margin-bottom:18px;
     }
@@ -259,10 +260,7 @@
       font-size:20px;
     }
 
-    .widget ul{
-      list-style:none;
-    }
-
+    .widget ul{list-style:none;}
     .widget li{
       padding:10px 0;
       border-bottom:1px solid #ececec;
@@ -270,78 +268,41 @@
       color:#39424e;
     }
 
-    .widget li:last-child{
-      border-bottom:none;
-    }
-
+    .widget li:last-child{border-bottom:none;}
     .widget a{
       color:inherit;
       text-decoration:none;
     }
 
-    .widget a:hover{
-      color:var(--azul);
-    }
+    .widget a:hover{color:var(--azul);}
 
     .ad-card{
       display:block;
       text-decoration:none;
       color:inherit;
-      background:#fff;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 10px 26px rgba(0,0,0,.12);
-      margin-bottom:18px;
+      margin-bottom:20px;
       transition:.28s ease;
       border:1px solid rgba(0,51,204,.08);
-      position:relative;
-    }
-
-    .ad-card:hover{
-      transform:translateY(-7px) scale(1.01);
-      box-shadow:0 18px 40px rgba(0,0,0,.22);
-      border-color:rgba(0,51,204,.22);
-    }
-
-    .ad-card::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(135deg,rgba(0,51,204,.08),rgba(199,0,0,.06));
-      opacity:0;
-      transition:.28s;
-      pointer-events:none;
-    }
-
-    .ad-card:hover::after{
-      opacity:1;
     }
 
     .ad-card img{
       width:100%;
-      height:260px;
+      height:340px;
       display:block;
-      object-fit:contain;
+      object-fit:cover;
       background:#071226;
-      transition:.35s ease;
-    }
-
-    .ad-card:hover img{
-      transform:scale(1.02);
     }
 
     .ad-caption{
-      padding:14px 14px 16px;
-      position:relative;
-      z-index:2;
+      padding:16px;
       background:#fff;
     }
 
     .ad-caption h4{
       color:var(--azul);
-      font-size:18px;
+      font-size:20px;
       line-height:1.35;
-      margin-bottom:6px;
+      margin-bottom:7px;
     }
 
     .ad-caption p{
@@ -357,7 +318,7 @@
       padding:5px 10px;
       border-radius:999px;
       font-size:11px;
-      font-weight:800;
+      font-weight:900;
       text-transform:uppercase;
       margin-bottom:8px;
     }
@@ -365,12 +326,18 @@
     .bloco-anuncio{
       background:#fff;
       border-radius:16px;
-      box-shadow:0 10px 26px rgba(0,0,0,.12);
+      box-shadow:var(--shadow);
       padding:22px;
-      text-align:center;
-      color:#5f6b7a;
-      font-weight:600;
+      color:#39424e;
+      font-weight:700;
       margin-bottom:18px;
+      border-left:6px solid var(--azul);
+    }
+
+    .bloco-anuncio a{
+      color:var(--azul);
+      text-decoration:none;
+      font-weight:900;
     }
 
     .detail{
@@ -389,7 +356,7 @@
       color:#fff;
       padding:12px 20px;
       border-radius:10px;
-      font-weight:700;
+      font-weight:800;
       cursor:pointer;
       margin-bottom:20px;
     }
@@ -415,9 +382,50 @@
       margin-bottom:16px;
     }
 
+    .footer-parceiros{
+      max-width:1400px;
+      margin:36px auto 0;
+      padding:0 16px;
+    }
+
+    .footer-parceiros h2{
+      color:var(--azul);
+      text-align:center;
+      margin-bottom:18px;
+      font-size:26px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+    }
+
+    .footer-card{
+      background:#fff;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:18px;
+      text-align:center;
+      text-decoration:none;
+      color:#222;
+      transition:.25s;
+    }
+
+    .footer-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .footer-card strong{
+      display:block;
+      color:var(--azul);
+      font-size:18px;
+      margin-bottom:5px;
+    }
+
     .footer-cta{
       max-width:1400px;
-      margin:0 auto 18px;
+      margin:28px auto 18px;
       display:flex;
       justify-content:center;
       gap:12px;
@@ -430,16 +438,13 @@
       color:#fff;
       padding:14px 20px;
       border-radius:12px;
-      font-weight:700;
+      font-weight:800;
       min-width:220px;
       text-align:center;
       transition:.25s;
     }
 
-    .footer-cta a:hover{
-      transform:translateY(-3px);
-    }
-
+    .footer-cta a:hover{transform:translateY(-3px);}
     .btn-portal{background:#0a45ff;}
     .btn-youtube{background:#ff0000;}
     .btn-instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);}
@@ -454,13 +459,8 @@
       text-decoration:none;
       padding:14px 18px;
       border-radius:999px;
-      font-weight:700;
+      font-weight:800;
       box-shadow:0 10px 24px rgba(0,0,0,.22);
-      transition:.2s;
-    }
-
-    .botao-simulados-fixo:hover{
-      transform:translateY(-2px);
     }
 
     footer{
@@ -468,98 +468,26 @@
       color:#d3d3d3;
       text-align:center;
       padding:34px 16px;
-      margin-top:60px;
+      margin-top:40px;
     }
 
-    footer p{
-      margin:4px 0;
+    footer p{margin:4px 0;}
+
+    @media(max-width:1200px){
+      .layout{grid-template-columns:1fr;}
+      .sidebar{position:static;}
     }
 
-    @media (max-width:1200px){
-      .layout{
-        grid-template-columns:1fr;
-      }
-
-      .sidebar{
-        position:static;
-      }
-    }
-
-    @media (max-width:768px){
-      .ticker-label{
-        padding:7px 10px;
-        font-size:13px;
-      }
-
-      .ticker-container{
-        height:32px;
-      }
-
-      .ticker-content{
-        font-size:13px;
-      }
-
-      .nav-container{
-        padding:6px 8px;
-        gap:4px;
-      }
-
-      .nav-link{
-        padding:7px 10px;
-        font-size:13px;
-        border-radius:8px;
-      }
-
-      header{
-        padding:16px 10px 14px;
-      }
-
-      header h1{
-        font-size:24px;
-      }
-
-      header p{
-        font-size:13px;
-      }
-
-      .hero-card img{
-        height:240px;
-      }
-
-      .hero-content{
-        padding:18px;
-      }
-
-      .hero-content h2{
-        font-size:24px;
-      }
-
-      .card img{
-        height:190px;
-      }
-
-      .card-content{
-        padding:16px;
-      }
-
-      .ad-card img{
-        height:260px;
-      }
-
-      .detail{
-        padding:24px 18px;
-      }
-
-      .detail h1{
-        font-size:25px;
-      }
-
-      .footer-cta a{
-        width:100%;
-        max-width:360px;
-        min-width:unset;
-      }
-
+    @media(max-width:768px){
+      header h1{font-size:24px;}
+      .layout{margin:18px auto;}
+      .hero-card img{height:240px;}
+      .hero-content h2{font-size:24px;}
+      .card img{height:190px;}
+      .ad-card img{height:310px;}
+      .detail{padding:24px 18px;}
+      .detail h1{font-size:25px;}
+      .footer-cta a{width:100%;max-width:360px;min-width:unset;}
       .botao-simulados-fixo{
         right:12px;
         bottom:12px;
@@ -569,6 +497,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="ticker-wrapper">
@@ -586,10 +515,27 @@
 
   <header>
     <h1>Portal Beberibe Notícias</h1>
-    <p>Notícias da cidade, região e informações em destaque todos os dias</p>
+    <p>Notícias da cidade, empregos, concursos, educação, ENEM, turismo e oportunidades</p>
   </header>
 
   <div id="contadorAcessos">Carregando acessos...</div>
+
+  <section class="empregos-topo">
+    <div class="emprego-box">
+      <h3>💼 Empresas contratando</h3>
+      <p>Comércio, turismo, serviços e alimentação começam a ganhar destaque em Beberibe.</p>
+    </div>
+
+    <div class="emprego-box">
+      <h3>📢 Divulgue sua vaga</h3>
+      <p>Envie sua oportunidade para: <a href="mailto:reinetrindadeeterna@gmail.com">reinetrindadeeterna@gmail.com</a></p>
+    </div>
+
+    <div class="emprego-box">
+      <h3>🎯 Prepare-se</h3>
+      <p>Hotelaria, atendimento, idiomas, concursos e ENEM podem abrir novas portas.</p>
+    </div>
+  </section>
 
   <div class="layout" id="homePage">
     <main>
@@ -602,39 +548,36 @@
     <aside class="sidebar">
 
       <a class="ad-card" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">
-        <img src="db-enem-anuncio.jpg" alt="DB ENEM - Simulados ENEM">
+        <img src="db-enem-parceiro.png" alt="DB ENEM - Simulados ENEM">
         <div class="ad-caption">
           <span class="ad-tag">ENEM 2026</span>
           <h4>DB ENEM</h4>
-          <p>
-            Prepare-se para o ENEM com simulados digitais por disciplina, teste grátis,
-            premium individual, redação com 300 questões e acesso vitalício aos 17 simulados.
-          </p>
+          <p>Simulados digitais para ENEM com 17 disciplinas, treino por área, teste grátis e preparação completa.</p>
         </div>
       </a>
-
-      <div class="bloco-anuncio">Espaço publicitário disponível para parceiros locais</div>
 
       <a class="ad-card" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">
-        <img src="imagem-gabarito-max.png" alt="Gabarito Max - simulados digitais para concursos">
+        <img src="gabarito-max-parceiro.png" alt="Gabarito Max - Simulados de Concursos">
         <div class="ad-caption">
-          <span class="ad-tag">Parceiro local</span>
+          <span class="ad-tag">Concursos</span>
           <h4>Gabarito Max</h4>
-          <p>
-            Simulados digitais para concursos, Câmara Municipal de Beberibe,
-            Analista Administrativo, áreas profissionais, educação e preparação prática.
-          </p>
+          <p>Simulados para concursos, Câmara de Beberibe, Analista Administrativo, INSS e simulador da Copa.</p>
         </div>
       </a>
 
-      <a class="ad-card" href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Parceiros locais">
+      <a class="ad-card" href="https://www.instagram.com/matriz.educacional/" target="_blank" rel="noopener noreferrer">
+        <img src="matriz-educacional-parceiro.png" alt="MATRIZ Educacional - Redação e preparação">
         <div class="ad-caption">
-          <span class="ad-tag">Publicidade</span>
-          <h4>Parceiros locais</h4>
-          <p>Espaço ideal para empresas, clínicas, pousadas, cursos e negócios da região anunciarem no Portal Beberibe Notícias.</p>
+          <span class="ad-tag">Redação</span>
+          <h4>MATRIZ Educacional</h4>
+          <p>Preparação com foco em redação, repertório, estrutura textual e desempenho para ENEM e concursos.</p>
         </div>
       </a>
+
+      <div class="bloco-anuncio">
+        📢 Quer anunciar sua empresa, vaga ou curso no Beberibe Notícias?<br>
+        Envie para: <a href="mailto:reinetrindadeeterna@gmail.com">reinetrindadeeterna@gmail.com</a>
+      </div>
 
       <div class="widget">
         <h3>Mais lidas</h3>
@@ -650,6 +593,31 @@
 
   <section class="detail" id="paginaNoticia"></section>
 
+  <section class="footer-parceiros">
+    <h2>Parceiros e canais oficiais</h2>
+    <div class="footer-grid">
+      <a class="footer-card" href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer">
+        <strong>Beberibe Notícias</strong>
+        @beberibe.noticiasoficial
+      </a>
+
+      <a class="footer-card" href="https://www.instagram.com/portal.gabaritomax/" target="_blank" rel="noopener noreferrer">
+        <strong>Gabarito Max</strong>
+        @portal.gabaritomax
+      </a>
+
+      <a class="footer-card" href="https://www.instagram.com/db.enem/" target="_blank" rel="noopener noreferrer">
+        <strong>DB ENEM</strong>
+        Simulados ENEM
+      </a>
+
+      <a class="footer-card" href="https://www.instagram.com/matriz.educacional/" target="_blank" rel="noopener noreferrer">
+        <strong>MATRIZ Educacional</strong>
+        Redação e preparação
+      </a>
+    </div>
+  </section>
+
   <div class="footer-cta">
     <a href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/" class="btn-portal" target="_blank" rel="noopener noreferrer">Portal Local</a>
     <a href="https://www.youtube.com/@Portal_Gabarito_Max" class="btn-youtube" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -658,7 +626,7 @@
 
   <footer>
     <p><strong>Portal Beberibe Notícias</strong></p>
-    <p>Informação local com visual profissional e atualização constante.</p>
+    <p>Informação local, empregos, concursos, ENEM, turismo e oportunidades.</p>
   </footer>
 
   <a href="https://cincoregioes-star.github.io/DB-ENEM/" class="botao-simulados-fixo" target="_blank" rel="noopener noreferrer">DB ENEM</a>
