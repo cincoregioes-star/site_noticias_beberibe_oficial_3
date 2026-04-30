@@ -3,7 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal Beberibe Notícias</title>
+
+  <title>Beberibe Notícias - Empregos, Concursos, ENEM, Turismo e Notícias do Ceará</title>
+
+  <meta name="description" content="Beberibe Notícias: portal com notícias de Beberibe, empregos, concursos, ENEM 2026, turismo, economia, oportunidades e informações da região." />
+  <meta name="keywords" content="Beberibe Notícias, notícias Beberibe, empregos Beberibe, concurso Beberibe, ENEM 2026, turismo Beberibe, vagas Beberibe, Ceará notícias, Câmara de Beberibe, INSS, DB ENEM, Gabarito Max, Matriz Educacional" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Beberibe Notícias" />
+  <link rel="canonical" href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/" />
+
+  <meta property="og:title" content="Beberibe Notícias - Empregos, Concursos, ENEM e Notícias do Ceará" />
+  <meta property="og:description" content="Notícias atualizadas de Beberibe, vagas de emprego, concursos, ENEM 2026, turismo e oportunidades." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/" />
+  <meta property="og:image" content="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/resort-uruau.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"NewsMediaOrganization",
+    "name":"Beberibe Notícias",
+    "url":"https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/",
+    "description":"Portal de notícias de Beberibe com empregos, concursos, ENEM, turismo e oportunidades.",
+    "areaServed":{"@type":"City","name":"Beberibe"},
+    "sameAs":[
+      "https://cincoregioes-star.github.io/DB-ENEM/",
+      "https://cincoregioes-star.github.io/oficial-portal-gabaritomax/",
+      "https://cincoregioes-star.github.io/matriz-educacional/"
+    ]
+  }
+  </script>
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -28,6 +57,7 @@
     }
 
     .ticker-wrapper{background:#111;}
+
     .ticker-label{
       background:var(--vermelho);
       color:#fff;
@@ -89,7 +119,10 @@
       font-size:14px;
     }
 
-    .nav-link:hover,.nav-link.active{background:rgba(255,255,255,.16);}
+    .nav-link:hover,
+    .nav-link.active{
+      background:rgba(255,255,255,.16);
+    }
 
     header{
       background:linear-gradient(135deg,var(--azul),var(--azul2));
@@ -98,8 +131,24 @@
       padding:22px 12px 18px;
     }
 
-    header h1{font-size:30px;margin-bottom:6px;line-height:1.2;}
-    header p{font-size:15px;opacity:.95;}
+    header h1{
+      font-size:30px;
+      margin-bottom:6px;
+      line-height:1.2;
+    }
+
+    header p{
+      font-size:15px;
+      opacity:.95;
+    }
+
+    .seo-intro{
+      max-width:1400px;
+      margin:14px auto 0;
+      padding:0 16px;
+      color:#4b5563;
+      font-size:15px;
+    }
 
     #contadorAcessos{
       max-width:1400px;
@@ -162,7 +211,10 @@
       margin-bottom:22px;
     }
 
-    .hero-card,.card,.widget,.ad-card{
+    .hero-card,
+    .card,
+    .widget,
+    .ad-card{
       background:#fff;
       border-radius:var(--radius);
       box-shadow:var(--shadow);
@@ -175,7 +227,9 @@
       transition:.25s;
     }
 
-    .hero-card:hover,.card:hover,.ad-card:hover{
+    .hero-card:hover,
+    .card:hover,
+    .ad-card:hover{
       transform:translateY(-6px);
     }
 
@@ -186,7 +240,10 @@
       display:block;
     }
 
-    .hero-content{padding:22px;}
+    .hero-content{
+      padding:22px;
+    }
+
     .hero-content h2{
       font-size:32px;
       line-height:1.25;
@@ -232,7 +289,10 @@
       display:block;
     }
 
-    .card-content{padding:18px;}
+    .card-content{
+      padding:18px;
+    }
+
     .card h3{
       font-size:20px;
       line-height:1.35;
@@ -260,7 +320,10 @@
       font-size:20px;
     }
 
-    .widget ul{list-style:none;}
+    .widget ul{
+      list-style:none;
+    }
+
     .widget li{
       padding:10px 0;
       border-bottom:1px solid #ececec;
@@ -268,13 +331,18 @@
       color:#39424e;
     }
 
-    .widget li:last-child{border-bottom:none;}
+    .widget li:last-child{
+      border-bottom:none;
+    }
+
     .widget a{
       color:inherit;
       text-decoration:none;
     }
 
-    .widget a:hover{color:var(--azul);}
+    .widget a:hover{
+      color:var(--azul);
+    }
 
     .ad-card{
       display:block;
@@ -444,10 +512,15 @@
       transition:.25s;
     }
 
-    .footer-cta a:hover{transform:translateY(-3px);}
+    .footer-cta a:hover{
+      transform:translateY(-3px);
+    }
+
     .btn-portal{background:#0a45ff;}
     .btn-youtube{background:#ff0000;}
-    .btn-instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);}
+    .btn-db{background:linear-gradient(135deg,#0a45ff,#121c4e);}
+    .btn-gabarito{background:linear-gradient(135deg,#ff9800,#c76a00);}
+    .btn-matriz{background:linear-gradient(135deg,#008037,#003f1f);}
 
     .botao-simulados-fixo{
       position:fixed;
@@ -471,7 +544,9 @@
       margin-top:40px;
     }
 
-    footer p{margin:4px 0;}
+    footer p{
+      margin:4px 0;
+    }
 
     @media(max-width:1200px){
       .layout{grid-template-columns:1fr;}
@@ -487,6 +562,7 @@
       .ad-card img{height:310px;}
       .detail{padding:24px 18px;}
       .detail h1{font-size:25px;}
+      .seo-intro{font-size:14px;}
       .footer-cta a{width:100%;max-width:360px;min-width:unset;}
       .botao-simulados-fixo{
         right:12px;
@@ -514,9 +590,13 @@
   </nav>
 
   <header>
-    <h1>Portal Beberibe Notícias</h1>
+    <h1>Beberibe Notícias</h1>
     <p>Notícias da cidade, empregos, concursos, educação, ENEM, turismo e oportunidades</p>
   </header>
+
+  <div class="seo-intro">
+    Portal Beberibe Notícias com atualizações sobre empregos em Beberibe, concursos públicos, ENEM 2026, turismo, economia local, oportunidades e notícias do Ceará.
+  </div>
 
   <div id="contadorAcessos">Carregando acessos...</div>
 
@@ -548,7 +628,7 @@
     <aside class="sidebar">
 
       <a class="ad-card" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">
-        <img src="db-enem-parceiro.png" alt="DB ENEM - Simulados ENEM">
+        <img src="db-enem-parceiro.png" alt="DB ENEM - Simulados ENEM 2026">
         <div class="ad-caption">
           <span class="ad-tag">ENEM 2026</span>
           <h4>DB ENEM</h4>
@@ -565,8 +645,8 @@
         </div>
       </a>
 
-      <a class="ad-card" href="https://www.instagram.com/matriz.educacional/" target="_blank" rel="noopener noreferrer">
-        <img src="matriz-educacional-parceiro.png" alt="MATRIZ Educacional - Redação e preparação">
+      <a class="ad-card" href="https://cincoregioes-star.github.io/matriz-educacional/" target="_blank" rel="noopener noreferrer">
+        <img src="matriz-educacional-parceiro.png" alt="MATRIZ Educacional - Redação ENEM e preparação">
         <div class="ad-caption">
           <span class="ad-tag">Redação</span>
           <h4>MATRIZ Educacional</h4>
@@ -594,39 +674,44 @@
   <section class="detail" id="paginaNoticia"></section>
 
   <section class="footer-parceiros">
-    <h2>Parceiros e canais oficiais</h2>
+    <h2>Plataformas parceiras</h2>
+
     <div class="footer-grid">
-      <a class="footer-card" href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer">
-        <strong>Beberibe Notícias</strong>
-        @beberibe.noticiasoficial
-      </a>
-
-      <a class="footer-card" href="https://www.instagram.com/portal.gabaritomax/" target="_blank" rel="noopener noreferrer">
-        <strong>Gabarito Max</strong>
-        @portal.gabaritomax
-      </a>
-
-      <a class="footer-card" href="https://www.instagram.com/db.enem/" target="_blank" rel="noopener noreferrer">
+      <a class="footer-card" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">
         <strong>DB ENEM</strong>
-        Simulados ENEM
+        Simulados ENEM 2026 com 17 disciplinas
       </a>
 
-      <a class="footer-card" href="https://www.instagram.com/matriz.educacional/" target="_blank" rel="noopener noreferrer">
+      <a class="footer-card" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">
+        <strong>Gabarito Max</strong>
+        Simulados para concursos, INSS e Câmara de Beberibe
+      </a>
+
+      <a class="footer-card" href="https://cincoregioes-star.github.io/matriz-educacional/" target="_blank" rel="noopener noreferrer">
         <strong>MATRIZ Educacional</strong>
-        Redação e preparação
+        Redação, ENEM e preparação educacional
+      </a>
+
+      <a class="footer-card" href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/" target="_blank" rel="noopener noreferrer">
+        <strong>Beberibe Notícias</strong>
+        Notícias, empregos, concursos e oportunidades
       </a>
     </div>
   </section>
 
   <div class="footer-cta">
-    <a href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/" class="btn-portal" target="_blank" rel="noopener noreferrer">Portal Local</a>
-    <a href="https://www.youtube.com/@Portal_Gabarito_Max" class="btn-youtube" target="_blank" rel="noopener noreferrer">YouTube</a>
-    <a href="https://www.instagram.com/beberibe.noticiasoficial/" class="btn-instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/" class="btn-portal" target="_blank" rel="noopener noreferrer">Notícias completas</a>
+    <a href="https://cincoregioes-star.github.io/DB-ENEM/" class="btn-db" target="_blank" rel="noopener noreferrer">Simulados ENEM</a>
+    <a href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" class="btn-gabarito" target="_blank" rel="noopener noreferrer">Simulados Concursos</a>
+    <a href="https://cincoregioes-star.github.io/matriz-educacional/" class="btn-matriz" target="_blank" rel="noopener noreferrer">MATRIZ Educacional</a>
   </div>
 
   <footer>
-    <p><strong>Portal Beberibe Notícias</strong></p>
+    <p><strong>Beberibe Notícias</strong></p>
     <p>Informação local, empregos, concursos, ENEM, turismo e oportunidades.</p>
+    <p>📲 Notícias completas: https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/</p>
+    <p>📚 Simulados ENEM: https://cincoregioes-star.github.io/DB-ENEM/</p>
+    <p>📝 Simulados concursos: https://cincoregioes-star.github.io/oficial-portal-gabaritomax/</p>
   </footer>
 
   <a href="https://cincoregioes-star.github.io/DB-ENEM/" class="botao-simulados-fixo" target="_blank" rel="noopener noreferrer">DB ENEM</a>
