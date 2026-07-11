@@ -1,235 +1,515 @@
-const homePage = document.getElementById("homePage");
-const areaDestaque = document.getElementById("areaDestaque");
-const listaNoticias = document.getElementById("listaNoticias");
-const paginaNoticia = document.getElementById("paginaNoticia");
-const tickerNoticias = document.getElementById("tickerNoticias");
-const menuCategorias = document.getElementById("menuCategorias");
-const maisLidas = document.getElementById("maisLidas");
-const listaCategorias = document.getElementById("listaCategorias");
+(() => {
+  "use strict";
 
-function misturarCategorias(noticias) {
-  const grupos = {};
+  const elements = {
+    homePage: document.getElementById("homePage"),
+    areaDestaque: document.getElementById("areaDestaque"),
+    listaNoticias: document.getElementById("listaNoticias"),
+    paginaNoticia: document.getElementById("paginaNoticia"),
+    tickerNoticias: document.getElementById("tickerNoticias"),
+    menuCategorias: document.getElementById("menuCategorias"),
+    destaquesEdicao: document.getElementById("destaquesEdicao"),
+    listaCategorias: document.getElementById("listaCategorias"),
+    searchInput: document.getElementById("searchInput"),
+    resultCount: document.getElementById("resultCount"),
+    editionDate: document.getElementById("editionDate"),
+    nextEditionDate: document.getElementById("nextEditionDate"),
+    editionStatus: document.getElementById("editionStatus"),
+    nextEditionText: document.getElementById("nextEditionText"),
+    readingProgress: document.getElementById("readingProgress")
+  };
 
-  noticias.forEach(n => {
-    if (!grupos[n.categoria]) grupos[n.categoria] = [];
-    grupos[n.categoria].push(n);
-  });
+  const state = {
+    categoria: "Todas",
+    busca: "",
+    artigoAberto: null
+  };
 
-  Object.keys(grupos).forEach(cat => {
-    grupos[cat].sort((a, b) => new Date(b.data) - new Date(a.data));
-  });
+  const collator = new Intl.Collator("pt-BR", { sensitivity: "base" });
 
-  const categoriasOrdenadas = Object.keys(grupos).sort((a, b) => grupos[b].length - grupos[a].length);
-  const resultado = [];
-  let adicionou = true;
+  function escapeHtml(value = "") {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
 
-  while (adicionou) {
-    adicionou = false;
-    categoriasOrdenadas.forEach(cat => {
-      const item = grupos[cat].shift();
-      if (item) {
-        resultado.push(item);
-        adicionou = true;
-      }
+  function normalizar(value = "") {
+    return String(value)
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+  }
+
+  function formatarData(dataISO, formatoLongo = false) {
+    if (!dataISO) return "";
+    const data = new Date(`${dataISO}T12:00:00`);
+    return new Intl.DateTimeFormat("pt-BR", formatoLongo
+      ? { day: "2-digit", month: "long", year: "numeric" }
+      : { day: "2-digit", month: "2-digit", year: "numeric" }
+    ).format(data);
+  }
+
+  function ordenarNoticias(lista) {
+    return [...lista].sort((a, b) => {
+      if (Boolean(a.destaque) !== Boolean(b.destaque)) return a.destaque ? -1 : 1;
+      return new Date(b.data) - new Date(a.data);
     });
   }
 
-  return resultado;
-}
+  const noticiasOrdenadas = ordenarNoticias(bancoNoticias);
 
-const noticiasDestaque = bancoNoticias
-  .filter(n => n.destaque)
-  .sort((a, b) => new Date(b.data) - new Date(a.data));
+  function categoriasComContagem() {
+    const mapa = bancoNoticias.reduce((acc, noticia) => {
+      acc[noticia.categoria] = (acc[noticia.categoria] || 0) + 1;
+      return acc;
+    }, {});
 
-const noticiasComuns = bancoNoticias
-  .filter(n => !n.destaque)
-  .sort((a, b) => new Date(b.data) - new Date(a.data));
-
-const noticiasOrdenadas = [
-  ...noticiasDestaque,
-  ...misturarCategorias(noticiasComuns)
-];
-
-let categoriaAtual = "Todas";
-
-function formatarData(dataStr) {
-  const data = new Date(dataStr + "T12:00:00");
-  return data.toLocaleDateString("pt-BR");
-}
-
-function gerarCategorias() {
-  const categorias = [
-    "Todas",
-    ...new Set(bancoNoticias.map(n => n.categoria))
-  ];
-
-  menuCategorias.innerHTML = categorias.map(cat => `
-    <a href="#" class="nav-link ${cat === categoriaAtual ? "active" : ""}" data-categoria="${cat}">
-      ${cat}
-    </a>
-  `).join("");
-
-  listaCategorias.innerHTML = categorias
-    .filter(cat => cat !== "Todas")
-    .map(cat => `<li><a href="#" data-categoria="${cat}">${cat}</a></li>`)
-    .join("");
-
-  document.querySelectorAll("[data-categoria]").forEach(item => {
-    item.addEventListener("click", function(e) {
-      e.preventDefault();
-      categoriaAtual = this.dataset.categoria;
-      gerarCategorias();
-      renderizarHome();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  });
-}
-
-function gerarTicker() {
-  const titulos = noticiasOrdenadas.slice(0, 10).map(n => `<span>${n.titulo}</span>`);
-  tickerNoticias.innerHTML = [...titulos, ...titulos].join("");
-}
-
-function gerarMaisLidas() {
-  const topNoticias = noticiasOrdenadas.slice(0, 6);
-
-  maisLidas.innerHTML = topNoticias.map(n => `
-    <li><a href="#" data-id="${n.id}">${n.titulo}</a></li>
-  `).join("");
-
-  maisLidas.querySelectorAll("[data-id]").forEach(link => {
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
-      abrirNoticia(Number(this.dataset.id));
-    });
-  });
-}
-
-function obterNoticiasFiltradas() {
-  if (categoriaAtual === "Todas") return noticiasOrdenadas;
-  return noticiasOrdenadas.filter(n => n.categoria === categoriaAtual);
-}
-
-function renderizarHome() {
-  const noticiasFiltradas = obterNoticiasFiltradas();
-
-  if (!noticiasFiltradas.length) {
-    areaDestaque.innerHTML = "";
-    listaNoticias.innerHTML = "<p>Nenhuma notícia encontrada.</p>";
-    return;
+    return Object.entries(mapa)
+      .sort(([a], [b]) => collator.compare(a, b))
+      .map(([nome, quantidade]) => ({ nome, quantidade }));
   }
 
-  const noticiaDestaque = noticiasFiltradas.find(n => n.destaque) || noticiasFiltradas[0];
-  const restantes = noticiasFiltradas.filter(n => n.id !== noticiaDestaque.id);
+  function configurarEdicao() {
+    elements.editionDate.textContent = formatarData(edicaoJornal.dataEdicao);
+    elements.nextEditionDate.textContent = formatarData(edicaoJornal.proximaAtualizacao);
+    elements.editionStatus.textContent = `Edição de ${formatarData(edicaoJornal.dataEdicao, true)}`;
+    elements.nextEditionText.textContent = `Próxima atualização: ${formatarData(edicaoJornal.proximaAtualizacao, true)}`;
+  }
 
-  areaDestaque.innerHTML = `
-    <article class="hero-card" data-id="${noticiaDestaque.id}">
-      <img src="${noticiaDestaque.imagem}" 
-           style="width:100%;height:260px;object-fit:cover;border-radius:12px;">
-      <div class="hero-content">
-        <span class="badge">${noticiaDestaque.categoria}</span>
-        <h2>${noticiaDestaque.titulo}</h2>
-        <div class="meta">
-          <span>${formatarData(noticiaDestaque.data)}</span>
-          <span>Notícia em destaque</span>
-        </div>
-        <p>${noticiaDestaque.resumo}</p>
-        ${noticiaDestaque.botao ? `
-          <a href="${noticiaDestaque.botao.link}" target="_blank"
-             style="display:inline-block;margin-top:12px;background:#0a45ff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;"
-             onclick="event.stopPropagation();">${noticiaDestaque.botao.texto}</a>
-        ` : ""}
-      </div>
-    </article>
-  `;
+  function gerarMenuCategorias() {
+    const categorias = [{ nome: "Todas", quantidade: bancoNoticias.length }, ...categoriasComContagem()];
 
-  listaNoticias.innerHTML = restantes.map(n => `
-    <article class="card" data-id="${n.id}">
-      <img src="${n.imagem}" 
-           style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
-      <div class="card-content">
-        <span class="badge">${n.categoria}</span>
-        <h3>${n.titulo}</h3>
-        <div class="meta">
-          <span>${formatarData(n.data)}</span>
-        </div>
-        <p>${n.resumo}</p>
-      </div>
-    </article>
-  `).join("");
+    elements.menuCategorias.innerHTML = categorias.map(({ nome, quantidade }) => `
+      <button
+        class="category-button ${state.categoria === nome ? "active" : ""}"
+        type="button"
+        data-category="${escapeHtml(nome)}"
+        aria-pressed="${state.categoria === nome}"
+        title="${quantidade} ${quantidade === 1 ? "notícia" : "notícias"}"
+      >${escapeHtml(nome)}</button>
+    `).join("");
 
-  document.querySelectorAll("[data-id]").forEach(card => {
-    card.addEventListener("click", function() {
-      abrirNoticia(Number(this.dataset.id));
+    elements.listaCategorias.innerHTML = categorias
+      .filter(({ nome }) => nome !== "Todas")
+      .map(({ nome, quantidade }) => `
+        <li>
+          <button type="button" data-category="${escapeHtml(nome)}">
+            <span>${escapeHtml(nome)}</span>
+            <b>${quantidade}</b>
+          </button>
+        </li>
+      `).join("");
+  }
+
+  function gerarTicker() {
+    const items = noticiasOrdenadas.slice(0, 9).map(noticia => (
+      `<span>${escapeHtml(noticia.titulo)}</span>`
+    ));
+    elements.tickerNoticias.innerHTML = [...items, ...items].join("");
+  }
+
+  function gerarDestaques() {
+    const idsPreferidos = [2, 1, 6, 10];
+    const destaques = idsPreferidos
+      .map(id => bancoNoticias.find(noticia => noticia.id === id))
+      .filter(Boolean);
+
+    elements.destaquesEdicao.innerHTML = destaques.map(noticia => `
+      <li>
+        <button type="button" data-news-id="${noticia.id}">
+          <span>${escapeHtml(noticia.titulo)}<small>${escapeHtml(noticia.categoria)} • ${formatarData(noticia.data)}</small></span>
+          <b>→</b>
+        </button>
+      </li>
+    `).join("");
+  }
+
+  function obterNoticiasFiltradas() {
+    const termo = normalizar(state.busca);
+
+    return noticiasOrdenadas.filter(noticia => {
+      const categoriaValida = state.categoria === "Todas" || noticia.categoria === state.categoria;
+      if (!categoriaValida) return false;
+      if (!termo) return true;
+
+      const textoIndexado = normalizar([
+        noticia.titulo,
+        noticia.resumo,
+        noticia.categoria,
+        noticia.selo,
+        ...(noticia.conteudo || []),
+        ...(noticia.convocados || []).flatMap(item => [item.nome, item.cargo, item.inscricao, item.modalidade])
+      ].join(" "));
+
+      return textoIndexado.includes(termo);
     });
-  });
-}
+  }
 
-function abrirNoticia(id) {
-  const noticia = bancoNoticias.find(n => n.id === id);
-  if (!noticia) return;
+  function metaNoticia(noticia, destaque = false) {
+    return `
+      <div class="news-meta">
+        <span>${formatarData(noticia.data, true)}</span>
+        <span>${escapeHtml(noticia.categoria)}</span>
+        <span class="source-check">✓ Fonte identificada</span>
+        ${destaque ? "<span>Principal da edição</span>" : ""}
+      </div>
+    `;
+  }
 
-  const conteudoHtml = noticia.conteudo.map(p => `<p>${p}</p>`).join("");
+  function imagemComFallback(noticia, loading = "lazy") {
+    return `<img src="${escapeHtml(noticia.imagem)}" alt="${escapeHtml(noticia.titulo)}" loading="${loading}" onerror="this.onerror=null;this.src='assets/fallback.svg';">`;
+  }
 
-  const imagensExtrasHtml = noticia.imagensExtras
-    ? `
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:20px 0;">
-        ${noticia.imagensExtras.map(img => `
-          <img src="${img}" 
-               style="width:100%;height:220px;object-fit:cover;border-radius:12px;">
+  function cardDestaque(noticia) {
+    return `
+      <article class="hero-news" data-news-id="${noticia.id}" tabindex="0" role="button" aria-label="Abrir notícia: ${escapeHtml(noticia.titulo)}">
+        <div class="hero-news__image">${imagemComFallback(noticia, "eager")}</div>
+        <div class="hero-news__content">
+          <span class="badge">${escapeHtml(noticia.selo || noticia.categoria)}</span>
+          <h3>${escapeHtml(noticia.titulo)}</h3>
+          <p>${escapeHtml(noticia.resumo)}</p>
+          ${metaNoticia(noticia, true)}
+        </div>
+      </article>
+    `;
+  }
+
+  function cardNoticia(noticia) {
+    return `
+      <article class="news-card" data-news-id="${noticia.id}" tabindex="0" role="button" aria-label="Abrir notícia: ${escapeHtml(noticia.titulo)}">
+        <div class="news-card__image">${imagemComFallback(noticia)}</div>
+        <div class="news-card__body">
+          <span class="badge">${escapeHtml(noticia.selo || noticia.categoria)}</span>
+          <h3>${escapeHtml(noticia.titulo)}</h3>
+          <p>${escapeHtml(noticia.resumo)}</p>
+          ${metaNoticia(noticia)}
+        </div>
+      </article>
+    `;
+  }
+
+  function atualizarContador(total) {
+    const filtros = [];
+    if (state.categoria !== "Todas") filtros.push(state.categoria);
+    if (state.busca) filtros.push(`busca: “${state.busca}”`);
+
+    const textoTotal = `${total} ${total === 1 ? "notícia encontrada" : "notícias encontradas"}`;
+    elements.resultCount.textContent = filtros.length ? `${textoTotal} • ${filtros.join(" • ")}` : textoTotal;
+  }
+
+  function renderizarHome() {
+    const filtradas = obterNoticiasFiltradas();
+    atualizarContador(filtradas.length);
+
+    if (!filtradas.length) {
+      elements.areaDestaque.innerHTML = "";
+      elements.listaNoticias.innerHTML = `
+        <div class="empty-state">
+          <strong>Nenhuma notícia encontrada.</strong><br>
+          Tente outra palavra ou selecione “Todas”.
+        </div>
+      `;
+      return;
+    }
+
+    const destaque = filtradas.find(noticia => noticia.destaque) || filtradas[0];
+    const restantes = filtradas.filter(noticia => noticia.id !== destaque.id);
+
+    elements.areaDestaque.innerHTML = cardDestaque(destaque);
+    elements.listaNoticias.innerHTML = restantes.map(cardNoticia).join("");
+  }
+
+  function servicoHtml(noticia) {
+    if (!Array.isArray(noticia.servico) || noticia.servico.length === 0) return "";
+    return `
+      <section class="service-box">
+        <h3>Informações práticas</h3>
+        <ul>${noticia.servico.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+      </section>
+    `;
+  }
+
+  function alertaEditorialHtml(noticia) {
+    if (!noticia.alertaEditorial) return "";
+    return `
+      <section class="editorial-alert">
+        <span>Correção verificada</span>
+        <h3>${escapeHtml(noticia.alertaEditorial.titulo)}</h3>
+        <p>${escapeHtml(noticia.alertaEditorial.texto)}</p>
+      </section>
+    `;
+  }
+
+  function metricasHtml(noticia) {
+    if (!Array.isArray(noticia.metricas) || !noticia.metricas.length) return "";
+    return `
+      <section class="article-section">
+        <div class="article-section__head"><span>Panorama</span><h2>Números do concurso</h2></div>
+        <div class="stats-grid">
+          ${noticia.metricas.map(item => `
+            <div class="stat-card"><strong>${escapeHtml(item.valor)}</strong><span>${escapeHtml(item.rotulo)}</span></div>
+          `).join("")}
+        </div>
+        ${noticia.notaCalculo ? `<p class="calculation-note">${escapeHtml(noticia.notaCalculo)}</p>` : ""}
+      </section>
+    `;
+  }
+
+  function historicoHtml(noticia) {
+    if (!Array.isArray(noticia.historicoNomeacoes) || !noticia.historicoNomeacoes.length) return "";
+    const total = noticia.historicoNomeacoes.reduce((soma, item) => soma + Number(item.registros || 0), 0);
+    return `
+      <section class="article-section">
+        <div class="article-section__head"><span>Levantamento</span><h2>Cinco atos de nomeação analisados</h2></div>
+        <div class="history-list">
+          ${noticia.historicoNomeacoes.map(item => `
+            <div><b>${escapeHtml(item.portaria)}</b><span>${escapeHtml(item.data)}</span><strong>${escapeHtml(item.registros)} registros</strong></div>
+          `).join("")}
+          <div class="history-total"><b>Total publicado</b><span>cinco portarias</span><strong>${total} registros</strong></div>
+        </div>
+      </section>
+    `;
+  }
+
+  function orientadorHtml(noticia) {
+    if (!Array.isArray(noticia.situacaoOrientador) || !noticia.situacaoOrientador.length) return "";
+    return `
+      <section class="orientador-box">
+        <div><span>Cargo acompanhado</span><h2>Orientador Social</h2><p>Não consta na Portaria de 7 de julho nem nos cinco atos de nomeação analisados.</p></div>
+        <ul>${noticia.situacaoOrientador.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+      </section>
+    `;
+  }
+
+  function convocadosHtml(noticia) {
+    if (!Array.isArray(noticia.convocados) || !noticia.convocados.length) return "";
+    const grupos = noticia.convocados.reduce((acc, item) => {
+      (acc[item.cargo] ||= []).push(item);
+      return acc;
+    }, {});
+
+    return `
+      <section class="article-section nominees-section">
+        <div class="article-section__head"><span>Anexo I</span><h2>Todos os 28 nomeados</h2><p>Relação reproduzida conforme as páginas 4 e 5 da Portaria nº 07.07.001/2026.</p></div>
+        ${Object.entries(grupos).map(([cargo, pessoas]) => `
+          <div class="nominee-group">
+            <div class="nominee-group__title"><h3>${escapeHtml(cargo)}</h3><span>${pessoas.length} ${pessoas.length === 1 ? "nome" : "nomes"}</span></div>
+            <div class="table-scroll">
+              <table class="nominee-table">
+                <thead><tr><th>Nome</th><th>Inscrição</th><th>Classificação</th><th>Modalidade</th></tr></thead>
+                <tbody>
+                  ${pessoas.map(pessoa => `
+                    <tr><td>${escapeHtml(pessoa.nome)}</td><td>${escapeHtml(pessoa.inscricao)}</td><td>${escapeHtml(pessoa.classificacao)}</td><td><span class="mode-pill mode-${normalizar(pessoa.modalidade)}">${escapeHtml(pessoa.modalidade)}</span></td></tr>
+                  `).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
         `).join("")}
-      </div>
-    `
-    : `<img src="${noticia.imagem}" style="width:100%;height:260px;object-fit:cover;border-radius:12px;">`;
-
-  const botaoHtml = noticia.botao
-    ? `
-      <a href="${noticia.botao.link}" target="_blank" rel="noopener noreferrer"
-         style="display:inline-block;margin:12px 0 22px;background:#0a45ff;color:#fff;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:800;">
-        ${noticia.botao.texto}
-      </a>
-    `
-    : "";
-
-  paginaNoticia.innerHTML = `
-    <button class="back-btn" onclick="fecharNoticia()">← Voltar</button>
-    <span class="badge">${noticia.categoria}</span>
-    <h1>${noticia.titulo}</h1>
-    <div class="meta">
-      <span>${formatarData(noticia.data)}</span>
-      <span>Portal Beberibe Notícias</span>
-    </div>
-    ${imagensExtrasHtml}
-    ${botaoHtml}
-    ${conteudoHtml}
-  `;
-
-  homePage.style.display = "none";
-  paginaNoticia.style.display = "block";
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-function fecharNoticia() {
-  paginaNoticia.style.display = "none";
-  homePage.style.display = "grid";
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-window.fecharNoticia = fecharNoticia;
-
-(function() {
-  const chave = "portal_beberibe_acessos";
-  let acessos = parseInt(localStorage.getItem(chave) || "0", 10);
-  acessos += 1;
-  localStorage.setItem(chave, acessos);
-
-  const contador = document.getElementById("contadorAcessos");
-  if (contador) {
-    contador.textContent = `Acessos neste dispositivo: ${acessos}`;
+      </section>
+    `;
   }
-})();
 
-gerarCategorias();
-gerarTicker();
-gerarMaisLidas();
-renderizarHome();
+  function galeriaHtml(noticia) {
+    if (!Array.isArray(noticia.galeria) || !noticia.galeria.length) return "";
+    return `
+      <section class="article-section">
+        <div class="article-section__head"><span>Documento oficial</span><h2>Imagens da portaria</h2></div>
+        <div class="document-gallery">
+          ${noticia.galeria.map(item => `
+            <figure><a href="${escapeHtml(item.imagem)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(item.imagem)}" alt="${escapeHtml(item.legenda)}" loading="lazy"></a><figcaption>${escapeHtml(item.legenda)}</figcaption></figure>
+          `).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function fontesHtml(noticia) {
+    const fontes = [noticia.fonte, noticia.fonteComplementar, ...(noticia.fontesExtras || [])].filter(Boolean);
+    return `
+      <section class="source-box">
+        <h3>Fontes consultadas</h3>
+        <p>O texto foi conferido nos documentos oficiais. Consulte as publicações originais para atualizações, retificações e resultados dos procedimentos de posse.</p>
+        ${fontes.map(fonte => `
+          <a class="source-link" href="${escapeHtml(fonte.url)}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(fonte.nome)} ↗
+          </a>
+        `).join("")}
+      </section>
+    `;
+  }
+
+  function abrirNoticia(id, atualizarHash = true) {
+    const noticia = bancoNoticias.find(item => item.id === Number(id));
+    if (!noticia) return;
+
+    state.artigoAberto = noticia.id;
+    document.title = `${noticia.titulo} | Beberibe Notícias`;
+
+    elements.paginaNoticia.innerHTML = `
+      <div class="detail-shell">
+        <button class="detail-back" type="button" data-close-article>← Voltar para a edição</button>
+
+        <header class="article-header">
+          <span class="badge">${escapeHtml(noticia.selo || noticia.categoria)}</span>
+          <h1>${escapeHtml(noticia.titulo)}</h1>
+          ${metaNoticia(noticia)}
+        </header>
+
+        <figure class="article-cover">
+          ${imagemComFallback(noticia, "eager")}
+          <figcaption class="image-credit">Imagem: ${escapeHtml(noticia.creditoImagem || "Beberibe Notícias")}</figcaption>
+        </figure>
+
+        <div class="article-layout">
+          <div class="article-body">
+            ${(noticia.conteudo || []).map(paragrafo => `<p>${escapeHtml(paragrafo)}</p>`).join("")}
+            ${alertaEditorialHtml(noticia)}
+            ${metricasHtml(noticia)}
+            ${historicoHtml(noticia)}
+            ${orientadorHtml(noticia)}
+            ${servicoHtml(noticia)}
+            ${convocadosHtml(noticia)}
+            ${galeriaHtml(noticia)}
+            ${fontesHtml(noticia)}
+          </div>
+
+          <aside class="article-actions" aria-label="Ações da notícia">
+            <button class="btn btn-primary" type="button" data-share-news="${noticia.id}">Compartilhar</button>
+            <a class="btn btn-secondary" href="${escapeHtml(noticia.fonte.url)}" target="_blank" rel="noopener noreferrer">Abrir fonte original</a>
+            ${noticia.documentoLocal ? `<a class="btn btn-document" href="${escapeHtml(noticia.documentoLocal)}" target="_blank" rel="noopener noreferrer">Abrir portaria em PDF</a>` : ""}
+            <div class="article-note">Última revisão editorial: ${formatarData(noticia.atualizado || edicaoJornal.dataEdicao, true)}.</div>
+          </aside>
+        </div>
+      </div>
+    `;
+
+    elements.homePage.style.display = "none";
+    elements.paginaNoticia.classList.add("active");
+
+    if (atualizarHash && window.location.hash !== `#noticia-${noticia.id}`) {
+      history.pushState({ noticiaId: noticia.id }, "", `#noticia-${noticia.id}`);
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function fecharNoticia(atualizarUrl = true) {
+    state.artigoAberto = null;
+    document.title = "Beberibe Notícias | Edição semanal de 11 de julho de 2026";
+    elements.paginaNoticia.classList.remove("active");
+    elements.paginaNoticia.innerHTML = "";
+    elements.homePage.style.display = "block";
+
+    if (atualizarUrl && window.location.hash.startsWith("#noticia-")) {
+      history.pushState({}, "", `${window.location.pathname}${window.location.search}`);
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  async function compartilharNoticia(id) {
+    const noticia = bancoNoticias.find(item => item.id === Number(id));
+    if (!noticia) return;
+
+    const url = `${window.location.origin}${window.location.pathname}#noticia-${noticia.id}`;
+    const dados = {
+      title: noticia.titulo,
+      text: `${noticia.titulo} — Beberibe Notícias`,
+      url
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(dados);
+        return;
+      } catch (erro) {
+        if (erro?.name === "AbortError") return;
+      }
+    }
+
+    const mensagem = encodeURIComponent(`${dados.text}\n${url}`);
+    window.open(`https://wa.me/?text=${mensagem}`, "_blank", "noopener,noreferrer");
+  }
+
+  function selecionarCategoria(categoria) {
+    state.categoria = categoria || "Todas";
+    gerarMenuCategorias();
+    renderizarHome();
+    document.getElementById("ultimasNoticias")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function tratarHash() {
+    const match = window.location.hash.match(/^#noticia-(\d+)$/);
+    if (match) {
+      abrirNoticia(Number(match[1]), false);
+    } else if (state.artigoAberto) {
+      fecharNoticia(false);
+    }
+  }
+
+  function atualizarProgressoLeitura() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const altura = document.documentElement.scrollHeight - window.innerHeight;
+    const progresso = altura > 0 ? Math.min(100, Math.max(0, (scrollTop / altura) * 100)) : 0;
+    elements.readingProgress.style.width = `${progresso}%`;
+  }
+
+  document.addEventListener("click", event => {
+    const noticiaTarget = event.target.closest("[data-news-id]");
+    if (noticiaTarget) {
+      event.preventDefault();
+      abrirNoticia(noticiaTarget.dataset.newsId);
+      return;
+    }
+
+    const categoriaTarget = event.target.closest("[data-category]");
+    if (categoriaTarget) {
+      event.preventDefault();
+      selecionarCategoria(categoriaTarget.dataset.category);
+      return;
+    }
+
+    if (event.target.closest("[data-close-article]")) {
+      event.preventDefault();
+      fecharNoticia();
+      return;
+    }
+
+    const shareTarget = event.target.closest("[data-share-news]");
+    if (shareTarget) {
+      event.preventDefault();
+      compartilharNoticia(shareTarget.dataset.shareNews);
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if ((event.key === "Enter" || event.key === " ") && event.target.matches("[data-news-id][role='button']")) {
+      event.preventDefault();
+      abrirNoticia(event.target.dataset.newsId);
+    }
+
+    if (event.key === "Escape" && state.artigoAberto) fecharNoticia();
+  });
+
+  elements.searchInput.addEventListener("input", event => {
+    state.busca = event.target.value.trim();
+    renderizarHome();
+  });
+
+  window.addEventListener("hashchange", tratarHash);
+  window.addEventListener("scroll", atualizarProgressoLeitura, { passive: true });
+  window.addEventListener("resize", atualizarProgressoLeitura);
+
+  configurarEdicao();
+  gerarMenuCategorias();
+  gerarTicker();
+  gerarDestaques();
+  renderizarHome();
+  tratarHash();
+  atualizarProgressoLeitura();
+})();

@@ -1,0 +1,43 @@
+BEBERIBE NOTÍCIAS — GUIA RÁPIDO PARA ATUALIZAÇÃO AOS SÁBADOS
+
+ARQUIVOS PRINCIPAIS
+- index.html: layout e estrutura do portal.
+- noticias.js: datas da edição e banco completo de notícias.
+- script.js: busca, filtros, abertura das matérias e compartilhamento.
+- assets/: imagens locais do jornal e dos projetos parceiros.
+
+PARA ATUALIZAR NO PRÓXIMO SÁBADO
+1. Abra noticias.js.
+2. No bloco edicaoJornal, altere dataEdicao e proximaAtualizacao.
+3. Adicione as notícias novas no início do bancoNoticias.
+4. Mantenha um id diferente para cada matéria.
+5. Informe sempre a fonte e o link original.
+6. Marque somente a principal com destaque: true.
+7. Coloque as novas imagens dentro da pasta assets.
+8. Envie novamente index.html, noticias.js, script.js e a pasta assets ao GitHub.
+
+ESTRUTURA DE UMA NOTÍCIA
+{
+  id: 13,
+  titulo: "Título da notícia",
+  data: "2026-07-18",
+  atualizado: "2026-07-18",
+  categoria: "Beberibe",
+  imagem: "assets/nome-da-imagem.webp",
+  destaque: true,
+  selo: "DESTAQUE",
+  resumo: "Resumo curto.",
+  conteudo: ["Parágrafo 1.", "Parágrafo 2."],
+  fonte: { nome: "Nome da fonte", url: "https://..." },
+  creditoImagem: "Crédito da imagem"
+}
+
+RECOMENDAÇÃO EDITORIAL
+Priorize Prefeitura, Governo do Ceará, Governo Federal, órgãos públicos, veículos jornalísticos reconhecidos e documentos oficiais. Evite publicar informação sem data, fonte ou confirmação.
+
+
+CORREÇÃO DE 11/07/2026
+- Removida a notícia incorreta sobre convocação de Orientador Social.
+- Incluída a Portaria 07.07.001/2026 com 28 nomes, cargos, inscrições, classificações e modalidades.
+- Incluídos o PDF oficial, imagens das páginas 1, 4 e 5 e levantamento dos cinco atos de nomeação.
+- Atenção: o número 102 é diferença aritmética, não saldo oficial de vagas.
