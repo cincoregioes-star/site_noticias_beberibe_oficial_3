@@ -1,0 +1,56 @@
+BEBERIBE NOTÍCIAS — EDIÇÃO DE 24/07/2026
+
+PACOTE PRONTO PARA GITHUB PAGES
+
+1. Envie todos os arquivos e pastas deste pacote para a raiz do repositório:
+   https://github.com/cincoregioes-star/site_noticias_beberibe_oficial_3
+
+2. Preserve exatamente:
+   - index.html
+   - noticias.js
+   - script.js
+   - pasta assets
+   - pasta documentos
+
+3. O site publicado utiliza:
+   https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/
+
+CONTEÚDO DESTA EDIÇÃO
+
+- 22 matérias, todas com quatro parágrafos;
+- Portaria de 21/07 com 24 novas nomeações;
+- audiência e oficinas do Plano Diretor;
+- saúde, educação, infraestrutura, férias e turismo;
+- política municipal e nacional;
+- pesquisas presidenciais com margem de erro explicada;
+- economia, inflação e análise do tarifaço;
+- crônica, moda, gastronomia e receitas;
+- agricultura empresarial e agricultura familiar;
+- ícones vetoriais nos três cards de informações rápidas;
+- imagens exclusivas, sem repetição entre as 22 matérias;
+- fotografias ultrarrealistas próprias para Uruaú, falésias, crônica, receitas e agricultura;
+- anúncios parceiros refeitos em formato horizontal, sem cortes e com melhor distribuição.
+- WhatsApp correto de Carlos nos anúncios DB ENEM e Gabarito Max: (85) 99712-0397.
+- links diretos para as plataformas e para o WhatsApp em cada anúncio.
+- anúncio da Bicicletaria Jonathan — JS Bike restaurado com WhatsApp (85) 99625-9283 e Instagram @jsbikeoficial00.
+
+ARQUIVOS IMPORTANTES
+
+- Capa do site: assets/capa-edicao-24-07-2026.webp
+- Card para redes sociais: assets/post-edicao-24-07-2026.png
+- Anúncio corrigido DB ENEM: assets/db-enem-horizontal-correto.webp
+- Anúncio corrigido Gabarito Max: assets/gabarito-max-horizontal-correto.webp
+- Anúncio Bicicletaria Jonathan restaurado: assets/js-bike-horizontal.webp
+- Portaria em PDF: documentos/portaria-21-07-001-2026.pdf
+
+VERIFICAÇÃO EDITORIAL
+
+- Notícias factuais possuem fontes identificadas.
+- Textos de opinião estão marcados como análise ou crônica.
+- A pesquisa Gerp mostra Flávio Bolsonaro com 35% e Lula com 34%, mas a diferença é empate técnico.
+- A análise do tarifaço separa a decisão dos Estados Unidos da responsabilidade do governo brasileiro pela negociação e resposta.
+- O projeto de inglês/Cambridge é apresentado como proposta; critérios dependem de publicação oficial.
+
+PRÓXIMA EDIÇÃO
+
+01/08/2026. O lembrete semanal foi programado para os sábados pela manhã.

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">IPCA de junho de 2026</title>
+  <desc id="desc">Inflação oficial de 0,16 por cento no mês, 3,36 por cento no ano e 4,64 por cento em doze meses.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b28"/><stop offset="1" stop-color="#145046"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Arial, sans-serif" transform="translate(100 90)">
+    <text x="0" y="45" fill="#56efba" font-size="31" font-weight="800" letter-spacing="4">ECONOMIA • INFLAÇÃO OFICIAL</text>
+    <text x="0" y="140" fill="#fff" font-size="72" font-weight="900">IPCA desacelera em junho</text>
+    <g transform="translate(0 230)">
+      <rect width="430" height="360" rx="42" fill="#071823" stroke="#56efba" stroke-opacity=".28"/>
+      <text x="42" y="86" fill="#b9ced3" font-size="30">NO MÊS</text><text x="42" y="240" fill="#56efba" font-size="122" font-weight="900">0,16%</text>
+      <rect x="475" width="430" height="360" rx="42" fill="#071823" stroke="#49cfe6" stroke-opacity=".28"/>
+      <text x="517" y="86" fill="#b9ced3" font-size="30">NO ANO</text><text x="517" y="240" fill="#49cfe6" font-size="122" font-weight="900">3,36%</text>
+      <rect x="950" width="430" height="360" rx="42" fill="#071823" stroke="#e7b541" stroke-opacity=".28"/>
+      <text x="992" y="86" fill="#b9ced3" font-size="30">EM 12 MESES</text><text x="992" y="240" fill="#e7b541" font-size="116" font-weight="900">4,64%</text>
+    </g>
+    <text x="0" y="670" fill="#fff" font-size="30" font-weight="800">Fonte: IBGE • divulgação oficial de julho de 2026</text>
+    <text x="0" y="720" fill="#9bb4bb" font-size="24">O índice nacional ajuda a acompanhar o custo de vida, mas cada família sente uma cesta de preços diferente.</text>
+  </g>
+</svg>

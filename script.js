@@ -113,7 +113,7 @@
   }
 
   function gerarDestaques() {
-    const idsPreferidos = [2, 1, 6, 10];
+    const idsPreferidos = [1, 2, 4, 12];
     const destaques = idsPreferidos
       .map(id => bancoNoticias.find(noticia => noticia.id === id))
       .filter(Boolean);
@@ -248,7 +248,7 @@
     if (!Array.isArray(noticia.metricas) || !noticia.metricas.length) return "";
     return `
       <section class="article-section">
-        <div class="article-section__head"><span>Panorama</span><h2>Números do concurso</h2></div>
+        <div class="article-section__head"><span>Panorama</span><h2>Números principais</h2></div>
         <div class="stats-grid">
           ${noticia.metricas.map(item => `
             <div class="stat-card"><strong>${escapeHtml(item.valor)}</strong><span>${escapeHtml(item.rotulo)}</span></div>
@@ -264,7 +264,7 @@
     const total = noticia.historicoNomeacoes.reduce((soma, item) => soma + Number(item.registros || 0), 0);
     return `
       <section class="article-section">
-        <div class="article-section__head"><span>Levantamento</span><h2>Cinco atos de nomeação analisados</h2></div>
+        <div class="article-section__head"><span>Levantamento</span><h2>${escapeHtml(noticia.tituloHistorico || "Histórico de atos analisados")}</h2></div>
         <div class="history-list">
           ${noticia.historicoNomeacoes.map(item => `
             <div><b>${escapeHtml(item.portaria)}</b><span>${escapeHtml(item.data)}</span><strong>${escapeHtml(item.registros)} registros</strong></div>
@@ -279,7 +279,7 @@
     if (!Array.isArray(noticia.situacaoOrientador) || !noticia.situacaoOrientador.length) return "";
     return `
       <section class="orientador-box">
-        <div><span>Cargo acompanhado</span><h2>Orientador Social</h2><p>Não consta na Portaria de 7 de julho nem nos cinco atos de nomeação analisados.</p></div>
+        <div><span>Cargo acompanhado</span><h2>${escapeHtml(noticia.tituloOrientador || "Orientador Social")}</h2><p>${escapeHtml(noticia.textoOrientador || "Consulte a situação atualizada nos documentos oficiais.")}</p></div>
         <ul>${noticia.situacaoOrientador.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
       </section>
     `;
@@ -294,7 +294,7 @@
 
     return `
       <section class="article-section nominees-section">
-        <div class="article-section__head"><span>Anexo I</span><h2>Todos os 28 nomeados</h2><p>Relação reproduzida conforme as páginas 4 e 5 da Portaria nº 07.07.001/2026.</p></div>
+        <div class="article-section__head"><span>Anexo I</span><h2>${escapeHtml(noticia.tituloConvocados || `${noticia.convocados.length} nomes publicados`)}</h2><p>${escapeHtml(noticia.descricaoConvocados || "Relação organizada a partir do documento oficial indicado na notícia.")}</p></div>
         ${Object.entries(grupos).map(([cargo, pessoas]) => `
           <div class="nominee-group">
             <div class="nominee-group__title"><h3>${escapeHtml(cargo)}</h3><span>${pessoas.length} ${pessoas.length === 1 ? "nome" : "nomes"}</span></div>
@@ -333,7 +333,7 @@
     return `
       <section class="source-box">
         <h3>Fontes consultadas</h3>
-        <p>O texto foi conferido nos documentos oficiais. Consulte as publicações originais para atualizações, retificações e resultados dos procedimentos de posse.</p>
+        <p>Consulte as publicações originais para conhecer metodologia, contexto, atualizações e eventuais retificações. Textos de análise, crônica e estilo são identificados como conteúdo editorial.</p>
         ${fontes.map(fonte => `
           <a class="source-link" href="${escapeHtml(fonte.url)}" target="_blank" rel="noopener noreferrer">
             ${escapeHtml(fonte.nome)} ↗
@@ -381,7 +381,7 @@
           <aside class="article-actions" aria-label="Ações da notícia">
             <button class="btn btn-primary" type="button" data-share-news="${noticia.id}">Compartilhar</button>
             <a class="btn btn-secondary" href="${escapeHtml(noticia.fonte.url)}" target="_blank" rel="noopener noreferrer">Abrir fonte original</a>
-            ${noticia.documentoLocal ? `<a class="btn btn-document" href="${escapeHtml(noticia.documentoLocal)}" target="_blank" rel="noopener noreferrer">Abrir portaria em PDF</a>` : ""}
+            ${noticia.documentoLocal ? `<a class="btn btn-document" href="${escapeHtml(noticia.documentoLocal)}" target="_blank" rel="noopener noreferrer">Abrir documento em PDF</a>` : ""}
             <div class="article-note">Última revisão editorial: ${formatarData(noticia.atualizado || edicaoJornal.dataEdicao, true)}.</div>
           </aside>
         </div>
@@ -400,7 +400,7 @@
 
   function fecharNoticia(atualizarUrl = true) {
     state.artigoAberto = null;
-    document.title = "Beberibe Notícias | Edição semanal de 11 de julho de 2026";
+    document.title = `Beberibe Notícias | Edição semanal de ${formatarData(edicaoJornal.dataEdicao, true)}`;
     elements.paginaNoticia.classList.remove("active");
     elements.paginaNoticia.innerHTML = "";
     elements.homePage.style.display = "block";

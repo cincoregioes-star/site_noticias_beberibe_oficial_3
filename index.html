@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#04131f">
   <meta name="color-scheme" content="dark">
 
-  <title>Beberibe Notícias | Edição semanal de 11 de julho de 2026</title>
-  <meta name="description" content="Notícias verificadas de Beberibe: Portaria de 7 de julho com 28 nomeados, nova unidade da CAIXA, saúde, infraestrutura, educação e serviços úteis.">
-  <meta name="keywords" content="Beberibe Notícias, concurso Beberibe, Portaria 07.07.001 2026, convocados concurso Beberibe, Orientador Social Beberibe, Caixa Beberibe, ENEM 2026, Ceará">
+  <title>Beberibe Notícias | Edição de 24 de julho de 2026</title>
+  <meta name="description" content="Edição atualizada: concurso de Beberibe, audiência e oficinas do Plano Diretor, saúde, educação, turismo, política, inflação, agricultura e receitas.">
+  <meta name="keywords" content="Beberibe Notícias, Plano Diretor Beberibe, oficinas PDM, concurso Beberibe, saúde Beberibe, Cambridge escolas, turismo Morro Branco, Praia das Fontes, Uruaú, eleições 2026, inflação">
   <meta name="author" content="Beberibe Notícias">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/">
@@ -17,9 +17,9 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Beberibe Notícias">
   <meta property="og:title" content="Beberibe Notícias | Edição semanal">
-  <meta property="og:description" content="Informação local com fontes verificadas. Veja os 28 nomeados da Portaria de 7 de julho, a nova CAIXA e outras notícias de Beberibe.">
+  <meta property="og:description" content="Nova edição: 24 nomeados, agenda do Plano Diretor, saúde, educação, turismo, política, economia e novas seções semanais.">
   <meta property="og:url" content="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/">
-  <meta property="og:image" content="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/assets/concurso-portaria-07-julho.svg">
+  <meta property="og:image" content="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/assets/capa-edicao-24-07-2026.webp">
 
   <script type="application/ld+json">
   {
@@ -491,30 +491,49 @@
       gap: 16px;
     }
     .quick-card {
+      --icon-color: var(--green);
       position: relative;
       overflow: hidden;
       min-height: 148px;
-      padding: 22px;
+      padding: 24px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
-      background: var(--surface-soft);
+      background:
+        radial-gradient(circle at 90% 5%, color-mix(in srgb, var(--icon-color) 9%, transparent), transparent 38%),
+        var(--surface-soft);
       backdrop-filter: blur(18px);
       transition: .25s ease;
     }
     .quick-card:hover { transform: translateY(-5px); border-color: var(--line-strong); }
     .quick-card__icon {
-      width: 42px;
-      height: 42px;
+      width: 56px;
+      height: 56px;
       display: grid;
       place-items: center;
-      border-radius: 14px;
-      color: #03101a;
-      background: var(--green);
-      font-size: 20px;
+      border: 1px solid rgba(86, 239, 186, .42);
+      border-radius: 18px;
+      color: var(--icon-color);
+      background: rgba(86, 239, 186, .09);
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, .025),
+        0 14px 30px rgba(0, 0, 0, .24);
+      transition: transform .25s ease, background .25s ease;
     }
-    .quick-card:nth-child(2) .quick-card__icon { background: var(--gold); }
-    .quick-card:nth-child(3) .quick-card__icon { background: var(--cyan); }
-    .quick-card strong { display: block; margin-top: 15px; font-size: 17px; line-height: 1.2; }
+    .quick-card:hover .quick-card__icon { transform: translateY(-2px) scale(1.04); }
+    .quick-card__icon svg {
+      width: 30px;
+      height: 30px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .quick-card:nth-child(2) { --icon-color: var(--gold); }
+    .quick-card:nth-child(2) .quick-card__icon { border-color: rgba(231, 181, 65, .44); background: rgba(231, 181, 65, .09); }
+    .quick-card:nth-child(3) { --icon-color: var(--cyan); }
+    .quick-card:nth-child(3) .quick-card__icon { border-color: rgba(73, 207, 230, .44); background: rgba(73, 207, 230, .09); }
+    .quick-card strong { display: block; margin-top: 17px; font-size: 18px; line-height: 1.2; }
     .quick-card span { display: block; margin-top: 7px; color: var(--muted); font-size: 13px; }
 
     .content-shell {
@@ -716,11 +735,22 @@
       transition: .26s ease;
     }
     .ad-card:hover { transform: translateY(-5px); border-color: var(--gold); }
-    .ad-card img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; }
+    .ad-card__media { display: block; background: #04132b; }
+    .ad-card img { width: 100%; height: auto; display: block; object-fit: contain; background: #04132b; }
     .ad-card__caption { padding: 17px; }
     .ad-card__caption span { color: var(--gold); font-size: 10px; font-weight: 950; letter-spacing: .1em; text-transform: uppercase; }
     .ad-card__caption strong { display: block; margin-top: 5px; font-size: 17px; }
     .ad-card__caption p { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
+    .ad-card__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+    .ad-card__actions a {
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: 8px 11px;
+      color: var(--green);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 900;
+    }
 
     .partner-section {
       padding: 64px 0;
@@ -729,16 +759,16 @@
     }
     .partner-grid {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
       margin-top: 24px;
     }
     .partner-card {
       position: relative;
       overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
       background: var(--surface-strong);
@@ -746,13 +776,33 @@
       transition: .27s ease;
     }
     .partner-card:hover { transform: translateY(-6px); border-color: var(--line-strong); }
-    .partner-card img { width: 100%; height: 100%; object-fit: cover; }
-    .partner-card__copy { align-self: center; padding: 28px; }
+    .partner-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; object-fit: contain; background: #04132b; }
+    .partner-card__copy { flex: 1; display: flex; flex-direction: column; align-items: flex-start; padding: 26px; }
     .partner-card__copy span { color: var(--gold); font-size: 10px; font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
     .partner-card__copy h3 { margin: 8px 0; font-size: 29px; line-height: 1.05; letter-spacing: -.04em; }
-    .partner-card__copy p { margin: 0; color: var(--muted); font-size: 13px; }
-    .partner-card--compact { grid-template-columns: 1fr; }
-    .partner-card--compact img { height: 205px; }
+    .partner-card__copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .partner-features { margin-top: 14px !important; color: #c9dcdf !important; font-size: 12px !important; font-weight: 800; }
+    .partner-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: auto; padding-top: 20px; }
+    .partner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 10px 15px;
+      color: #03101a;
+      background: var(--green);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: 0;
+    }
+    .partner-cta--secondary { border: 1px solid var(--line-strong); color: var(--green); background: transparent; }
+    .partner-card--wide {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+    }
+    .partner-card--wide img { height: auto; aspect-ratio: auto; object-fit: contain; background: #020202; }
 
     .detail-page {
       display: none;
@@ -783,6 +833,7 @@
     }
     .article-header .news-meta { margin-top: 0; }
     .article-cover {
+      position: relative;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
@@ -790,7 +841,7 @@
       box-shadow: var(--shadow);
     }
     .article-cover img { width: 100%; max-height: 590px; display: block; object-fit: cover; }
-    .image-credit { padding: 9px 15px; color: var(--muted); font-size: 11px; }
+    .image-credit { position: relative; z-index: 5; padding: 9px 15px; color: var(--muted); background: #071925; font-size: 11px; }
     .article-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 270px;
@@ -852,7 +903,7 @@
     .article-section__head { margin-bottom: 18px; }
     .article-section__head h2 { margin: 5px 0 4px; font-size: clamp(27px, 4vw, 42px); line-height: 1.08; letter-spacing: -.035em; }
     .article-section__head p { margin: 0; color: var(--muted); font-size: 14px; }
-    .stats-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
     .stat-card {
       min-height: 145px;
       display: flex;
@@ -1008,6 +1059,7 @@
       .content-layout { grid-template-columns: 1fr; }
       .sidebar { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .partner-grid { grid-template-columns: 1fr; }
+      .partner-card--wide { grid-column: auto; }
       .article-layout { grid-template-columns: 1fr; }
       .article-actions { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1048,8 +1100,7 @@
       .news-grid { grid-template-columns: 1fr; }
       .news-card__body { padding: 18px; }
       .sidebar { grid-template-columns: 1fr; }
-      .partner-card { grid-template-columns: 1fr; }
-      .partner-card img { height: 250px; }
+      .partner-card img { height: auto; }
       .partner-card__copy { padding: 23px; }
       .article-header h1 { font-size: clamp(38px, 12vw, 58px); }
       .article-cover { border-radius: 24px; }
@@ -1095,7 +1146,7 @@
 
       <label class="search-box" aria-label="Pesquisar notícias">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m21 21-4.3-4.3m2.3-5.2A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z"/></svg>
-        <input id="searchInput" type="search" placeholder="Buscar CAIXA, ENEM, saúde, concurso..." autocomplete="off">
+        <input id="searchInput" type="search" placeholder="Buscar PDM, saúde, concurso, turismo, economia..." autocomplete="off">
       </label>
 
       <a class="header-social" href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram do Beberibe Notícias">
@@ -1124,7 +1175,7 @@
           <div>
             <span class="eyebrow">Beberibe em movimento</span>
             <h1>O que mudou <span>nesta semana.</span></h1>
-            <p class="intro-lead">Notícias locais, oportunidades e serviços públicos organizados em uma edição limpa, útil e sustentada por fontes oficiais.</p>
+            <p class="intro-lead">Notícias da cidade, participação pública, política, economia, turismo e vida prática, com fontes identificadas e seções para toda a família.</p>
             <div class="intro-actions">
               <a class="btn btn-primary" href="#ultimasNoticias">Ler edição</a>
               <a class="btn btn-secondary" href="mailto:reinetrindadeeterna@gmail.com?subject=Pauta%20para%20o%20Beberibe%20Not%C3%ADcias">Enviar pauta</a>
@@ -1134,10 +1185,10 @@
           <aside class="edition-card" aria-label="Informações da edição">
             <span class="edition-card__number">Edição semanal</span>
             <h2>Informação que ajuda a decidir, agir e acompanhar.</h2>
-            <p>Conteúdo atualizado aos sábados, com links diretos para as fontes consultadas.</p>
+            <p>Edição extraordinária de sexta, com atualização semanal aos sábados e links diretos para as fontes consultadas.</p>
             <div class="edition-card__dates">
-              <div class="edition-date"><span>Atualizada em</span><strong id="editionDate">11/07/2026</strong></div>
-              <div class="edition-date"><span>Próxima edição</span><strong id="nextEditionDate">18/07/2026</strong></div>
+              <div class="edition-date"><span>Atualizada em</span><strong id="editionDate">24/07/2026</strong></div>
+              <div class="edition-date"><span>Próxima edição</span><strong id="nextEditionDate">01/08/2026</strong></div>
             </div>
           </aside>
         </div>
@@ -1146,19 +1197,25 @@
       <section class="quick-info" aria-label="Informações rápidas">
         <div class="container quick-grid">
           <article class="quick-card">
-            <span class="quick-card__icon" aria-hidden="true">▣</span>
-            <strong>CAIXA no Centro</strong>
-            <span>Atendimento: 10h às 15h. Autoatendimento: 6h às 22h.</span>
+            <span class="quick-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="17" rx="3"/><rect x="8" y="2" width="8" height="4" rx="1.5"/><path d="m8 12 2.5 2.5L16.5 9"/><path d="M8 18h8"/></svg>
+            </span>
+            <strong>24 novos nomeados</strong>
+            <span>Portaria nº 21.07.001/2026 alcança nove cargos do concurso nº 001/2025.</span>
           </article>
           <article class="quick-card">
-            <span class="quick-card__icon" aria-hidden="true">✓</span>
-            <strong>ENEM 2026</strong>
-            <span>Provas marcadas para 8 e 15 de novembro.</span>
+            <span class="quick-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m8 15 2.4 2.4L16.5 12"/></svg>
+            </span>
+            <strong>PDM: 12 a 15 de agosto</strong>
+            <span>Audiência na Câmara e oficinas participativas na sede e nos distritos.</span>
           </article>
           <article class="quick-card">
-            <span class="quick-card__icon" aria-hidden="true">!</span>
-            <strong>PND: prazo próximo</strong>
-            <span>Pagamento da taxa previsto até 14 de julho.</span>
+            <span class="quick-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20V11M10 20v-6M16 20V9M22 20H2"/><path d="m4 8 5-4 5 4 6-6"/><circle cx="4" cy="8" r="1.2"/><circle cx="9" cy="4" r="1.2"/><circle cx="14" cy="8" r="1.2"/><circle cx="20" cy="2" r="1.2"/></svg>
+            </span>
+            <strong>Inflação oficial</strong>
+            <span>IPCA de junho: 0,16% no mês e 4,64% acumulados em doze meses.</span>
           </article>
         </div>
       </section>
@@ -1168,7 +1225,7 @@
           <div>
             <div class="section-heading">
               <div>
-                <span class="eyebrow">Edição de sábado</span>
+                <span class="eyebrow">Edição especial de sexta</span>
                 <h2>Últimas notícias</h2>
               </div>
               <span class="result-count" id="resultCount">Carregando notícias...</span>
@@ -1187,21 +1244,27 @@
               <div class="side-widget__body">
                 <ul class="service-list">
                   <li><a href="https://www.beberibe.ce.gov.br/" target="_blank" rel="noopener noreferrer"><span>Prefeitura de Beberibe<small>Notícias, editais e serviços</small></span><b>↗</b></a></li>
-                  <li><a href="https://www.beberibe.ce.gov.br/processoseletivo.php" target="_blank" rel="noopener noreferrer"><span>Processos seletivos<small>Convocações e documentos</small></span><b>↗</b></a></li>
-                  <li><a href="https://www.gov.br/inep/pt-br" target="_blank" rel="noopener noreferrer"><span>Inep<small>ENEM e Prova Nacional Docente</small></span><b>↗</b></a></li>
-                  <li><a href="https://www.caixa.gov.br/atendimento/Paginas/default.aspx" target="_blank" rel="noopener noreferrer"><span>Atendimento CAIXA<small>Canais e serviços oficiais</small></span><b>↗</b></a></li>
+                  <li><a href="https://www.beberibe.ce.gov.br/concursopublico.php?grup=42" target="_blank" rel="noopener noreferrer"><span>Concurso de Beberibe<small>Portarias e documentos oficiais</small></span><b>↗</b></a></li>
+                  <li><a href="https://www.beberibe.ce.gov.br/informa/2350/prefeitura-de-beberibe-convida-popula-o-para-parti" target="_blank" rel="noopener noreferrer"><span>Plano Diretor<small>Audiência e oficinas participativas</small></span><b>↗</b></a></li>
+                  <li><a href="https://www.ibge.gov.br/pt/indicadores.html?lang=pt-BR" target="_blank" rel="noopener noreferrer"><span>Indicadores do IBGE<small>Inflação e dados econômicos</small></span><b>↗</b></a></li>
                 </ul>
               </div>
             </section>
 
-            <a class="ad-card" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/db-enem-parceiro.webp" alt="DB ENEM — preparação digital para o ENEM" loading="lazy">
+            <article class="ad-card">
+              <a class="ad-card__media" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/db-enem-horizontal-correto.webp" alt="DB ENEM — preparação digital para o ENEM" loading="lazy">
+              </a>
               <div class="ad-card__caption">
                 <span>Projeto parceiro</span>
                 <strong>DB ENEM</strong>
                 <p>Simulados digitais para organizar a preparação até novembro.</p>
+                <div class="ad-card__actions">
+                  <a href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">Abrir plataforma</a>
+                  <a href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20DB%20ENEM." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
               </div>
-            </a>
+            </article>
 
             <section class="side-widget">
               <div class="side-widget__head">
@@ -1213,14 +1276,20 @@
               </div>
             </section>
 
-            <a class="ad-card" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/gabarito-max-parceiro.webp" alt="Gabarito Max — simulados para vestibulares e concursos" loading="lazy">
+            <article class="ad-card">
+              <a class="ad-card__media" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/gabarito-max-horizontal-correto.webp" alt="Gabarito Max — simulados para vestibulares e concursos" loading="lazy">
+              </a>
               <div class="ad-card__caption">
                 <span>Projeto parceiro</span>
                 <strong>Gabarito Max</strong>
                 <p>Treino para concursos, vestibulares e avaliações.</p>
+                <div class="ad-card__actions">
+                  <a href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">Abrir plataforma</a>
+                  <a href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20Gabarito%20Max." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
               </div>
-            </a>
+            </article>
 
             <section class="side-widget">
               <div class="side-widget__head">
@@ -1239,30 +1308,54 @@
         <div class="container">
           <div class="section-heading">
             <div>
-              <span class="eyebrow">Educação digital</span>
-              <h2>Projetos parceiros</h2>
+              <span class="eyebrow">Projetos e comércio local</span>
+              <h2>Parceiros e anunciantes</h2>
             </div>
-            <p>Ferramentas locais para preparação educacional e treinamento por simulados.</p>
+            <p>Projetos educacionais e empresas locais apresentados com imagem completa, contato confirmado e acesso direto.</p>
           </div>
 
           <div class="partner-grid">
-            <a class="partner-card" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/db-enem-anuncio.webp" alt="Tela de divulgação do DB ENEM" loading="lazy">
+            <article class="partner-card">
+              <img src="assets/db-enem-horizontal-correto.webp" alt="DB ENEM — plataforma com 17 simulados digitais" loading="lazy">
               <div class="partner-card__copy">
                 <span>ENEM 2026</span>
                 <h3>DB ENEM</h3>
-                <p>Simulados, treino por área e acompanhamento de desempenho.</p>
+                <p>Plataforma de preparação com 17 simulados digitais, questões por área, redação e acompanhamento de desempenho.</p>
+                <p class="partner-features">Teste grátis • acesso vitalício • treino atualizado</p>
+                <div class="partner-actions">
+                  <a class="partner-cta" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">Abrir plataforma →</a>
+                  <a class="partner-cta partner-cta--secondary" href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20DB%20ENEM." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
               </div>
-            </a>
+            </article>
 
-            <a class="partner-card partner-card--compact" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/enem-2026.webp" alt="Preparação para o ENEM 2026" loading="lazy">
+            <article class="partner-card">
+              <img src="assets/gabarito-max-horizontal-correto.webp" alt="Gabarito Max — preparação para vestibulares e concursos" loading="lazy">
               <div class="partner-card__copy">
                 <span>Vestibulares e concursos</span>
                 <h3>Gabarito Max</h3>
-                <p>Prática objetiva para transformar conteúdo em desempenho.</p>
+                <p>Preparação completa, simulados regulares e estratégias organizadas para vestibulares, ENEM e concursos.</p>
+                <p class="partner-features">Material completo • foco no objetivo • evolução acompanhada</p>
+                <div class="partner-actions">
+                  <a class="partner-cta" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">Abrir plataforma →</a>
+                  <a class="partner-cta partner-cta--secondary" href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20Gabarito%20Max." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
               </div>
-            </a>
+            </article>
+
+            <article class="partner-card partner-card--wide">
+              <img src="assets/js-bike-horizontal.webp" alt="Bicicletaria Jonathan JS Bike em Beberibe" loading="lazy">
+              <div class="partner-card__copy">
+                <span>Comércio local</span>
+                <h3>Bicicletaria Jonathan — JS Bike</h3>
+                <p>Bicicletas aro 16 ao 29, atendimento especializado e compromisso com qualidade, segurança e confiança.</p>
+                <p class="partner-features">Revisão grátis • 3 meses de garantia • descanso de brinde</p>
+                <div class="partner-actions">
+                  <a class="partner-cta" href="https://wa.me/5585996259283?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20da%20JS%20Bike%20no%20Beberibe%20Not%C3%ADcias." target="_blank" rel="noopener noreferrer">Falar no WhatsApp →</a>
+                  <a class="partner-cta partner-cta--secondary" href="https://www.instagram.com/jsbikeoficial00/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1287,6 +1380,7 @@
             <a href="#ultimasNoticias">Últimas notícias</a>
             <a href="mailto:reinetrindadeeterna@gmail.com?subject=Pauta%20Beberibe%20Not%C3%ADcias">Enviar pauta</a>
             <a href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://wa.me/5585997120397" target="_blank" rel="noopener noreferrer">WhatsApp: (85) 99712-0397</a>
           </div>
         </div>
         <div>
@@ -1294,11 +1388,12 @@
           <div class="footer-links">
             <a href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">DB ENEM</a>
             <a href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">Gabarito Max</a>
+            <a href="https://www.instagram.com/jsbikeoficial00/" target="_blank" rel="noopener noreferrer">Bicicletaria Jonathan — JS Bike</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Beberibe Notícias. Atualização semanal aos sábados.</span>
+        <span>© 2026 Beberibe Notícias. Edição de 24/07/2026; atualização semanal aos sábados.</span>
         <span>Beberibe — Ceará</span>
       </div>
     </div>

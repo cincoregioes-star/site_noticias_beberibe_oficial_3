@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tarifa adicional dos Estados Unidos sobre produtos brasileiros</title>
+  <desc id="desc">Arte editorial informativa sobre a tarifa adicional de 25 por cento e a disputa política sobre responsabilidades.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081722"/><stop offset=".5" stop-color="#16364a"/><stop offset="1" stop-color="#32523d"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Arial, sans-serif" transform="translate(95 80)">
+    <text x="0" y="45" fill="#e7b541" font-size="31" font-weight="800" letter-spacing="4">ANÁLISE • COMÉRCIO EXTERIOR</text>
+    <text x="0" y="140" fill="#fff" font-size="74" font-weight="900">Tarifa adicional de 25%</text>
+    <text x="0" y="202" fill="#c3d4d8" font-size="30">Medida dos Estados Unidos atinge produtos brasileiros e abre disputa sobre causas e respostas.</text>
+    <g transform="translate(0 285)">
+      <rect width="660" height="320" rx="42" fill="#071722" stroke="#49cfe6" stroke-opacity=".30"/>
+      <text x="42" y="72" fill="#49cfe6" font-size="29" font-weight="900">DECISÃO</text>
+      <text x="42" y="145" fill="#fff" font-size="42" font-weight="900">A tarifa é uma medida</text>
+      <text x="42" y="200" fill="#fff" font-size="42" font-weight="900">soberana dos EUA.</text>
+      <text x="42" y="262" fill="#afc6cc" font-size="24">Há exceções e setores com impactos diferentes.</text>
+      <rect x="720" width="660" height="320" rx="42" fill="#071722" stroke="#56efba" stroke-opacity=".30"/>
+      <text x="762" y="72" fill="#56efba" font-size="29" font-weight="900">RESPONSABILIDADE</text>
+      <text x="762" y="145" fill="#fff" font-size="42" font-weight="900">Negociação e apoio aos</text>
+      <text x="762" y="200" fill="#fff" font-size="42" font-weight="900">exportadores cabem ao Brasil.</text>
+      <text x="762" y="262" fill="#afc6cc" font-size="24">Culpa exclusiva é interpretação política, não fato provado.</text>
+    </g>
+    <text x="0" y="695" fill="#e7b541" font-size="28" font-weight="800">O jornal separa fato, posição dos governos e análise editorial.</text>
+    <text x="0" y="745" fill="#9fb7bd" font-size="23">Fontes: MDIC, Agência Brasil e cobertura internacional identificada no texto.</text>
+  </g>
+</svg>
