@@ -3,1406 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#04131f">
-  <meta name="color-scheme" content="dark">
-
-  <title>Beberibe Notícias | Edição de 24 de julho de 2026</title>
-  <meta name="description" content="Edição atualizada: concurso de Beberibe, audiência e oficinas do Plano Diretor, saúde, educação, turismo, política, inflação, agricultura e receitas.">
-  <meta name="keywords" content="Beberibe Notícias, Plano Diretor Beberibe, oficinas PDM, concurso Beberibe, saúde Beberibe, Cambridge escolas, turismo Morro Branco, Praia das Fontes, Uruaú, eleições 2026, inflação">
-  <meta name="author" content="Beberibe Notícias">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Beberibe Notícias">
-  <meta property="og:title" content="Beberibe Notícias | Edição semanal">
-  <meta property="og:description" content="Nova edição: 24 nomeados, agenda do Plano Diretor, saúde, educação, turismo, política, economia e novas seções semanais.">
-  <meta property="og:url" content="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/">
-  <meta property="og:image" content="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/assets/capa-edicao-24-07-2026.webp">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NewsMediaOrganization",
-    "name": "Beberibe Notícias",
-    "url": "https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/",
-    "description": "Portal semanal de notícias verificadas de Beberibe, Ceará.",
-    "areaServed": {"@type": "City", "name": "Beberibe", "addressRegion": "CE"},
-    "sameAs": [
-      "https://www.instagram.com/beberibe.noticiasoficial/",
-      "https://cincoregioes-star.github.io/DB-ENEM/",
-      "https://cincoregioes-star.github.io/oficial-portal-gabaritomax/"
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #03101a;
-      --bg-deep: #020a11;
-      --surface: rgba(8, 29, 42, .82);
-      --surface-strong: #081e2b;
-      --surface-soft: rgba(12, 42, 54, .66);
-      --line: rgba(153, 232, 210, .16);
-      --line-strong: rgba(84, 238, 187, .42);
-      --text: #f4fbfc;
-      --muted: #a7c1c8;
-      --green: #56efba;
-      --green-2: #16b78c;
-      --cyan: #49cfe6;
-      --gold: #e7b541;
-      --orange: #ff8c32;
-      --danger: #ff6b62;
-      --shadow: 0 24px 80px rgba(0, 0, 0, .34);
-      --radius-xl: 34px;
-      --radius-lg: 24px;
-      --radius-md: 17px;
-      --max: 1440px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      overflow-x: hidden;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 14% 2%, rgba(31, 181, 143, .16), transparent 34rem),
-        radial-gradient(circle at 88% 16%, rgba(57, 175, 220, .16), transparent 34rem),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img { max-width: 100%; }
-    button, input { font: inherit; }
-    a { color: inherit; }
-    ::selection { color: #021018; background: var(--green); }
-
-    .skip-link {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 9999;
-      transform: translateY(-160%);
-      padding: 10px 14px;
-      color: #03101a;
-      background: var(--green);
-      border-radius: 10px;
-      font-weight: 900;
-    }
-    .skip-link:focus { transform: translateY(0); }
-
-    .ambient {
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .ambient::before,
-    .ambient::after {
-      content: "";
-      position: absolute;
-      width: 44rem;
-      height: 44rem;
-      border-radius: 45% 55% 60% 40%;
-      filter: blur(34px);
-      opacity: .16;
-      animation: drift 16s ease-in-out infinite alternate;
-    }
-    .ambient::before {
-      top: 16%;
-      left: -22rem;
-      background: linear-gradient(135deg, var(--green), var(--cyan));
-    }
-    .ambient::after {
-      right: -23rem;
-      bottom: 4%;
-      background: linear-gradient(135deg, var(--gold), var(--green-2));
-      animation-delay: -6s;
-    }
-    @keyframes drift {
-      to { transform: translate3d(6rem, 4rem, 0) rotate(24deg) scale(1.1); }
-    }
-
-    .reading-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      width: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--green), var(--cyan), var(--gold));
-      box-shadow: 0 0 18px rgba(86, 239, 186, .6);
-    }
-
-    .container {
-      width: min(calc(100% - 34px), var(--max));
-      margin-inline: auto;
-    }
-
-    .edition-bar {
-      border-bottom: 1px solid var(--line);
-      background: rgba(2, 11, 18, .82);
-      backdrop-filter: blur(18px);
-    }
-    .edition-bar__inner {
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .edition-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--text);
-      font-weight: 800;
-    }
-    .edition-status::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 6px rgba(86, 239, 186, .1), 0 0 18px var(--green);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse { 50% { opacity: .48; transform: scale(.82); } }
-
-    .site-header {
-      position: relative;
-      z-index: 100;
-      border-bottom: 1px solid var(--line);
-      background: rgba(3, 16, 26, .76);
-      backdrop-filter: blur(22px);
-    }
-    .header-main {
-      min-height: 88px;
-      display: grid;
-      grid-template-columns: auto minmax(260px, 1fr) auto;
-      align-items: center;
-      gap: 28px;
-    }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 13px;
-      text-decoration: none;
-      min-width: max-content;
-    }
-    .brand-mark {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(86, 239, 186, .48);
-      border-radius: 18px 8px 18px 8px;
-      color: #03101a;
-      background: linear-gradient(145deg, var(--green), var(--gold));
-      box-shadow: 0 10px 35px rgba(22, 183, 140, .24);
-      font-size: 24px;
-      font-weight: 950;
-      transform: rotate(-2deg);
-    }
-    .brand-copy strong {
-      display: block;
-      font-size: 21px;
-      line-height: 1.05;
-      letter-spacing: -.04em;
-    }
-    .brand-copy span {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .search-box {
-      position: relative;
-      width: min(100%, 620px);
-      justify-self: center;
-    }
-    .search-box svg {
-      position: absolute;
-      top: 50%;
-      left: 18px;
-      width: 20px;
-      transform: translateY(-50%);
-      color: var(--muted);
-      pointer-events: none;
-    }
-    .search-box input {
-      width: 100%;
-      height: 50px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      outline: none;
-      padding: 0 20px 0 50px;
-      color: var(--text);
-      background: rgba(255, 255, 255, .045);
-      transition: .25s ease;
-    }
-    .search-box input:focus {
-      border-color: var(--green);
-      background: rgba(255, 255, 255, .075);
-      box-shadow: 0 0 0 4px rgba(86, 239, 186, .08);
-    }
-    .search-box input::placeholder { color: #77939b; }
-
-    .header-social {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 15px;
-      font-size: 13px;
-      font-weight: 850;
-      transition: .22s ease;
-    }
-    .header-social:hover { border-color: var(--green); transform: translateY(-2px); }
-
-    .category-nav {
-      position: sticky;
-      top: 0;
-      z-index: 95;
-      overflow-x: auto;
-      scrollbar-width: none;
-      border-bottom: 1px solid var(--line);
-      background: rgba(3, 15, 24, .9);
-      backdrop-filter: blur(18px);
-    }
-    .category-nav::-webkit-scrollbar { display: none; }
-    .category-nav__inner {
-      min-height: 53px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding-block: 7px;
-    }
-    .category-button {
-      flex: 0 0 auto;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      padding: 8px 14px;
-      color: var(--muted);
-      background: transparent;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 850;
-      transition: .22s ease;
-    }
-    .category-button:hover { color: var(--text); background: rgba(255, 255, 255, .055); }
-    .category-button.active {
-      color: #021018;
-      border-color: var(--green);
-      background: var(--green);
-      box-shadow: 0 8px 28px rgba(86, 239, 186, .18);
-    }
-
-    .ticker {
-      border-bottom: 1px solid var(--line);
-      background: #061824;
-      overflow: hidden;
-    }
-    .ticker__inner {
-      min-height: 42px;
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      align-items: center;
-    }
-    .ticker__label {
-      position: relative;
-      z-index: 2;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      padding: 0 18px;
-      color: #03101a;
-      background: linear-gradient(135deg, var(--gold), var(--orange));
-      font-size: 12px;
-      font-weight: 950;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .ticker__viewport { overflow: hidden; }
-    .ticker__track {
-      width: max-content;
-      display: flex;
-      align-items: center;
-      gap: 44px;
-      padding-left: 35px;
-      color: #dcebed;
-      font-size: 13px;
-      font-weight: 750;
-      animation: tickerMove 48s linear infinite;
-    }
-    .ticker__track:hover { animation-play-state: paused; }
-    .ticker__track span::before {
-      content: "◆";
-      margin-right: 11px;
-      color: var(--green);
-      font-size: 9px;
-    }
-    @keyframes tickerMove { to { transform: translateX(-50%); } }
-
-    .intro {
-      position: relative;
-      padding: 62px 0 34px;
-    }
-    .intro-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(340px, .8fr);
-      gap: 38px;
-      align-items: center;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 18px;
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 950;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-    .eyebrow::before { content: ""; width: 38px; height: 2px; background: var(--green); }
-    .intro h1 {
-      max-width: 900px;
-      margin: 0;
-      font-size: clamp(42px, 6.4vw, 88px);
-      line-height: .98;
-      letter-spacing: -.065em;
-    }
-    .intro h1 span {
-      display: block;
-      color: transparent;
-      background: linear-gradient(95deg, var(--green), var(--cyan) 48%, var(--gold));
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
-    .intro-lead {
-      max-width: 790px;
-      margin: 24px 0 0;
-      color: var(--muted);
-      font-size: clamp(17px, 1.7vw, 22px);
-    }
-    .intro-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-    .btn {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 0 19px;
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 900;
-      transition: .24s ease;
-    }
-    .btn-primary { color: #03101a; border-color: var(--green); background: var(--green); }
-    .btn-secondary { color: var(--text); background: rgba(255, 255, 255, .045); }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0, 0, 0, .24); }
-
-    .edition-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 350px;
-      padding: 32px;
-      border: 1px solid var(--line-strong);
-      border-radius: 42px 12px 42px 12px;
-      background:
-        radial-gradient(circle at 95% 5%, rgba(86, 239, 186, .26), transparent 45%),
-        linear-gradient(145deg, rgba(9, 38, 51, .95), rgba(5, 21, 32, .96));
-      box-shadow: var(--shadow);
-    }
-    .edition-card::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      bottom: -100px;
-      width: 300px;
-      height: 300px;
-      border: 52px solid rgba(231, 181, 65, .1);
-      border-radius: 50%;
-    }
-    .edition-card__number {
-      position: relative;
-      z-index: 1;
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 950;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-    .edition-card h2 {
-      position: relative;
-      z-index: 1;
-      margin: 16px 0 8px;
-      font-size: 36px;
-      line-height: 1.05;
-      letter-spacing: -.045em;
-    }
-    .edition-card p { position: relative; z-index: 1; margin: 0; color: var(--muted); }
-    .edition-card__dates {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 30px;
-    }
-    .edition-date {
-      padding: 17px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, .04);
-    }
-    .edition-date span { display: block; color: var(--muted); font-size: 11px; font-weight: 800; text-transform: uppercase; }
-    .edition-date strong { display: block; margin-top: 3px; font-size: 15px; }
-
-    .quick-info {
-      padding: 16px 0 42px;
-    }
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .quick-card {
-      --icon-color: var(--green);
-      position: relative;
-      overflow: hidden;
-      min-height: 148px;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background:
-        radial-gradient(circle at 90% 5%, color-mix(in srgb, var(--icon-color) 9%, transparent), transparent 38%),
-        var(--surface-soft);
-      backdrop-filter: blur(18px);
-      transition: .25s ease;
-    }
-    .quick-card:hover { transform: translateY(-5px); border-color: var(--line-strong); }
-    .quick-card__icon {
-      width: 56px;
-      height: 56px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(86, 239, 186, .42);
-      border-radius: 18px;
-      color: var(--icon-color);
-      background: rgba(86, 239, 186, .09);
-      box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, .025),
-        0 14px 30px rgba(0, 0, 0, .24);
-      transition: transform .25s ease, background .25s ease;
-    }
-    .quick-card:hover .quick-card__icon { transform: translateY(-2px) scale(1.04); }
-    .quick-card__icon svg {
-      width: 30px;
-      height: 30px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.8;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .quick-card:nth-child(2) { --icon-color: var(--gold); }
-    .quick-card:nth-child(2) .quick-card__icon { border-color: rgba(231, 181, 65, .44); background: rgba(231, 181, 65, .09); }
-    .quick-card:nth-child(3) { --icon-color: var(--cyan); }
-    .quick-card:nth-child(3) .quick-card__icon { border-color: rgba(73, 207, 230, .44); background: rgba(73, 207, 230, .09); }
-    .quick-card strong { display: block; margin-top: 17px; font-size: 18px; line-height: 1.2; }
-    .quick-card span { display: block; margin-top: 7px; color: var(--muted); font-size: 13px; }
-
-    .content-shell {
-      padding: 30px 0 68px;
-    }
-    .content-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 28px;
-      align-items: start;
-    }
-    .section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 22px;
-    }
-    .section-heading h2 {
-      margin: 0;
-      font-size: clamp(29px, 4vw, 48px);
-      line-height: 1.04;
-      letter-spacing: -.05em;
-    }
-    .section-heading p { max-width: 540px; margin: 0; color: var(--muted); font-size: 14px; }
-    .result-count { color: var(--green); font-size: 13px; font-weight: 900; white-space: nowrap; }
-
-    .hero-news {
-      position: relative;
-      overflow: hidden;
-      min-height: 520px;
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: var(--surface-strong);
-      box-shadow: var(--shadow);
-      cursor: pointer;
-      transition: .28s ease;
-    }
-    .hero-news:hover { transform: translateY(-6px); border-color: var(--line-strong); }
-    .hero-news__image { min-height: 520px; position: relative; overflow: hidden; }
-    .hero-news__image::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent 60%, rgba(8, 30, 43, .72));
-    }
-    .hero-news__image img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
-    .hero-news:hover .hero-news__image img { transform: scale(1.035); }
-    .hero-news__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: clamp(28px, 4vw, 48px);
-    }
-    .badge {
-      width: fit-content;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      border: 1px solid rgba(86, 239, 186, .26);
-      border-radius: 999px;
-      padding: 6px 10px;
-      color: var(--green);
-      background: rgba(86, 239, 186, .07);
-      font-size: 10px;
-      font-weight: 950;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-    .badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-    .hero-news h3 {
-      margin: 18px 0 13px;
-      font-size: clamp(30px, 3.2vw, 50px);
-      line-height: 1.02;
-      letter-spacing: -.052em;
-    }
-    .hero-news p { margin: 0; color: var(--muted); font-size: 16px; }
-    .news-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 15px;
-      margin-top: 22px;
-      color: #84a3ab;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .source-check { color: var(--green); }
-
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-    .news-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 100%;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: var(--surface);
-      box-shadow: 0 17px 50px rgba(0, 0, 0, .18);
-      cursor: pointer;
-      transition: .26s ease;
-    }
-    .news-card:hover { transform: translateY(-6px); border-color: var(--line-strong); }
-    .news-card__image {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      background: #061824;
-    }
-    .news-card__image::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 55%;
-      background: linear-gradient(transparent, rgba(3, 16, 26, .65));
-    }
-    .news-card__image img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .55s ease; }
-    .news-card:hover .news-card__image img { transform: scale(1.045); }
-    .news-card__body { padding: 20px; }
-    .news-card h3 {
-      margin: 13px 0 9px;
-      font-size: 21px;
-      line-height: 1.18;
-      letter-spacing: -.025em;
-    }
-    .news-card p {
-      display: -webkit-box;
-      overflow: hidden;
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-    .news-card .news-meta { margin-top: 16px; }
-
-    .empty-state {
-      grid-column: 1 / -1;
-      padding: 48px 24px;
-      border: 1px dashed var(--line-strong);
-      border-radius: var(--radius-lg);
-      text-align: center;
-      color: var(--muted);
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 76px;
-      display: grid;
-      gap: 18px;
-    }
-    .side-widget {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: var(--surface);
-      box-shadow: 0 17px 50px rgba(0, 0, 0, .17);
-    }
-    .side-widget__head { padding: 20px 20px 0; }
-    .side-widget__head span { color: var(--green); font-size: 10px; font-weight: 950; letter-spacing: .13em; text-transform: uppercase; }
-    .side-widget__head h3 { margin: 4px 0 0; font-size: 22px; letter-spacing: -.03em; }
-    .side-widget__body { padding: 15px 20px 20px; }
-    .service-list, .highlight-list, .category-list { list-style: none; margin: 0; padding: 0; }
-    .service-list li, .highlight-list li, .category-list li { border-bottom: 1px solid var(--line); }
-    .service-list li:last-child, .highlight-list li:last-child, .category-list li:last-child { border-bottom: 0; }
-    .service-list a, .highlight-list button, .category-list button {
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      border: 0;
-      padding: 13px 0;
-      color: var(--text);
-      background: transparent;
-      text-align: left;
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 750;
-      transition: color .2s ease;
-    }
-    .service-list a:hover, .highlight-list button:hover, .category-list button:hover { color: var(--green); }
-    .service-list small, .highlight-list small { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; font-weight: 600; }
-    .category-list b { color: var(--muted); font-size: 11px; }
-
-    .ad-card {
-      display: block;
-      overflow: hidden;
-      border: 1px solid rgba(231, 181, 65, .22);
-      border-radius: var(--radius-lg);
-      background: #061521;
-      text-decoration: none;
-      transition: .26s ease;
-    }
-    .ad-card:hover { transform: translateY(-5px); border-color: var(--gold); }
-    .ad-card__media { display: block; background: #04132b; }
-    .ad-card img { width: 100%; height: auto; display: block; object-fit: contain; background: #04132b; }
-    .ad-card__caption { padding: 17px; }
-    .ad-card__caption span { color: var(--gold); font-size: 10px; font-weight: 950; letter-spacing: .1em; text-transform: uppercase; }
-    .ad-card__caption strong { display: block; margin-top: 5px; font-size: 17px; }
-    .ad-card__caption p { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
-    .ad-card__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
-    .ad-card__actions a {
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
-      padding: 8px 11px;
-      color: var(--green);
-      text-decoration: none;
-      font-size: 10px;
-      font-weight: 900;
-    }
-
-    .partner-section {
-      padding: 64px 0;
-      border-top: 1px solid var(--line);
-      background: linear-gradient(180deg, transparent, rgba(11, 45, 53, .24));
-    }
-    .partner-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 24px;
-    }
-    .partner-card {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: var(--surface-strong);
-      text-decoration: none;
-      transition: .27s ease;
-    }
-    .partner-card:hover { transform: translateY(-6px); border-color: var(--line-strong); }
-    .partner-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; object-fit: contain; background: #04132b; }
-    .partner-card__copy { flex: 1; display: flex; flex-direction: column; align-items: flex-start; padding: 26px; }
-    .partner-card__copy span { color: var(--gold); font-size: 10px; font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
-    .partner-card__copy h3 { margin: 8px 0; font-size: 29px; line-height: 1.05; letter-spacing: -.04em; }
-    .partner-card__copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-    .partner-features { margin-top: 14px !important; color: #c9dcdf !important; font-size: 12px !important; font-weight: 800; }
-    .partner-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: auto; padding-top: 20px; }
-    .partner-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      padding: 10px 15px;
-      color: #03101a;
-      background: var(--green);
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 950;
-      letter-spacing: 0;
-    }
-    .partner-cta--secondary { border: 1px solid var(--line-strong); color: var(--green); background: transparent; }
-    .partner-card--wide {
-      grid-column: 1 / -1;
-      display: flex;
-      flex-direction: column;
-    }
-    .partner-card--wide img { height: auto; aspect-ratio: auto; object-fit: contain; background: #020202; }
-
-    .detail-page {
-      display: none;
-      padding: 45px 0 78px;
-    }
-    .detail-page.active { display: block; animation: fadeIn .35s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } }
-    .detail-shell { width: min(calc(100% - 34px), 1040px); margin-inline: auto; }
-    .detail-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 15px;
-      color: var(--text);
-      background: rgba(255, 255, 255, .045);
-      cursor: pointer;
-      font-weight: 850;
-    }
-    .article-header { padding: 36px 0 26px; }
-    .article-header h1 {
-      max-width: 960px;
-      margin: 17px 0 15px;
-      font-size: clamp(38px, 6vw, 72px);
-      line-height: .98;
-      letter-spacing: -.06em;
-    }
-    .article-header .news-meta { margin-top: 0; }
-    .article-cover {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: #071925;
-      box-shadow: var(--shadow);
-    }
-    .article-cover img { width: 100%; max-height: 590px; display: block; object-fit: cover; }
-    .image-credit { position: relative; z-index: 5; padding: 9px 15px; color: var(--muted); background: #071925; font-size: 11px; }
-    .article-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 270px;
-      gap: 34px;
-      align-items: start;
-      margin-top: 34px;
-    }
-    .article-body p { margin: 0 0 21px; color: #d6e6e9; font-size: 18px; line-height: 1.86; }
-    .article-body p:first-child::first-letter {
-      float: left;
-      margin: 9px 10px 0 0;
-      color: var(--green);
-      font-size: 62px;
-      font-weight: 950;
-      line-height: .72;
-    }
-    .service-box, .source-box {
-      margin: 25px 0;
-      padding: 21px;
-      border: 1px solid var(--line-strong);
-      border-radius: var(--radius-lg);
-      background: rgba(86, 239, 186, .055);
-    }
-    .service-box h3, .source-box h3 { margin: 0 0 10px; font-size: 18px; }
-    .service-box ul { margin: 0; padding-left: 20px; color: #d7e7e9; }
-    .service-box li { margin: 6px 0; }
-    .source-box p { margin: 0 0 12px; color: var(--muted); font-size: 13px; line-height: 1.6; }
-    .source-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 6px 6px 0 0;
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
-      padding: 9px 13px;
-      color: var(--green);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .editorial-alert {
-      margin: 28px 0;
-      padding: 24px;
-      border: 1px solid rgba(255, 107, 98, .48);
-      border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, rgba(255, 107, 98, .12), rgba(231, 181, 65, .06));
-    }
-    .editorial-alert > span, .article-section__head > span, .orientador-box > div > span {
-      color: var(--gold);
-      font-size: 11px;
-      font-weight: 950;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-    }
-    .editorial-alert h3 { margin: 7px 0 8px; font-size: 25px; }
-    .editorial-alert p { margin: 0; color: #f4d8d5; font-size: 15px; line-height: 1.72; }
-    .article-section { margin: 38px 0; }
-    .article-section__head { margin-bottom: 18px; }
-    .article-section__head h2 { margin: 5px 0 4px; font-size: clamp(27px, 4vw, 42px); line-height: 1.08; letter-spacing: -.035em; }
-    .article-section__head p { margin: 0; color: var(--muted); font-size: 14px; }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
-    .stat-card {
-      min-height: 145px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 19px;
-      border: 1px solid var(--line);
-      border-radius: 21px;
-      background: linear-gradient(145deg, rgba(86, 239, 186, .09), rgba(73, 207, 230, .035));
-    }
-    .stat-card strong { color: var(--green); font-size: 43px; line-height: 1; letter-spacing: -.055em; }
-    .stat-card span { margin-top: 9px; color: #cce0e3; font-size: 13px; font-weight: 800; line-height: 1.35; }
-    .calculation-note {
-      margin: 14px 0 0 !important;
-      padding: 16px 18px;
-      border-left: 4px solid var(--gold);
-      border-radius: 0 14px 14px 0;
-      color: #d6cdb5 !important;
-      background: rgba(231, 181, 65, .075);
-      font-size: 13px !important;
-      line-height: 1.65 !important;
-    }
-    .history-list { display: grid; gap: 9px; }
-    .history-list > div {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) .8fr .8fr;
-      gap: 14px;
-      align-items: center;
-      padding: 14px 17px;
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      background: rgba(255, 255, 255, .025);
-    }
-    .history-list b { color: var(--text); }
-    .history-list span { color: var(--muted); font-size: 13px; }
-    .history-list strong { color: var(--cyan); text-align: right; font-size: 13px; }
-    .history-list .history-total { border-color: var(--line-strong); background: rgba(86, 239, 186, .075); }
-    .history-list .history-total strong { color: var(--green); }
-    .orientador-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin: 32px 0;
-      padding: 25px;
-      border: 1px solid var(--line-strong);
-      border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, rgba(73, 207, 230, .08), rgba(86, 239, 186, .055));
-    }
-    .orientador-box h2 { margin: 5px 0 8px; font-size: 35px; }
-    .orientador-box p { margin: 0 !important; color: var(--muted) !important; font-size: 14px !important; line-height: 1.65 !important; }
-    .orientador-box ul { margin: 0; padding: 0; display: grid; gap: 8px; list-style: none; }
-    .orientador-box li { padding: 10px 13px; border: 1px solid var(--line); border-radius: 12px; color: #d8ebed; background: rgba(2, 14, 21, .36); font-size: 13px; font-weight: 750; }
-    .nominees-section { margin-top: 42px; }
-    .nominee-group { margin: 18px 0 25px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: rgba(3, 20, 29, .58); }
-    .nominee-group__title { display: flex; justify-content: space-between; gap: 15px; align-items: center; padding: 16px 18px; border-bottom: 1px solid var(--line); background: rgba(86, 239, 186, .055); }
-    .nominee-group__title h3 { margin: 0; font-size: 19px; }
-    .nominee-group__title span { color: var(--green); font-size: 12px; font-weight: 900; }
-    .table-scroll { overflow-x: auto; }
-    .nominee-table { width: 100%; min-width: 720px; border-collapse: collapse; }
-    .nominee-table th, .nominee-table td { padding: 13px 15px; border-bottom: 1px solid rgba(153, 232, 210, .1); text-align: left; vertical-align: middle; }
-    .nominee-table th { color: #8fb1b7; background: rgba(255, 255, 255, .025); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
-    .nominee-table td { color: #dbecee; font-size: 13px; }
-    .nominee-table td:first-child { color: var(--text); font-weight: 850; }
-    .nominee-table tr:last-child td { border-bottom: 0; }
-    .mode-pill { display: inline-flex; min-width: 46px; justify-content: center; padding: 5px 9px; border-radius: 999px; color: #04202a; background: var(--green); font-size: 10px; font-weight: 950; }
-    .mode-ppp { background: var(--gold); }
-    .mode-pcd { color: #fff; background: #468ee8; }
-    .document-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
-    .document-gallery figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025); }
-    .document-gallery a { display: block; height: 330px; overflow: hidden; background: #e9eff1; }
-    .document-gallery img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .35s ease; }
-    .document-gallery a:hover img { transform: scale(1.025); }
-    .document-gallery figcaption { padding: 12px 13px 14px; color: var(--muted); font-size: 11px; line-height: 1.5; }
-    .btn-document { color: #07151c; background: linear-gradient(135deg, var(--gold), var(--orange)); }
-
-    .article-actions { position: sticky; top: 76px; display: grid; gap: 11px; }
-    .article-actions .btn { width: 100%; }
-    .article-note {
-      padding: 17px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      color: var(--muted);
-      background: rgba(255, 255, 255, .035);
-      font-size: 12px;
-    }
-
-    footer {
-      padding: 54px 0 32px;
-      border-top: 1px solid var(--line);
-      background: #020a10;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr .9fr;
-      gap: 34px;
-    }
-    .footer-brand p { max-width: 460px; color: var(--muted); font-size: 13px; }
-    .footer-title { margin: 0 0 13px; color: var(--green); font-size: 11px; font-weight: 950; letter-spacing: .13em; text-transform: uppercase; }
-    .footer-links { display: grid; gap: 8px; }
-    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; }
-    .footer-links a:hover { color: var(--green); }
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 42px;
-      padding-top: 20px;
-      border-top: 1px solid var(--line);
-      color: #6e8c94;
-      font-size: 11px;
-    }
-
-    .floating-actions {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 90;
-      display: grid;
-      gap: 9px;
-    }
-    .floating-button {
-      min-width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line-strong);
-      border-radius: 18px;
-      color: #03101a;
-      background: var(--green);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, .34);
-      text-decoration: none;
-      font-size: 21px;
-      font-weight: 950;
-      transition: .22s ease;
-    }
-    .floating-button:nth-child(2) { color: var(--text); background: var(--surface-strong); }
-    .floating-button:hover { transform: translateY(-4px); }
-
-    @media (max-width: 1180px) {
-      .content-layout { grid-template-columns: minmax(0, 1fr) 320px; }
-      .hero-news { grid-template-columns: 1fr; }
-      .hero-news__image { min-height: 360px; }
-      .hero-news__image::after { background: linear-gradient(transparent 55%, rgba(8, 30, 43, .8)); }
-    }
-
-    @media (max-width: 980px) {
-      .header-main { grid-template-columns: auto 1fr; }
-      .search-box { grid-column: 1 / -1; grid-row: 2; width: 100%; padding-bottom: 14px; }
-      .header-social { justify-self: end; }
-      .intro-grid { grid-template-columns: 1fr; }
-      .edition-card { min-height: 280px; }
-      .quick-grid { grid-template-columns: 1fr; }
-      .content-layout { grid-template-columns: 1fr; }
-      .sidebar { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .partner-grid { grid-template-columns: 1fr; }
-      .partner-card--wide { grid-column: auto; }
-      .article-layout { grid-template-columns: 1fr; }
-      .article-actions { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-brand { grid-column: 1 / -1; }
-    }
-
-
-    @media (max-width: 820px) {
-      .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .orientador-box { grid-template-columns: 1fr; }
-      .document-gallery { grid-template-columns: 1fr; }
-      .document-gallery a { height: 460px; }
-    }
-
-    @media (max-width: 720px) {
-      .container { width: min(calc(100% - 22px), var(--max)); }
-      .edition-bar__inner { min-height: 48px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 0; padding-block: 6px; }
-      .edition-bar__inner > span:last-child { padding-left: 18px; font-size: 11px; }
-      .header-main { min-height: 74px; gap: 12px; }
-      .brand-mark { width: 44px; height: 44px; border-radius: 15px 7px; }
-      .brand-copy strong { font-size: 18px; }
-      .brand-copy span { font-size: 9px; }
-      .header-social { width: 44px; height: 44px; justify-content: center; border-radius: 14px; padding: 0; font-size: 0; }
-      .header-social::before { content: "◎"; font-size: 22px; }
-      .ticker__inner { grid-template-columns: 96px minmax(0, 1fr); }
-      .ticker__label { padding: 0 8px; font-size: 9px; }
-      .intro { padding-top: 40px; }
-      .intro h1 { font-size: clamp(43px, 14vw, 66px); }
-      .intro-lead { font-size: 16px; }
-      .edition-card { padding: 25px; border-radius: 30px 10px; }
-      .edition-card h2 { font-size: 30px; }
-      .edition-card__dates { grid-template-columns: 1fr; }
-      .section-heading { align-items: flex-start; flex-direction: column; }
-      .hero-news { min-height: auto; border-radius: 25px; }
-      .hero-news__image { min-height: 255px; }
-      .hero-news__content { padding: 24px; }
-      .hero-news h3 { font-size: 34px; }
-      .news-grid { grid-template-columns: 1fr; }
-      .news-card__body { padding: 18px; }
-      .sidebar { grid-template-columns: 1fr; }
-      .partner-card img { height: auto; }
-      .partner-card__copy { padding: 23px; }
-      .article-header h1 { font-size: clamp(38px, 12vw, 58px); }
-      .article-cover { border-radius: 24px; }
-      .article-body p { font-size: 16px; }
-      .article-actions { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr; }
-      .history-list > div { grid-template-columns: 1fr; gap: 3px; }
-      .history-list strong { text-align: left; }
-      .document-gallery a { height: 390px; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-brand { grid-column: auto; }
-      .footer-bottom { flex-direction: column; }
-      .floating-actions { right: 11px; bottom: 11px; }
-      .floating-button { width: 48px; height: 48px; min-width: 48px; border-radius: 15px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-    }
-  </style>
+  <meta name="description" content="Notícias de Beberibe, serviços públicos, Plano Diretor, saúde, educação, cultura, agricultura e oportunidades.">
+  <meta name="theme-color" content="#07192b">
+  <meta property="og:title" content="Beberibe Notícias | Edição de 30 de julho de 2026">
+  <meta property="og:description" content="Diagnóstico do PDM, audiência e oficinas, concurso público e as principais notícias de Beberibe.">
+  <meta property="og:image" content="https://www.beberibe.ce.gov.br/fotos/2386/Capa2386.jpg">
+  <title>Beberibe Notícias | Edição de 30 de julho de 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudoPrincipal">Ir para as notícias</a>
-  <div class="ambient" aria-hidden="true"></div>
-  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
   <div class="edition-bar">
     <div class="container edition-bar__inner">
-      <span class="edition-status" id="editionStatus">Edição semanal verificada</span>
-      <span id="nextEditionText">Nova atualização aos sábados</span>
+      <span><strong>Edição verificada</strong> · 30 de julho de 2026</span>
+      <span>Atualização semanal aos sábados</span>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container header-main">
-      <a class="brand" href="#inicio" aria-label="Beberibe Notícias — início">
-        <span class="brand-mark">BN</span>
-        <span class="brand-copy">
+      <a class="brand" href="#inicio" aria-label="Beberibe Notícias - início">
+        <span class="brand__mark">BN</span>
+        <span>
           <strong>Beberibe Notícias</strong>
-          <span>Informação local verificada</span>
+          <small>Informação local verificada</small>
         </span>
       </a>
 
-      <label class="search-box" aria-label="Pesquisar notícias">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m21 21-4.3-4.3m2.3-5.2A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z"/></svg>
-        <input id="searchInput" type="search" placeholder="Buscar PDM, saúde, concurso, turismo, economia..." autocomplete="off">
-      </label>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-      <a class="header-social" href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram do Beberibe Notícias">
-        @beberibe.noticiasoficial
-      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#destaque">PDM</a>
+        <a href="#noticias">Últimas notícias</a>
+        <a href="#concurso">Concurso</a>
+        <a href="#parceiros">Parceiros</a>
+        <a class="nav-contact" href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20enviar%20uma%20pauta%20para%20o%20Beberibe%20Not%C3%ADcias." target="_blank" rel="noopener">Enviar pauta</a>
+      </nav>
+    </div>
+
+    <div class="search-row">
+      <div class="container search-row__inner">
+        <label class="search-box">
+          <span class="sr-only">Buscar notícia</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.6-4.6m2.1-5.15a7.25 7.25 0 1 1-14.5 0 7.25 7.25 0 0 1 14.5 0Z"/></svg>
+          <input id="searchInput" type="search" placeholder="Buscar PDM, saúde, concurso, cultura...">
+        </label>
+        <div class="social-links">
+          <a href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener">@beberibe.noticiasoficial</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <nav class="category-nav" aria-label="Categorias de notícias">
-    <div class="container category-nav__inner" id="menuCategorias"></div>
-  </nav>
-
-  <section class="ticker" aria-label="Manchetes da edição">
-    <div class="ticker__inner">
-      <div class="ticker__label">Em destaque</div>
-      <div class="ticker__viewport">
-        <div class="ticker__track" id="tickerNoticias"></div>
+  <div class="news-ticker" aria-label="Destaques rápidos">
+    <div class="ticker-label">Agora</div>
+    <div class="ticker-viewport">
+      <div class="ticker-track">
+        <span>PDM: Diagnóstico Preliminar já está disponível para consulta pública.</span>
+        <span>12 de agosto: audiência às 9h e oficina da sede às 13h30, ambas na Câmara.</span>
+        <span>Concurso: levantamento aponta 180 convocados entre 255 aprovados.</span>
+        <span>Saúde: Prefeitura divulga novas ações de vacinação e cuidado materno-infantil.</span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <main id="conteudoPrincipal">
-    <div id="homePage">
-      <section class="intro" id="inicio">
-        <div class="container intro-grid">
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero__background"></div>
+      <div class="container hero__content">
+        <div class="hero__copy">
+          <span class="eyebrow">Edição especial · participação pública</span>
+          <h1>O futuro de Beberibe está em debate.</h1>
+          <p>O Diagnóstico Preliminar do Plano Diretor revela desafios em saneamento, mobilidade, educação, acessibilidade e proteção do litoral. Agora, a população poderá participar da audiência e das oficinas.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#destaque">Ler matéria especial</a>
+            <a class="button button--ghost" href="https://www.beberibe.ce.gov.br/publicacoes.php?id=3086" target="_blank" rel="noopener">Abrir diagnóstico oficial</a>
+          </div>
+        </div>
+        <aside class="hero__agenda">
+          <span class="agenda-date">12 AGO</span>
           <div>
-            <span class="eyebrow">Beberibe em movimento</span>
-            <h1>O que mudou <span>nesta semana.</span></h1>
-            <p class="intro-lead">Notícias da cidade, participação pública, política, economia, turismo e vida prática, com fontes identificadas e seções para toda a família.</p>
-            <div class="intro-actions">
-              <a class="btn btn-primary" href="#ultimasNoticias">Ler edição</a>
-              <a class="btn btn-secondary" href="mailto:reinetrindadeeterna@gmail.com?subject=Pauta%20para%20o%20Beberibe%20Not%C3%ADcias">Enviar pauta</a>
-            </div>
+            <strong>Câmara Municipal</strong>
+            <p>9h · Audiência Pública</p>
+            <p>13h30 · Oficina da sede</p>
           </div>
+        </aside>
+      </div>
+    </section>
 
-          <aside class="edition-card" aria-label="Informações da edição">
-            <span class="edition-card__number">Edição semanal</span>
-            <h2>Informação que ajuda a decidir, agir e acompanhar.</h2>
-            <p>Edição extraordinária de sexta, com atualização semanal aos sábados e links diretos para as fontes consultadas.</p>
-            <div class="edition-card__dates">
-              <div class="edition-date"><span>Atualizada em</span><strong id="editionDate">24/07/2026</strong></div>
-              <div class="edition-date"><span>Próxima edição</span><strong id="nextEditionDate">01/08/2026</strong></div>
-            </div>
-          </aside>
-        </div>
-      </section>
+    <section class="stats-strip" aria-label="Indicadores da edição">
+      <div class="container stats-grid">
+        <div><strong>180</strong><span>convocados no levantamento</span></div>
+        <div><strong>255</strong><span>aprovados considerados</span></div>
+        <div><strong>7</strong><span>territórios com oficinas</span></div>
+        <div><strong>29 JUL</strong><span>publicação do diagnóstico</span></div>
+      </div>
+    </section>
 
-      <section class="quick-info" aria-label="Informações rápidas">
-        <div class="container quick-grid">
-          <article class="quick-card">
-            <span class="quick-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="17" rx="3"/><rect x="8" y="2" width="8" height="4" rx="1.5"/><path d="m8 12 2.5 2.5L16.5 9"/><path d="M8 18h8"/></svg>
-            </span>
-            <strong>24 novos nomeados</strong>
-            <span>Portaria nº 21.07.001/2026 alcança nove cargos do concurso nº 001/2025.</span>
-          </article>
-          <article class="quick-card">
-            <span class="quick-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m8 15 2.4 2.4L16.5 12"/></svg>
-            </span>
-            <strong>PDM: 12 a 15 de agosto</strong>
-            <span>Audiência na Câmara e oficinas participativas na sede e nos distritos.</span>
-          </article>
-          <article class="quick-card">
-            <span class="quick-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 20V11M10 20v-6M16 20V9M22 20H2"/><path d="m4 8 5-4 5 4 6-6"/><circle cx="4" cy="8" r="1.2"/><circle cx="9" cy="4" r="1.2"/><circle cx="14" cy="8" r="1.2"/><circle cx="20" cy="2" r="1.2"/></svg>
-            </span>
-            <strong>Inflação oficial</strong>
-            <span>IPCA de junho: 0,16% no mês e 4,64% acumulados em doze meses.</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-shell" id="ultimasNoticias">
-        <div class="container content-layout">
+    <section class="section feature-section" id="destaque">
+      <div class="container">
+        <div class="section-heading">
           <div>
-            <div class="section-heading">
-              <div>
-                <span class="eyebrow">Edição especial de sexta</span>
-                <h2>Últimas notícias</h2>
-              </div>
-              <span class="result-count" id="resultCount">Carregando notícias...</span>
-            </div>
-
-            <section id="areaDestaque" aria-label="Notícia principal"></section>
-            <section class="news-grid" id="listaNoticias" aria-live="polite"></section>
+            <span class="eyebrow">Matéria especial</span>
+            <h2>Diagnóstico Preliminar do PDM: o que muda e por que a população deve participar</h2>
           </div>
-
-          <aside class="sidebar" aria-label="Conteúdo complementar">
-            <section class="side-widget">
-              <div class="side-widget__head">
-                <span>Utilidade pública</span>
-                <h3>Serviços úteis</h3>
-              </div>
-              <div class="side-widget__body">
-                <ul class="service-list">
-                  <li><a href="https://www.beberibe.ce.gov.br/" target="_blank" rel="noopener noreferrer"><span>Prefeitura de Beberibe<small>Notícias, editais e serviços</small></span><b>↗</b></a></li>
-                  <li><a href="https://www.beberibe.ce.gov.br/concursopublico.php?grup=42" target="_blank" rel="noopener noreferrer"><span>Concurso de Beberibe<small>Portarias e documentos oficiais</small></span><b>↗</b></a></li>
-                  <li><a href="https://www.beberibe.ce.gov.br/informa/2350/prefeitura-de-beberibe-convida-popula-o-para-parti" target="_blank" rel="noopener noreferrer"><span>Plano Diretor<small>Audiência e oficinas participativas</small></span><b>↗</b></a></li>
-                  <li><a href="https://www.ibge.gov.br/pt/indicadores.html?lang=pt-BR" target="_blank" rel="noopener noreferrer"><span>Indicadores do IBGE<small>Inflação e dados econômicos</small></span><b>↗</b></a></li>
-                </ul>
-              </div>
-            </section>
-
-            <article class="ad-card">
-              <a class="ad-card__media" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/db-enem-horizontal-correto.webp" alt="DB ENEM — preparação digital para o ENEM" loading="lazy">
-              </a>
-              <div class="ad-card__caption">
-                <span>Projeto parceiro</span>
-                <strong>DB ENEM</strong>
-                <p>Simulados digitais para organizar a preparação até novembro.</p>
-                <div class="ad-card__actions">
-                  <a href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">Abrir plataforma</a>
-                  <a href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20DB%20ENEM." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                </div>
-              </div>
-            </article>
-
-            <section class="side-widget">
-              <div class="side-widget__head">
-                <span>Seleção editorial</span>
-                <h3>Destaques da edição</h3>
-              </div>
-              <div class="side-widget__body">
-                <ul class="highlight-list" id="destaquesEdicao"></ul>
-              </div>
-            </section>
-
-            <article class="ad-card">
-              <a class="ad-card__media" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/gabarito-max-horizontal-correto.webp" alt="Gabarito Max — simulados para vestibulares e concursos" loading="lazy">
-              </a>
-              <div class="ad-card__caption">
-                <span>Projeto parceiro</span>
-                <strong>Gabarito Max</strong>
-                <p>Treino para concursos, vestibulares e avaliações.</p>
-                <div class="ad-card__actions">
-                  <a href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">Abrir plataforma</a>
-                  <a href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20Gabarito%20Max." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                </div>
-              </div>
-            </article>
-
-            <section class="side-widget">
-              <div class="side-widget__head">
-                <span>Navegação</span>
-                <h3>Categorias</h3>
-              </div>
-              <div class="side-widget__body">
-                <ul class="category-list" id="listaCategorias"></ul>
-              </div>
-            </section>
-          </aside>
+          <span class="source-badge">Fonte oficial identificada</span>
         </div>
-      </section>
+        <article id="featureArticle" class="feature-article"></article>
+      </div>
+    </section>
 
-      <section class="partner-section">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Projetos e comércio local</span>
-              <h2>Parceiros e anunciantes</h2>
-            </div>
-            <p>Projetos educacionais e empresas locais apresentados com imagem completa, contato confirmado e acesso direto.</p>
+    <section class="section news-section" id="noticias">
+      <div class="container">
+        <div class="section-heading section-heading--compact">
+          <div>
+            <span class="eyebrow">Edição de 30/07/2026</span>
+            <h2>Últimas notícias</h2>
           </div>
-
-          <div class="partner-grid">
-            <article class="partner-card">
-              <img src="assets/db-enem-horizontal-correto.webp" alt="DB ENEM — plataforma com 17 simulados digitais" loading="lazy">
-              <div class="partner-card__copy">
-                <span>ENEM 2026</span>
-                <h3>DB ENEM</h3>
-                <p>Plataforma de preparação com 17 simulados digitais, questões por área, redação e acompanhamento de desempenho.</p>
-                <p class="partner-features">Teste grátis • acesso vitalício • treino atualizado</p>
-                <div class="partner-actions">
-                  <a class="partner-cta" href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">Abrir plataforma →</a>
-                  <a class="partner-cta partner-cta--secondary" href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20DB%20ENEM." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="partner-card">
-              <img src="assets/gabarito-max-horizontal-correto.webp" alt="Gabarito Max — preparação para vestibulares e concursos" loading="lazy">
-              <div class="partner-card__copy">
-                <span>Vestibulares e concursos</span>
-                <h3>Gabarito Max</h3>
-                <p>Preparação completa, simulados regulares e estratégias organizadas para vestibulares, ENEM e concursos.</p>
-                <p class="partner-features">Material completo • foco no objetivo • evolução acompanhada</p>
-                <div class="partner-actions">
-                  <a class="partner-cta" href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">Abrir plataforma →</a>
-                  <a class="partner-cta partner-cta--secondary" href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20Gabarito%20Max." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="partner-card partner-card--wide">
-              <img src="assets/js-bike-horizontal.webp" alt="Bicicletaria Jonathan JS Bike em Beberibe" loading="lazy">
-              <div class="partner-card__copy">
-                <span>Comércio local</span>
-                <h3>Bicicletaria Jonathan — JS Bike</h3>
-                <p>Bicicletas aro 16 ao 29, atendimento especializado e compromisso com qualidade, segurança e confiança.</p>
-                <p class="partner-features">Revisão grátis • 3 meses de garantia • descanso de brinde</p>
-                <div class="partner-actions">
-                  <a class="partner-cta" href="https://wa.me/5585996259283?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20da%20JS%20Bike%20no%20Beberibe%20Not%C3%ADcias." target="_blank" rel="noopener noreferrer">Falar no WhatsApp →</a>
-                  <a class="partner-cta partner-cta--secondary" href="https://www.instagram.com/jsbikeoficial00/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                </div>
-              </div>
-            </article>
-          </div>
+          <p id="resultCount">Carregando notícias...</p>
         </div>
-      </section>
-    </div>
 
-    <article class="detail-page" id="paginaNoticia" aria-live="polite"></article>
+        <div class="filters" id="filters" aria-label="Filtrar notícias">
+          <button class="filter-button active" type="button" data-category="Todas">Todas</button>
+          <button class="filter-button" type="button" data-category="Concurso">Concurso</button>
+          <button class="filter-button" type="button" data-category="Saúde">Saúde</button>
+          <button class="filter-button" type="button" data-category="Educação">Educação</button>
+          <button class="filter-button" type="button" data-category="Agricultura">Agricultura</button>
+          <button class="filter-button" type="button" data-category="Cultura">Cultura</button>
+          <button class="filter-button" type="button" data-category="Cidade">Cidade</button>
+        </div>
+
+        <div class="news-grid" id="newsGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>Nenhuma notícia encontrada para essa busca.</p>
+      </div>
+    </section>
+
+    <section class="section partners-section" id="parceiros">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Projetos e comércio local</span>
+            <h2>Parceiros e anunciantes</h2>
+          </div>
+          <p>Três espaços mantidos, com imagens completas e contatos diretos.</p>
+        </div>
+
+        <div class="partners-grid">
+          <article class="partner-card">
+            <div class="partner-card__image">
+              <img src="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/assets/db-enem-horizontal-correto.webp" alt="DB ENEM — plataforma com 17 simulados digitais" loading="lazy">
+            </div>
+            <div class="partner-card__body">
+              <span class="partner-label">ENEM 2026</span>
+              <h3>DB ENEM</h3>
+              <p>Plataforma com 17 simulados digitais, testes gratuitos, versões premium por disciplina e pacote vitalício.</p>
+              <div class="partner-card__links">
+                <a href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener">Abrir plataforma</a>
+                <a href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20DB%20ENEM." target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="partner-card">
+            <div class="partner-card__image">
+              <img src="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/assets/gabarito-max-horizontal-correto.webp" alt="Gabarito Max — preparação para vestibulares e concursos" loading="lazy">
+            </div>
+            <div class="partner-card__body">
+              <span class="partner-label">Vestibulares e concursos</span>
+              <h3>Gabarito Max</h3>
+              <p>Portal de simulados, revisão e preparação digital para concursos, ENEM, vestibulares e formação profissional.</p>
+              <div class="partner-card__links">
+                <a href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener">Abrir plataforma</a>
+                <a href="https://wa.me/5585997120397?text=Ol%C3%A1%2C%20quero%20informa%C3%A7%C3%B5es%20sobre%20o%20Gabarito%20Max." target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="partner-card">
+            <div class="partner-card__image">
+              <img src="https://cincoregioes-star.github.io/site_noticias_beberibe_oficial_3/assets/js-bike-horizontal.webp" alt="Bicicletaria Jonathan — JS Bike em Beberibe" loading="lazy">
+            </div>
+            <div class="partner-card__body">
+              <span class="partner-label">Comércio local</span>
+              <h3>Bicicletaria Jonathan — JS Bike</h3>
+              <p>Bicicletas aro 16 ao 29, revisão, manutenção e atendimento especializado no Sítio Lucas, em Beberibe.</p>
+              <div class="partner-highlights">Revisão grátis · 3 meses de garantia · descanso de brinde</div>
+              <div class="partner-card__links">
+                <a href="https://wa.me/5585991819078?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20da%20JS%20Bike%20no%20Beberibe%20Not%C3%ADcias." target="_blank" rel="noopener">Falar no WhatsApp</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="#inicio">
-            <span class="brand-mark">BN</span>
-            <span class="brand-copy"><strong>Beberibe Notícias</strong><span>Edição semanal</span></span>
-          </a>
-          <p>Portal independente de informação local. Notícias resumidas com identificação e link para a fonte consultada.</p>
-        </div>
-        <div>
-          <h3 class="footer-title">Portal</h3>
-          <div class="footer-links">
-            <a href="#ultimasNoticias">Últimas notícias</a>
-            <a href="mailto:reinetrindadeeterna@gmail.com?subject=Pauta%20Beberibe%20Not%C3%ADcias">Enviar pauta</a>
-            <a href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://wa.me/5585997120397" target="_blank" rel="noopener noreferrer">WhatsApp: (85) 99712-0397</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="footer-title">Parceiros</h3>
-          <div class="footer-links">
-            <a href="https://cincoregioes-star.github.io/DB-ENEM/" target="_blank" rel="noopener noreferrer">DB ENEM</a>
-            <a href="https://cincoregioes-star.github.io/oficial-portal-gabaritomax/" target="_blank" rel="noopener noreferrer">Gabarito Max</a>
-            <a href="https://www.instagram.com/jsbikeoficial00/" target="_blank" rel="noopener noreferrer">Bicicletaria Jonathan — JS Bike</a>
-          </div>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="#inicio">
+          <span class="brand__mark">BN</span>
+          <span><strong>Beberibe Notícias</strong><small>Portal independente</small></span>
+        </a>
+        <p>Notícias resumidas com identificação e acesso direto às fontes consultadas.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 Beberibe Notícias. Edição de 24/07/2026; atualização semanal aos sábados.</span>
-        <span>Beberibe — Ceará</span>
+      <div>
+        <h3>Portal</h3>
+        <a href="#destaque">Especial PDM</a>
+        <a href="#noticias">Últimas notícias</a>
+        <a href="#parceiros">Parceiros</a>
       </div>
+      <div>
+        <h3>Contato</h3>
+        <a href="https://www.instagram.com/beberibe.noticiasoficial/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5585997120397" target="_blank" rel="noopener">WhatsApp: (85) 99712-0397</a>
+        <a href="mailto:cincoregioes@gmail.com">cincoregioes@gmail.com</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Beberibe Notícias · Beberibe — Ceará</span>
+      <span>Edição de 30/07/2026</span>
     </div>
   </footer>
 
-  <div class="floating-actions" aria-label="Atalhos">
-    <a class="floating-button" href="mailto:reinetrindadeeterna@gmail.com?subject=Pauta%20Beberibe%20Not%C3%ADcias" title="Enviar pauta" aria-label="Enviar pauta por e-mail">✉</a>
-    <a class="floating-button" href="#inicio" title="Voltar ao topo" aria-label="Voltar ao topo">↑</a>
-  </div>
+  <dialog class="news-modal" id="newsModal">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Fechar matéria">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">↑</button>
 
   <script src="noticias.js"></script>
   <script src="script.js"></script>
