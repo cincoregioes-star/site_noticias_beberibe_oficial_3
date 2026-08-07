@@ -1,0 +1,25 @@
+BEBERIBE NOTÍCIAS — CORREÇÃO E ATUALIZAÇÃO DE 07/08/2026
+
+Este pacote foi criado SOBRE o pacote original da edição de 30/07/2026.
+O modelo visual e os três parceiros/anunciantes foram mantidos.
+
+ARQUIVOS A SUBSTITUIR NO GITHUB (todos os quatro):
+1. index.html
+2. noticias.js
+3. script.js
+4. style.css
+
+IMPORTANTE:
+- Não substitua somente noticias.js. A edição de 30/07 estava escrita diretamente no index.html.
+- O index agora usa ?v=20260807 nos arquivos CSS/JS para reduzir problema de cache do navegador/GitHub Pages.
+- Depois do upload, aguarde o GitHub Pages publicar e faça Ctrl+F5 no navegador.
+
+O QUE FOI ATUALIZADO:
+- Data da edição: 07/08/2026.
+- Matéria principal: 4ª Reunião Ordinária da CGA, de 06/08/2026.
+- Pauta oficial da reunião com 7 pontos.
+- Matéria de turismo: Zebra Boutique Hotel / Kicco Risi / Uruaú.
+- Notícias de 05 a 07/08: CRAS/Cadastro Único, VetMóvel, Casa do Cidadão em Arataca,
+  pequenas cirurgias, poda e limpeza, Policlínica, Córrego do Pântano e teste da orelhinha.
+- As notícias da edição anterior foram PRESERVADAS abaixo das novas.
+- DB ENEM, Gabarito Max e Bicicletaria Jonathan — JS Bike foram preservados sem alteração.

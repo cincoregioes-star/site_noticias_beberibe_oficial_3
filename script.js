@@ -19,7 +19,12 @@
     Educação: "A",
     Agricultura: "↟",
     Cultura: "◆",
-    Cidade: "⌂"
+    Cidade: "⌂",
+    Turismo: "✦",
+    Cidadania: "◎",
+    "Plano Diretor": "◇",
+    Infraestrutura: "▦",
+    Serviços: "●"
   };
 
   const normalize = (value) =>
@@ -33,7 +38,7 @@
   const featureMarkup = `
     <figure class="feature-media">
       <img src="${FEATURE_ARTICLE.image}" alt="${FEATURE_ARTICLE.imageAlt}">
-      <figcaption>Imagem de divulgação do Diagnóstico Preliminar do PDM.</figcaption>
+      <figcaption>Imagem: Prefeitura Municipal de Beberibe.</figcaption>
     </figure>
     <div class="feature-layout">
       <div class="feature-lead">
@@ -44,19 +49,19 @@
         <p class="standfirst">${FEATURE_ARTICLE.intro}</p>
         <div class="feature-summary">
           <strong>Nesta matéria</strong>
-          <a href="#numeros-pdm">Indicadores</a>
-          <a href="#agenda-pdm">Agenda completa</a>
-          <a href="${FEATURE_ARTICLE.sourceUrl}" target="_blank" rel="noopener">Documento oficial ↗</a>
+          <a href="#pauta-cga">Pauta da reunião</a>
+          <a href="#agenda-pdm">Próximas etapas</a>
+          <a href="${FEATURE_ARTICLE.sourceUrl}" target="_blank" rel="noopener">Notícia oficial ↗</a>
         </div>
       </div>
       <div class="article-body">
         ${FEATURE_ARTICLE.body
-          .replace("<h3>O que os números revelam</h3>", '<h3 id="numeros-pdm">O que os números revelam</h3>')
-          .replace("<h3>Oficinas nos territórios</h3>", '<h3 id="agenda-pdm">Oficinas nos territórios</h3>')}
+          .replace("<h3>Sete pontos da pauta oficial</h3>", '<h3 id="pauta-cga">Sete pontos da pauta oficial</h3>')
+          .replace("<h3>Próximas etapas e participação popular</h3>", '<h3 id="agenda-pdm">Próximas etapas e participação popular</h3>')}
         <div class="source-box">
           <span>Fontes consultadas</span>
-          <a href="${FEATURE_ARTICLE.sourceUrl}" target="_blank" rel="noopener">Diagnóstico Preliminar oficial</a>
-          <a href="${FEATURE_ARTICLE.scheduleUrl}" target="_blank" rel="noopener">Programação da audiência e oficinas</a>
+          <a href="${FEATURE_ARTICLE.sourceUrl}" target="_blank" rel="noopener">Prefeitura — 4ª Reunião Ordinária da CGA</a>
+          <a href="${FEATURE_ARTICLE.scheduleUrl}" target="_blank" rel="noopener">Programação oficial da audiência e oficinas</a>
         </div>
       </div>
     </div>`;
