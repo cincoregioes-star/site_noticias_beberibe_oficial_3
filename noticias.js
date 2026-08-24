@@ -265,7 +265,7 @@ const projetos = [
     nome: 'Gabarito Logística',
     etiqueta: 'Formação profissional',
     texto: 'Projeto de simulados e preparação voltado a conhecimentos, rotinas e fundamentos da área de logística.',
-    link: 'https://cincoregioes-star.github.io/gabarito-logistica/',
+    link: 'https://cincoregioes-star.github.io/gabarito-logistica-testes-gratis/',
     img: 'assets/logistica.png'
   },
   {
